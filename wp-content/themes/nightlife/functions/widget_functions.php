@@ -2,12 +2,13 @@
 // Register widgetized areas
 if ( function_exists('register_sidebar') )
 {
-	register_sidebars(1,array('id' => 'primary_menu_content', 'name' => 'Primary Menu Content', 'description' => 'Widgets placed in this area will be displayed in Primary menu area.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
-	register_sidebars(1,array('id' => 'front_sidebar', 'name' => 'Front Page - Sidebar', 'description' => 'Widgets placed in this area will be display in Front Sidebar.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
+	register_sidebars(1,array('id' => 'primary_menu_content', 'name' => 'Primary Menu Content', 'description' => 'Widgets placed in this area will be displayed with primary menu only its support only subimt event link and wordpress search widget.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
+	register_sidebars(1,array('id' => 'front_sidebar', 'name' => 'Front Page - Sidebar', 'description' => 'Set the widgets you like to show on home page sidebar, Like event calendar,advertisement etc.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
 	register_sidebars(1,array('id' => 'below_header', 'name' => 'Homepage Banner', 'description' => 'Widgets placed in this area will be display below header area.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
-	register_sidebars(1,array('id'=>'footer1','name'=>'Footer 1','description'=>'Display wigets in footer column 1','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
-	register_sidebars(1,array('id'=>'footer2','name'=>'Footer 2','description'=>'Display wigets in footer column 2','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
-	register_sidebars(1,array('id'=>'footer3','name'=>'Footer 3','description'=>'Display wigets in footer column 3','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
+	register_sidebars(1,array('id' => 'header_search', 'name' => 'Inner page - Header Section', 'description' => 'Widgets placed in this area will be display above main navigation, this widget area will show only in inner pages.','before_widget' => '<div class="widget">','after_widget' => '</div>','before_title' => '<h3><span>','after_title' => '</span></h3>'));
+	register_sidebars(1,array('id'=>'footer1','name'=>'Above Footer','description'=>'Display wigets in full width just above the footer','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
+	register_sidebars(1,array('id'=>'footer2','name'=>'Footer 1','description'=>'Display wigets in the first column of the footer','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
+	register_sidebars(1,array('id'=>'footer3','name'=>'Footer 2','description'=>'Display wigets in 4 columns in footer after the footer 2 area','before_widget'=>'<div class="widget">','after_widget'=>'</div>','before_title'=>'<h3>','after_title'=>'</h3>'));
 		
 }
 //END OF WIDGET AREAS
@@ -18,6 +19,7 @@ Description : remove unnecessory widget areas
 function templ_remove_widgetareas(){
 	// Unregsiter some of the TwentyTen sidebars
 	unregister_sidebar( 'after-content' );
+	unregister_sidebar( 'subsidiary-2c' );
 	unregister_sidebar( 'subsidiary-3c' );
 	unregister_sidebar( 'subsidiary-4c' );
 	unregister_sidebar( 'subsidiary-5c' );
@@ -26,6 +28,12 @@ function templ_remove_widgetareas(){
 	unregister_sidebar( 'after-header-4c' );
 	unregister_sidebar( 'widgets-template' );
 	unregister_sidebar( 'after-header-5c' );
+	unregister_sidebar( 'after-header' );
+	unregister_sidebar( 'secondary' );
+	unregister_sidebar( 'before-content' );
+	unregister_sidebar( 'after-singular' );
+	unregister_sidebar( 'entry' );
+	unregister_sidebar( 'header' );
 }
 add_action( 'init', 'templ_remove_widgetareas', 11 );
 /* =============================== REGISTER WIDGETS ======================================= */
@@ -47,25 +55,29 @@ class eventsearch extends WP_Widget {
     function set_search()
 	{
 		var sr = '';
-		
+
 		if(document.getElementById('skw').value=='<?php _e("Search for","templatic");?>')
 		{
 			document.getElementById('skw').value = '';
 		}else
 		{
-			sr = sr + document.getElementById('skw').value+"-";
+			sr = sr + document.getElementById('skw').value;
 		}
-		if(document.getElementById('scat').value)
+		if(document.getElementById('scat').value=='-1')
 		{
-			sr = sr + document.getElementById('scat').options[document.getElementById('scat').selectedIndex].text + '-';
+			document.getElementById('scat').value = '';
+		}
+		else
+		{
+			sr = sr + "-" + document.getElementById('scat').options[document.getElementById('scat').selectedIndex].text;
 		}
 		if(document.getElementById('sdate').value)
 		{
-			sr = sr + document.getElementById('sdate').value+ '-';
+			sr = sr + "-" + document.getElementById('sdate').value;
 		}
 		if(document.getElementById('saddress').value)
 		{
-			sr = sr + document.getElementById('saddress').value+ '-';
+			sr = sr + "-" + document.getElementById('saddress').value;
 		}
 		if(sr)
 		{
@@ -92,40 +104,40 @@ class eventsearch extends WP_Widget {
   		 <h3><?php echo $title; ?> </h3> 
         <?php endif;?>
          <form action="<?php echo home_url();?>/" id="srchevent" name="srchevent" method="get"> 
-     <input type="hidden" name="s" value="" id="sr" />
-     <input type="hidden" name="t" value="event" />
+			<input type="hidden" name="s" value="" id="sr" />
+			<input type="hidden" name="t" value="event" />
          
           
-          <div class="row">
+          <div class="form_row">
           <?php if(@$_REQUEST['skw'])
 		  {
 			$skw = $_REQUEST['skw'];  
 		  }?>
-          	<span><?php echo SEARCH_EVENT_TEXT;?></span>
+          	<label><?php echo SEARCH_EVENT_TEXT;?></label>
             <input type="text" onblur="if (this.value == '') {this.value = '<?php _e('Search for',T_DOMAIN);?>';}" onfocus="if (this.value == '<?php _e('Search for',T_DOMAIN);?>') {this.value = '';}" class="textfield xl" id="skw" name="skw" value="<?php echo @$skw;?>" />
           
           </div>
-		  <div class="row">
-          
-		  	<span><?php echo SELECT_CATEGORY_TEXT;?></span>
+		  <div class="form_row">
+          <label><?php echo SELECT_CATEGORY_TEXT;?></label>
 		  <?php echo get_category_dl_options(@$_REQUEST['scat']);?>
           
           </div>
-		  <div class="row">
-		  <span><?php echo EVENT_START_TEXT;?></span>
+		  <div class="form_row">
+		  <label><?php echo EVENT_START_TEXT;?></label>
           <input type="text" name="sdate" id="sdate" value="<?php echo @$_REQUEST['sdate'];?>"   size="25"  />
 		  </div>
-		  <div class="row">
-		  <span><?php echo ZIP_OR_ADD_TEXT;?></span>
+		  <div class="form_row">
+		  <label><?php echo ZIP_OR_ADD_TEXT;?></label>
           <input name="saddress" id="saddress" type="text" value="<?php echo @$_REQUEST['saddress'];?>" class="textfield xl"  />
 		  </div>
-		  <div class="row">
+		  <div class="form_row">
 		  <?php 
 			$default_custom_metaboxes = get_search_post_fields_templ_plugin('event','custom_fields','post');
 			display_search_custom_post_field_plugin($default_custom_metaboxes,'custom_fields','post');//displaty custom fields html. ?>
 		  </div>
-		  <input name="search" type="submit" value="<?php echo SEARCH_EVENTS_TEXT;?>" class="b_search_event" onclick="set_search();" />
-		  <div class="clearfix"></div>
+		  <div class="form_row">
+          <input name="search" type="submit" value="<?php echo SEARCH_EVENTS_TEXT;?>" class="b_search_event" onclick="set_search();" />
+		  </div>
 	</div>
 	</form>
 	<?php
@@ -177,8 +189,12 @@ class eventwidget extends WP_Widget {
                 
 				<?php 
 			        global $post;
-					$cat_id = icl_object_id($category,'category',false,ICL_LANGUAGE_CODE);
-					$args = array( 'suppress_filters' => false, 'numberposts' => $post_number, 'post_type' => 'post' , 'category_name' =>  $cat_id);
+				   $suppress_filters='true';
+				   if(is_plugin_active('wpml-translation-management/plugin.php') && function_exists('icl_object_id')){
+						$category = icl_object_id($category,'category',false,ICL_LANGUAGE_CODE);
+						$suppress_filters='false';
+				   }
+				$args = array( 'suppress_filters' => $suppress_filters , 'numberposts' => $post_number, 'post_type' => 'post' , 'category_name' =>  $category);
 	            	$latest_menus = get_posts($args);
                     foreach($latest_menus as $post) :
                     setup_postdata($post);
@@ -195,10 +211,10 @@ class eventwidget extends WP_Widget {
 				<a href="<?php echo get_permalink($post->ID); ?>" class="post_img"><img src="<?php echo get_stylesheet_directory_uri()."/images/img_not_available.png"; ?>"  alt="<?php echo $post_img[0]['alt']; ?>" /></a>
 				<?php } ?>
                    <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>  </h3>
-                   <p class="date"><?php the_time('j F Y') ?><?php _e(' at ',T_DOMAIN); ?><?php the_time('H : s A') ?></p> 
+                   <p class="date"><?php the_time('j F Y') ?> <?php _e('at',T_DOMAIN);?> <?php the_time('H : s A') ?></p> 
                </li>
     
-<?php endforeach; ?>
+<?php endforeach; wp_reset_query();?>
 <?php
 	    echo '</ul>';
 		echo $after_widget;
@@ -252,7 +268,7 @@ register_widget('eventwidget');
 class onecolumnslist extends WP_Widget {
 	function onecolumnslist() {
 	//Constructor
-		$widget_ops = array('classname' => 'widget category List View', 'description' => 'Display a list of Latest Events. To be placed in Front Content widget area.' );
+		$widget_ops = array('classname' => 'widget category List View', 'description' => 'Display a list of Latest Events. To be placed in Front page sidbar widget area.' );
 		$this->WP_Widget('onecolumnslist', 'T &rarr; Latest Events', $widget_ops);
 	}
 
@@ -293,11 +309,21 @@ class onecolumnslist extends WP_Widget {
 			?>
 		  <?php 
 			global $post,$wpdb;
+			 
+			
 			if($category)
 			{
 				$sqlsql = " and p.ID in (select tr.object_id from $wpdb->term_relationships tr join $wpdb->term_taxonomy t on t.term_taxonomy_id=tr.term_taxonomy_id  join $wpdb->terms tm  on t.term_id=tm.term_id where tm.slug like '$category'  )";
 			}
-			@$sql = "select p.* from $wpdb->posts p where p.post_type='".CUSTOM_POST_TYPE_EVENT."' and p.post_status='publish' $sqlsql order by $orderby limit $post_number";
+			if(is_plugin_active('wpml-translation-management/plugin.php')){
+				$language = ICL_LANGUAGE_CODE;			
+				$icl_translations=$wpdb->prefix."icl_translations icl_translations";
+				@$sql = "select p.* from $wpdb->posts p ,$icl_translations where p.ID=icl_translations.element_id  AND icl_translations.language_code = '".$language."' and  p.post_type='".CUSTOM_POST_TYPE_EVENT."' and p.post_status='publish' $sqlsql order by $orderby limit $post_number";
+			 }else
+			 {
+				@$sql = "select p.* from $wpdb->posts p where p.post_type='".CUSTOM_POST_TYPE_EVENT."' and p.post_status='publish' $sqlsql order by $orderby limit $post_number";
+			 }			
+			
 			$latest_menus = $wpdb->get_results($sql);
 			$pcount=0;
 			if($latest_menus)
@@ -418,18 +444,19 @@ class spotlightpost extends WP_Widget {
 		        <?php endif;?>
 				<?php 
 			        global $post;
-					$args = array( 'numberposts' => $post_number,'taxonomy' => CUSTOM_CATEGORY_TYPE_EVENT , 'category' => $category, 'post_type' => CUSTOM_POST_TYPE_EVENT);
+					$args = array( 'numberposts' => -1,'taxonomy' => CUSTOM_CATEGORY_TYPE_EVENT , 'category' => $category, 'post_type' => CUSTOM_POST_TYPE_EVENT);
 			        $latest_menus = get_posts( $args );
 				
-                    foreach($latest_menus as $post) :
+                    $v = 0;
+					foreach($latest_menus as $post) :
                     setup_postdata($post); ?>
 	 
-                <?php if(get_post_meta($post->ID,'video',true)){?>
+                <?php  if(get_post_meta($post->ID,'video',true) != "" && $v < $post_number){ ?>
                      <div class="video">
                     <?php echo get_post_meta($post->ID,'video',true);?>
                     	<h4><a class="widget-title" href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h4>
                     </div>
-                    <?php }?>   
+                    <?php $v++; }?>   
                  <?php endforeach; ?>
                 <?php
 
@@ -547,13 +574,19 @@ class categoryposts extends WP_Widget {
 	$today = date('Y-m-d G:i:s');
 	wp_reset_query();
 	//$category = explode(",",$category);
+	
+	if(is_plugin_active('wpml-translation-management/plugin.php')){
+		$category_ID =  get_term_by( 'slug',$slug, 'ecategory' );	
+		$slug=$category_ID->slug;
+		$title=ucfirst($category_ID->name);
+	}
 	if($slug)
 	{
 		$args=
 		array( 
 		'post_type' => 'event',
 		'posts_per_page' => $post_number,
-		'post_status' => array('publish'),
+		'post_status' => array('publish','private'),
 		'meta_query' => array(
 				'relation' => 'OR',
 				array(
@@ -565,7 +598,7 @@ class categoryposts extends WP_Widget {
 				array(
 					'key' => 'end_date',
 					'value' =>  $today,
-					'compare' => '>'
+					'compare' => '>='
 				)
 			),
 		'tax_query' => array(
@@ -575,7 +608,10 @@ class categoryposts extends WP_Widget {
 				'terms' => array($slug),
 				'operator'  => 'IN'
 			)
-			)
+			),
+			'meta_key' => 'st_date',
+			'orderby' => 'meta_value',
+			'order' => 'DESC'
 		);
 		
 	}
@@ -591,21 +627,28 @@ class categoryposts extends WP_Widget {
 					array(
 						'key' => 'st_date',
 						'value' => $today,
-						'compare' => '>',
+						'compare' => '>=',
 						'type'=> 'text'
 					),
 					array(
 						'key' => 'end_date',
 						'value' =>  $today,
-						'compare' => '>'
+						'compare' => '>='
 					)
-				)
+				),
+				'meta_key' => 'st_date',
+				'orderby' => 'meta_value',
+				'order' => 'DESC'
 			);
 	}
 	$post_query = null;
+	remove_action('pre_get_posts','slider_advance_search');
 	remove_all_actions('posts_where');
+	remove_all_actions('posts_orderby');
+	
+	add_filter( 'posts_clauses', 'remove_recurring_event',10,2 );
 	$post_query = new WP_Query($args);
-	//print_r($post_query);
+	remove_filter( 'posts_clauses', 'remove_recurring_event',10,2 );
 	//$latest_menus = $post_query;
 
 	if($post_query)
@@ -616,7 +659,7 @@ class categoryposts extends WP_Widget {
                 	<?php if($title!=""):?>
 						<h4><?php echo $title; ?> </h4>
                     <?php endif;?>
-						<a class="viewall" href="<?php if($slug) { echo get_term_link($slug, CUSTOM_CATEGORY_TYPE_EVENT);  } else { echo "#"; } ?>"><?php _e('VIEW ALL',DOMAIN); ?></a>
+						<a class="viewall" href="<?php if($slug) { echo get_term_link($slug, CUSTOM_CATEGORY_TYPE_EVENT);  } else { echo "#"; } ?>"><?php _e('VIEW ALL',T_DOMAIN); ?></a>
 						<ul class="eventlist collist">
 							<?php 
 							
@@ -633,7 +676,7 @@ class categoryposts extends WP_Widget {
 												
 											//	echo date('d',strtotime($date));
 											?>
-                                            <b><?php echo date("M",strtotime(get_post_meta($post->ID,'st_date',true)));?></b>
+                                            <b><?php echo date_i18n("M",strtotime(get_post_meta($post->ID,'st_date',true)));?></b>
                                         </span>
 										<span class="title"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_title(); ?></a><b><?php echo get_post_meta($post->ID,'address',true);?></b></span>
 									</p>
@@ -688,443 +731,16 @@ class categoryposts extends WP_Widget {
 register_widget('categoryposts');
 // Category POSTS WIDGET ENDS
 
-// FEATURED EVENTS HOME PAGE SLIDER WIDGET STARTS ================================================================================
-class featuredslider extends WP_Widget {
-	function featuredslider() {
-	//Constructor
-		$widget_ops = array('classname' => 'widget night life slider with search', 'description' => 'Display Latest Events in a slider.' );
-		$this->WP_Widget('featuredslider', 'T &rarr; Night Life  Slider With Search', $widget_ops);
-	}
-
-	function widget($args, $instance) {
-	// prints the widget
-
-		extract($args, EXTR_SKIP);
-		echo $before_widget;
-		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
- 		$category = empty($instance['category']) ? '' : apply_filters('widget_category', $instance['category']);
-		$display_text = empty($instance['display_text']) ? '5' : apply_filters('widget_display_text', $instance['display_text']);
-		$post_number = empty($instance['post_number']) ? '5' : apply_filters('widget_post_number', $instance['post_number']);
-		$post_link = empty($instance['post_link']) ? '' : apply_filters('widget_post_link', $instance['post_link']);
-		$character_cout = empty($instance['character_cout']) ? '15' : apply_filters('widget_character_cout', $instance['character_cout']);
-		$search = empty($instance['search']) ? '' : apply_filters('widget_search', $instance['search']);
-		$custom_banner = empty($instance['custom_banner']) ? '' : $instance['custom_banner'];
-		$radius = empty($instance['radius']) ? '' : $instance['radius'];
-		$distance = empty($instance['distance']) ? '' : $instance['distance'];
-		
-		
-		$s1 = empty($instance['s1']) ? '' : apply_filters('widget_s1', $instance['s1']);
-		$s1link = empty($instance['s1link']) ? '' : apply_filters('widget_s1', $instance['s1link']);
-		$s2 = empty($instance['s2']) ? '' : apply_filters('widget_s2', $instance['s2']);
-		$s2link = empty($instance['s2link']) ? '' : apply_filters('widget_s2link', $instance['s2link']);
-		$s3 = empty($instance['s3']) ? '' : apply_filters('widget_s3', $instance['s3']);
-		$s3link = empty($instance['s3link']) ? '' : apply_filters('widget_s3link', $instance['s3link']);
-		$s4 = empty($instance['s4']) ? '' : apply_filters('widget_s4', $instance['s4']);
-		$s4link = empty($instance['s4link']) ? '' : apply_filters('widget_s4link', $instance['s4link']);
-		$s5 = empty($instance['s5']) ? '' : apply_filters('widget_s5', $instance['s5']);
-		$s5link = empty($instance['s5link']) ? '' : apply_filters('widget_s5link', $instance['s5link']);
-		$s6 = empty($instance['s6']) ? '' : apply_filters('widget_s6', $instance['s6']);
-		$s6link = empty($instance['s6link']) ? '' : apply_filters('widget_s6link', $instance['s6link']);
-		$s7 = empty($instance['s7']) ? '' : apply_filters('widget_s7', $instance['s7']);
-		$s7link = empty($instance['s7link']) ? '' : apply_filters('widget_s7link', $instance['s7link']);
-		$s8 = empty($instance['s8']) ? '' : apply_filters('widget_s8', $instance['s8']);
-		$s8link = empty($instance['s8link']) ? '' : apply_filters('widget_s8link', $instance['s8link']);
-		$s9 = empty($instance['s9']) ? '' : apply_filters('widget_s9', $instance['s9']);
-		$s9link = empty($instance['s9link']) ? '' : apply_filters('widget_s9link', $instance['s9link']);
-		$s10 = empty($instance['s10']) ? '' : apply_filters('widget_s10', $instance['s10']);
-		$s10link = empty($instance['s10link']) ? '' : apply_filters('widget_s10link', $instance['s10link']);
-		
-	global $post,$wpdb;
-	$count_posts = wp_count_posts(CUSTOM_POST_TYPE_EVENT);
-	$today = date('Y-m-d G:i:s');
-	remove_filter('posts_where', 'event_where',10);
-	remove_filter('posts_where', 'adv_searching_filter_where');
-	?>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flexslider.css" type="text/css" media="screen" />
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.flexslider-min.js"></script>
-	<?php
-					if(isset($instance['custom_banner']) && $instance['custom_banner'] == 1){
-			?>
-						<div class="flexslider">
-							<div class="slides_container">
-								<ul class="slides">
-									<?php if ( $s1 <> "" ) { ?><li><a class="" href="<?php echo $s1link; ?>"><img src="<?php echo $s1; ?>"  alt=""/></a></li><?php } ?>
-									<?php if ( $s2 <> "" ) { ?><li><a  class="" href="<?php echo $s2link; ?>"><img src="<?php echo $s2; ?>" alt=""/></a></li><?php } ?>
-									<?php if ( $s3 <> "" ) { ?><li><a  class="" href="<?php echo $s3link; ?>"><img src="<?php echo $s3; ?>" alt="" /></a></li><?php } ?>
-									<?php if ( $s4 <> "" ) { ?><li><a  class="" href="<?php echo $s4link; ?>"><img src="<?php echo $s4; ?>"  alt=""  /></a></li><?php } ?>
-									<?php if ( $s5 <> "" ) { ?><li><a  class="" href="<?php echo $s5link; ?>"><img src="<?php echo $s5; ?>" alt=""  /></a></li><?php } ?>
-									<?php if ( $s6 <> "" ) { ?><li><a class="" href="<?php echo $s6link; ?>"><img src="<?php echo $s6; ?>" alt=""   /></a></li><?php } ?>
-									<?php if ( $s7 <> "" ) { ?><li><a class="" href="<?php echo $s7link; ?>"><img src="<?php echo $s7; ?>"  alt=""   /></a></li><?php } ?>
-									<?php if ( $s8 <> "" ) { ?><li><a class="" href="<?php echo $s8link; ?>"><img src="<?php echo $s8; ?>" alt=""   /></a></li><?php } ?>
-									<?php if ( $s9 <> "" ) { ?><li><a style="display:block;" class="" href="<?php echo $s9link; ?>"><img src="<?php echo $s9; ?>" alt=""   /></a></li><?php } ?>
-									<?php if ( $s10 <> "" ) { ?><li><a class="" href="<?php echo $s10link; ?>"><img src="<?php echo $s10; ?>"  alt=""  /></a></li><?php } ?>
-								</ul>
-								<?php
-								 if(isset($search) && $search != '')
-								   {?>
-										<script type="text/javascript">
-													jQuery(function(){
-														var pickerOpts = {						
-															dateFormat: 'yy-mm-dd'
-														};	
-														jQuery("#header_search_date").datepicker(pickerOpts);
-													});
-												</script>
-										   <div class="slider_content">
-												<h2><strong><?php printf($display_text,$count_posts->publish); ?></strong></h2>
-												<?php echo search_form('search_box','header_search_date',$radius,$distance);	?>
-												
-											</div>
-								<?php 
-								}
-								?>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						
-				<?php }else{ 
-	if($category)
-	{
-		$args=
-		array( 
-		'post_type' => 'event',
-		'posts_per_page' => $post_number,
-		'post_status' => array('publish'),
-		'meta_query' => array(
-				'relation' => 'AND',
-				array(
-						'key' => 'featured_h',
-						'value' =>  'h',
-						'compare' => '='
-					),
-					array(
-						'key' => 'st_date',
-						'value' => $today,
-						'compare' => '<=',
-						'type'=> 'text'
-					),
-				array(
-					'key' => 'end_date',
-					'value' =>  $today,
-					'compare' => '>'
-				)
-			),
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'ecategory',
-				'field' => 'slug',
-				'terms' => array($category),
-				'operator'  => 'IN'
-			)
-			)
-		);
-		
-	}
-	else
-	{
-		$args=
-			array( 
-			'post_type' => 'event',
-			'posts_per_page' => $post_number,
-			'post_status' => array('publish'),
-			'meta_query' => array(
-					'relation' => 'AND',
-					array(
-						'key' => 'end_date',
-						'value' => $today,
-						'compare' => '>',
-						'type'=> 'text'
-					),
-					array(
-						'key' => 'st_date',
-						'value' => $today,
-						'compare' => '<=',
-						'type'=> 'text'
-					),
-					array(
-						'key' => 'featured_h',
-						'value' =>  'h',
-						'compare' => '='
-					)
-				)
-			);
-	}
-	$post_query = null;
-	$post_query = new WP_Query($args);
-	
-	if($post_query)
-	{ ?>		
-        <div class="flexslider">
-		<span class="h_featured"><?php echo $title; ?> </span>
-		<ul class="slides">
-        <?php 
-			while($post_query->have_posts()): $post_query->the_post();
-			setup_postdata($post);
-	    ?>        
-		<li> 
-        <?php		
-			if ( current_theme_supports( 'get-the-image' ) ) : 	
-	     		get_the_image(array('post_id'=> get_the_ID(),'size'=>'home-page-slider','image_class'=>'img post_img listimg','default_image'=>get_stylesheet_directory_uri()."/images/no-image_full.jpg"));					
-			endif; 
-		?>
-        
-        
-                <div class="flex-caption">
-                    <div class="slide_event_info">
-                        <span class="image"><?php echo date('d',strtotime((get_post_meta($post->ID,'st_date',true))));?></span>
-                        <p>
-                            <span><?php echo get_formated_date(get_post_meta($post->ID,'st_date',true));?></span>
-                            <a href="#"><?php the_title(); ?></a>
-                        </p>
-                    </div>
-            	</div>
-        
-        </li>
-<?php endwhile; ?>
-<?php
-		   echo '</ul>';
-		   if(isset($search) && $search != '')
-		   {?>
-				<script type="text/javascript">
-							jQuery(function(){
-								var pickerOpts = {						
-									dateFormat: 'yy-mm-dd'
-								};	
-								jQuery("#header_search_date").datepicker(pickerOpts);
-							});
-				</script>
-					 <div class="slider_content">
-						<h2><strong><?php printf($display_text,$count_posts->publish); ?></strong></h2>
-						
-							<?php echo search_form('search_box','header_search_date',$radius,$distance);	?>
-						
-					</div>
-			<?php 
-			}
-			?>
-		   </div>
-		   <?php
-		   }
-		}
-		echo $after_widget;
-	}
-
-	function update($new_instance, $old_instance) {
-	//save the widget
-		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['category'] = strip_tags($new_instance['category']);
-		$instance['display_text'] = strip_tags($new_instance['display_text']);
-		$instance['post_number'] = strip_tags($new_instance['post_number']);
-		$instance['post_link'] = strip_tags($new_instance['post_link']);
-		$instance['character_cout'] = strip_tags($new_instance['character_cout']);
-		$instance['search'] = strip_tags($new_instance['search']);
-		$instance['custom_banner'] = strip_tags($new_instance['custom_banner']);
-		$instance['radius'] = strip_tags($new_instance['radius']);
-		$instance['distance'] = strip_tags($new_instance['distance']);
-		
-		//  If Custom Banner Slider is selected
-			$instance['s1'] = ($new_instance['s1']);
-			$instance['s1link'] = ($new_instance['s1link']);
-			$instance['s2'] = ($new_instance['s2']);
-			$instance['s2link'] = ($new_instance['s2link']);
-			$instance['s3'] = ($new_instance['s3']);
-			$instance['s3link'] = ($new_instance['s3link']);
-			$instance['s4'] = ($new_instance['s4']);
-			$instance['s4link'] = ($new_instance['s4link']);
-			$instance['s5'] = ($new_instance['s5']);
-			$instance['s5link'] = ($new_instance['s5link']);
-			$instance['s6'] = ($new_instance['s6']);
-			$instance['s6link'] = ($new_instance['s6link']);
-			$instance['s7'] = ($new_instance['s7']);
-			$instance['s7link'] = ($new_instance['s7link']);
-			$instance['s8'] = ($new_instance['s8']);
-			$instance['s8link'] = ($new_instance['s8link']);
-			$instance['s9'] = ($new_instance['s9']);
-			$instance['s9link'] = ($new_instance['s9link']);
-			$instance['s10'] = ($new_instance['s10']);
-			$instance['s10link'] = ($new_instance['s10link']);
-		
-		return $instance;
-	}
-
-	function form($instance) {
-	//widgetform in backend
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'category' => '', 'post_number' => '','character_cout' => '' ) );
-		$title = strip_tags($instance['title']);
-		$category = strip_tags($instance['category']);
-		$display_text = strip_tags($instance['display_text']);
-		$post_number = strip_tags($instance['post_number']);
-		$post_link = strip_tags($instance['post_link']);
-		$search = strip_tags($instance['search']);
-		$character_cout = strip_tags($instance['character_cout']);
-		$custom_banner = strip_tags($instance['custom_banner']);
-		$radius = strip_tags($instance['radius']);
-		$distance = strip_tags($instance['distance']);
-		//  If Custom Banner Slider is selected.
-				$s1 = ($instance['s1']);
-				$s1link = ($instance['s1link']);
-				$s2 = ($instance['s2']);
-				$s2link = ($instance['s2link']);
-				$s3 = ($instance['s3']);
-				$s3link = ($instance['s3link']);
-				$s4 = ($instance['s4']);
-				$s4link = ($instance['s4link']);
-				$s5 = ($instance['s5']);
-				$s5link = ($instance['s5link']);
-				$s6 = ($instance['s6']);
-				$s6link = ($instance['s6link']);
-				$s7 = ($instance['s7']);
-				$s7link = ($instance['s7link']);
-				$s8 = ($instance['s8']);
-				$s8link = ($instance['s8link']);
-				$s9 = ($instance['s9']);
-				$s9link = ($instance['s9link']);
-				$s10 = ($instance['s9']);
-				$s10link = ($instance['s10link']);
-?>
-				<script type="text/javascript">
-					jQuery(document).ready(function($) {
-						$('input[id=<?php echo $this->get_field_id('custom_banner'); ?>]').click(function(){
-							$('#<?php echo $this->get_field_id('home_slide_default'); ?>').slideToggle('slow');
-							$('#<?php echo $this->get_field_id('home_slide_custom'); ?>').slideToggle('slow');
-						});
-					});
-					jQuery(document).ready(function($) {
-						jQuery('#<?php echo $this->get_field_id('search'); ?>').change(function (){
-							$('#<?php echo $this->get_field_id('home_slide_distance'); ?>').slideToggle('slow');
-						});
-					});
-				</script>
-		
-		<p>
-		  <label for="<?php echo $this->get_field_id('search'); ?>"><?php _e('show search on slider',T_DOMAIN); ?>:
-		  <select id="<?php echo $this->get_field_id('search'); ?>" name="<?php echo $this->get_field_name('search'); ?>" style="width:50%;">
-		  <option value="1" <?php if(esc_attr($search)){ echo 'selected="selected"';}?>><?php _e('Yes',T_DOMAIN);?></option>
-		  <option value="0" <?php if(!esc_attr($search)){ echo 'selected="selected"';}?>><?php _e('No',T_DOMAIN);?></option>
-		  </select>
-		  </label>
-		</p>
-
-		<div id="<?php echo $this->get_field_id('home_slide_distance'); ?>" style="<?php if($search =='1'){ ?>display:block;<?php }else{?>display:none;<?php }?>">
-			<p>
-			  <label for="<?php echo $this->get_field_id('distance'); ?>"><?php _e('Distance in',T_DOMAIN); ?>:
-			   <select id="<?php echo $this->get_field_id('distance'); ?>" name="<?php echo $this->get_field_name('distance'); ?>" style="width:50%;">
-				  <option value="Miles" <?php if(esc_attr($distance) == 'Miles'){ echo 'selected="selected"';}?>><?php _e('Miles',T_DOMAIN);?></option>
-				  <option value="Kilometer" <?php if(esc_attr($distance) == 'Kilometer'){ echo 'selected="selected"';}?>><?php _e('Kilometer',T_DOMAIN);?></option>
-			  </select>
-			  </label>
-			</p>
-			<p>
-			  <label for="<?php echo $this->get_field_id('radius'); ?>"><?php _e('Radius',T_DOMAIN); ?>:
-			  <input class="widefat" id="<?php echo $this->get_field_id('radius'); ?>" name="<?php echo $this->get_field_name('radius'); ?>" type="text" value="<?php echo esc_attr($radius); ?>" />
-			  </label>
-			</p>
-		</div>
-        <p>
-          <label for="<?php echo $this->get_field_id('display_text'); ?>"><?php echo DISPLAY_TEXT; ?>:
-          <input class="widefat" id="<?php echo $this->get_field_id('display_text'); ?>" name="<?php echo $this->get_field_name('display_text'); ?>" type="text" value="<?php echo esc_attr($display_text); ?>" />
-          </label>
-        </p>
-		<p>
-		  <label for="<?php echo $this->get_field_id('custom_banner'); ?>">
-			<input id="<?php echo $this->get_field_id('custom_banner'); ?>" name="<?php echo $this->get_field_name('custom_banner'); ?>" type="checkbox" value="1" <?php if($custom_banner =='1'){ ?>checked=checked<?php } ?>style="width:10px;" onclick="" /> <?php _e('<b>Use custom images?</b>',T_DOMAIN);?>	<br/> 
-		  </label>
-		</p>
-			
-				<div id="<?php echo $this->get_field_id('home_slide_default'); ?>" style="<?php if($custom_banner =='1'){ ?>display:none;<?php }else{?>display:block;<?php }?>">
-					<p>
-					  <label for="<?php echo $this->get_field_id('category'); ?>"><?php echo CATEGORY_SLUGS_TEXT; ?>:
-					  <input class="widefat" id="<?php echo $this->get_field_id('category'); ?>" name="<?php echo $this->get_field_name('category'); ?>" type="text" value="<?php echo esc_attr($category); ?>" />
-					  </label>
-					</p>
-                    <p>
-					  <label for="<?php echo $this->get_field_id('post_number'); ?>"><?php echo NUMBER_POSTS_TEXT; ?>:
-					  <input class="widefat" id="<?php echo $this->get_field_id('post_number'); ?>" name="<?php echo $this->get_field_name('post_number'); ?>" type="text" value="<?php echo esc_attr($post_number); ?>" />
-					  </label>
-					</p>
-				</div>	
-			<p>
-			
-				<div id="<?php echo $this->get_field_id('home_slide_custom'); ?>" style="<?php if($custom_banner =='1'){ ?>display:block;<?php }else{?>display:none;<?php }?>">
-					<p><label for="<?php echo $this->get_field_id('s1'); ?>"><?php _e('Banner Slider Image 1 full URL <small>(ex.http://templatic.com/images/banner1.png, Image size 980x425 )</small>',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s1'); ?>" name="<?php echo $this->get_field_name('s1'); ?>" value="<?php echo esc_attr($s1); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s1link'); ?>"><?php _e('Banner Slider Image 1 Link <small>(ex.http://templatic.com)</small>',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s1link'); ?>" name="<?php echo $this->get_field_name('s1link'); ?>" value="<?php echo esc_attr($s1link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s2'); ?>"><?php _e('Banner Slider Image 2 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s2'); ?>" name="<?php echo $this->get_field_name('s2'); ?>" value="<?php echo esc_attr($s2); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s2link'); ?>"><?php _e('Banner Slider Image 2 Link',T_DOMAIN);?>
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s2link'); ?>" name="<?php echo $this->get_field_name('s2link'); ?>" value="<?php echo esc_attr($s2link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s3'); ?>"><?php _e('Banner Slider Image 3 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s3'); ?>" name="<?php echo $this->get_field_name('s3'); ?>" value="<?php echo esc_attr($s3); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s3link'); ?>"><?php _e('Banner Slider Image 3 Link',T_DOMAIN);?>
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s3link'); ?>" name="<?php echo $this->get_field_name('s3link'); ?>" value="<?php echo esc_attr($s3link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s4'); ?>"><?php _e('Banner Slider Image 4 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s4'); ?>" name="<?php echo $this->get_field_name('s4'); ?>" value="<?php echo esc_attr($s4); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s4link'); ?>"><?php _e('Banner Slider Image 4 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s4link'); ?>" name="<?php echo $this->get_field_name('s4link'); ?>" value="<?php echo esc_attr($s4link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s5'); ?>"><?php _e('Banner Slider Image 5 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s5'); ?>" name="<?php echo $this->get_field_name('s5'); ?>" value="<?php echo esc_attr($s5); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s5link'); ?>"><?php _e('Banner Slider Image 5 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s5link'); ?>" name="<?php echo $this->get_field_name('s5link'); ?>" value="<?php echo esc_attr($s5link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s6'); ?>"><?php _e('Banner Slider Image 6 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s6'); ?>" name="<?php echo $this->get_field_name('s6'); ?>" value="<?php echo esc_attr($s6); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s6link'); ?>"><?php _e('Banner Slider Image 6 Link',T_DOMAIN);?>
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s6link'); ?>" name="<?php echo $this->get_field_name('s6link'); ?>" value="<?php echo esc_attr($s6link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s7'); ?>"><?php _e('Banner Slider Image 7 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s7'); ?>" name="<?php echo $this->get_field_name('s7'); ?>" value="<?php echo esc_attr($s7); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s7link'); ?>"><?php _e('Banner Slider Image 7 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s7link'); ?>" name="<?php echo $this->get_field_name('s7link'); ?>" value="<?php echo esc_attr($s7link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s8'); ?>"><?php _e('Banner Slider Image 8 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s8'); ?>" name="<?php echo $this->get_field_name('s8'); ?>" value="<?php echo esc_attr($s8); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s8link'); ?>"><?php _e('Banner Slider Image 8 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s8link'); ?>" name="<?php echo $this->get_field_name('s8link'); ?>" value="<?php echo esc_attr($s8link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s9'); ?>"><?php _e('Banner Slider Image 9 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s9'); ?>" name="<?php echo $this->get_field_name('s9'); ?>" value="<?php echo esc_attr($s9); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s9link'); ?>"><?php _e('Banner Slider Image 9 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s9link'); ?>" name="<?php echo $this->get_field_name('s9link'); ?>" value="<?php echo esc_attr($s9link); ?>"></label>
-					</p>
-					<p><label for="<?php echo $this->get_field_id('s10'); ?>"><?php _e('Banner Slider Image 10 full URL',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s10'); ?>" name="<?php echo $this->get_field_name('s10'); ?>" value="<?php echo esc_attr($s10); ?>"></label>
-					</p> 
-					<p><label for="<?php echo $this->get_field_id('s10link'); ?>"><?php _e('Banner Slider Image 10 Link',T_DOMAIN);?> 
-					<input type="text" class="widefat" id="<?php echo $this->get_field_id('s10link'); ?>" name="<?php echo $this->get_field_name('s10link'); ?>" value="<?php echo esc_attr($s10link); ?>"></label>
-					</p>
-				</div>
-			</p>
- 
-<?php
-	}
-}
-register_widget('featuredslider');
-// FEATURED EVENTS HOME PAGE SLIDER WIDGET ENDS
-
-// FOOTER SEARCH WIDGET STARTS =============================================================
-class footersearchwidget extends WP_Widget {
+// EVENT SEARCH WIDGET STARTS =============================================================
+class footersearchwidget extends WP_Widget  {
 	function footersearchwidget() {
 	//Constructor
-		$widget_ops = array('classname' => 'widget Footer search', 'description' => 'Display search widget at footer.' );		
-		$this->WP_Widget('footersearchwidget', 'T &rarr; Footer search widget', $widget_ops);
+		$widget_ops = array('classname' => 'widget Event search', 'description' => 'Display event search widget in Above Footer area.' );		
+		$this->WP_Widget('footersearchwidget', 'T &rarr; Event search widget', $widget_ops);
 	}
 	function widget($args, $instance) {
+	
+	
 	// prints the widget
 		extract($args, EXTR_SKIP);
 		$radius = empty($instance['radius']) ? '' : $instance['radius'];
@@ -1139,11 +755,11 @@ class footersearchwidget extends WP_Widget {
 		jQuery("#footer_search_date").datepicker(pickerOpts);
 	});
 </script>
-<?php
-
-echo search_form('footer_container search_box','footer_search_date',$radius,$distance);
-
- ?>
+ 
+<div class="footer_bg1">
+	<?php echo search_form('footer_container search_box','footer_search_date',$radius,$distance); ?>
+</div> 
+ 
 <?php }
 	function update($new_instance, $old_instance) {
 	//save the widget
@@ -1273,10 +889,10 @@ class rssfeed extends WP_Widget {
     	<div class="widget clearfix" >
         <div class="newsletter">
             <h3> 
-             <?php if($title){?><span class="title"><?php _e($title,T_DOMAIN);?></span> <?php }?> 
+             <?php if($title){?><span class="title"><?php echo sprintf(__('%s',T_DOMAIN), $title);?></span> <?php }?> 
               </h3>
             <?php if ( $text <> "" ) { ?>	 
-                 <a target="_blank" href="<?php if($id){echo 'http://feeds2.feedburner.com/'.$id;}else{bloginfo('rss_url');} ?>" ><?php _e($text,T_DOMAIN);?></a>
+                 <a target="_blank" href="<?php if($id){echo 'http://feeds2.feedburner.com/'.$id;}else{bloginfo('rss_url');} ?>" ><?php echo sprintf(__('%s',T_DOMAIN), $text);?></a>
             <?php } ?>
   			</div>
 		  </div>  <!-- #end -->
@@ -1319,16 +935,12 @@ class addeventurl extends WP_Widget {
 ?>
     
 	<?php if ( $url <> "" ) { ?>
-			<div id="menu-primary" class="menu-container sub_event">
-				<div class="wrap">
-					<div class="menu">
-						<ul id="menu-primary-items" class="">
-							<li>
-         						<a target="_blank" href="<?php echo $url; ?>" ><?php _e($title,T_DOMAIN);?></a>
-							 </li>
-						</ul>
-					</div>	
-				</div>
+			<div id="nav_widget" class="sub_event">
+				<ul class="clearfix">
+                    <li>
+                        <a target="_blank" href="<?php echo $url; ?>" ><?php echo sprintf(__('%s',T_DOMAIN), $title);?></a>
+                     </li>
+                </ul>
 			</div>
     <?php } ?>
 		
@@ -1353,4 +965,70 @@ class addeventurl extends WP_Widget {
 	}
 }
 register_widget('addeventurl');
+
+/* header search widget */
+class searchwithnavigation extends WP_Widget {
+	function searchwithnavigation() {
+	//Constructor
+		$widget_ops = array('classname' => 'widget searchwithnavigation', 'description' => apply_filters('templ_searchwithnavigation_widget_desc_filter',__('Search widget specially for main nanigaion',T_DOMAIN)) );		
+		$this->WP_Widget('widget_searchwithnavigation', apply_filters('templ_searchwithnavigation_widget_title_filter',__('T &rarr; Primary Navigation Search',T_DOMAIN)), $widget_ops);
+	}
+	function widget($args, $instance) {
+	// prints the widget
+		extract($args, EXTR_SKIP);
+		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
+		$post_type = empty($instance['post_type']) ? 'post' : apply_filters('widget_post_type', $instance['post_type']);
+		if($post_type){
+			$post_type = implode(',',$post_type);
+		} 
+		$search = '<form method="get" class="search-form" id="search-form' . esc_attr( $this->id_base ) . '" action="' . home_url() . '/"><div>';
+
+			/* If a search label was set, add it. */
+			if ( !empty( $instance['title'] ) )
+				$search .= '<label for="search-text' . esc_attr( $this->id_base ) . '">' . $instance['title'] . '</label>';
+
+			/* Search form text input. */
+			$search .= '<input class="search-text" type="text" name="s" id="search-text' . esc_attr( $this->id_base ) . '" value="' . $title . '" onfocus="if(this.value==this.defaultValue)this.value=\'\';" onblur="if(this.value==\'\')this.value=this.defaultValue;" />';
+			$search .='<input type="hidden" name = "search_type" value="'.$post_type.'"/>';
+			/* Close the form. */
+			$search .= '</div></form>'; 
+			echo $before_widget;
+			echo $search;
+			echo $after_widget;
+	}
+	function update($new_instance, $old_instance) {
+		$instance = $old_instance;			
+		$instance['title'] = ($new_instance['title']);
+		$instance['post_type'] = ($new_instance['post_type']);		
+		return $instance;
+	}
+	function form($instance) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'post_type' => '') );		
+		$title = strip_tags($instance['title']);
+		$post_types = ($instance['post_type']);
+		if(empty($post_types)){ $post_types =array('post'); }
+ ?>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'hybrid-core' ); ?></label>
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Search From', 'hybrid-core' ); ?>:</label>
+			<?php
+				$custom_post_types = get_post_types($custom_post_types_args,'objects');
+				$i = 0;
+				foreach ($custom_post_types as $content_type) {
+					if($content_type->name!='nav_menu_item' && $content_type->name!='attachment' && $content_type->name!='revision' && $content_type->name!='page')
+						{ ?>
+							  <label for="post_type_<?php echo $i; ?>"><input type="checkbox" name="<?php echo $this->get_field_name( 'post_type' ) ."[]"; ?>" id="post_type_<?php echo $i; ?>" value="<?php echo $content_type->name; ?>" <?php if(in_array($content_type->name,$post_types)) { ?> checked="checked" <?php } ?> />
+							  <?php echo $content_type->label;?></label>
+				<?php		}						
+				}
+
+			?>
+		</p>
+<?php
+	}
+}
+register_widget('searchwithnavigation');
 ?>

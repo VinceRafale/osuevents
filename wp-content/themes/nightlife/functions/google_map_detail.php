@@ -1,7 +1,7 @@
 <?php
 /* show map on detail page */
  if($geo_latitude && $geo_longitude){?>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.5&sensor=false"></script>
 
 <div id="map-container"></div>
 <div id="dir-container"></div>
@@ -113,7 +113,7 @@ var Demo = {
  	var marker = new google.maps.Marker({
         position: latLng, 
         map: Demo.map,
-        title:"<?php echo trim($post->post_title);?>"
+        title:"<?php echo htmlentities(trim($post->post_title),ENT_QUOTES);?>"
     });   
 	
     // Show directions onload

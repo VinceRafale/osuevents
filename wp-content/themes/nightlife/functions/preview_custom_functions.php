@@ -1,19 +1,34 @@
 <?php 
 /*Remove action for preview page  */
-session_start();
+if(session_id()=="")
+	session_start();
 if(isset($_POST['preview'])){	
 	$_SESSION['custom_fields'] = $_POST; 
 }
-if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
-{	
-	if($_FILES['organizer_logo']['name'])
+if(isset($_SESSION['custom_fields']['cur_post_type']) && $_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
+{		
+	/*Add wp_title filter for add title for preview page */
+	add_filter('wp_title','preview_page_title',10,2);	
+	function preview_page_title($title,$separator)
 	{
-		$upload_file['organizer_logo'] = get_file_upload($_FILES['organizer_logo']);
-		$_SESSION['upload_file'] = $upload_file;		
+		if(isset($_REQUEST['page']) && $_REQUEST['page']=='preview'){
+			$title=ucfirst($_SESSION['custom_fields']['cur_post_type'])." Preview";
+		}
+		return $title;
 	}
+
+	if(isset($_FILES) && !empty($_FILES) && !strstr($_SERVER['REQUEST_URI'],'/wp-admin/'))
+	{
+		foreach($_FILES as $key => $FILES)
+		 {		   
+			$file_upload[$key] = get_file_upload($_FILES[$key]);
+		 }
+		 $_SESSION['upload_file'] = $file_upload;	
+	}	
+	
 	remove_action('tmpl_preview_page_gallery','tmpl_preview_detail_page_gallery_display'); /*Remove preview page post image gallery  */
 	remove_action('templ_preview_address_map','templ_preview_address_map_display');/* Remove preview page post map */
-	remove_action('tmpl_preview_page_fields_collection','tmpl_preview_detail_page_fields_collection_display');/* Remove preview post page custom field */
+	remove_action('tmpl_preview_page_fields_collection','tmpl_show_custom_fields_onpreview');/* Remove preview post page custom field */
 	remove_action('templ_preview_page_file_upload','templ_preview_page_file_upload_display');/* Remove preview post page custom field */
 	
 	/*Add action after preview post title */
@@ -38,8 +53,8 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 			?>
 			<div class="event_detail clearfix">
 				<div class="col1">
-				<?php if($st_date!=""):?><p class="date"><span><?php _e('STARTING DATE',T_DOMAIN)?></span><?php echo date("M dS,Y",strtotime($st_date));?></p><?php endif;?>
-				<?php if($end_date!=""):?><p class="date"><span><?php _e('ENDING DATE',T_DOMAIN)?></span><?php echo date("M dS,Y",strtotime($end_date));?></p><?php endif;?>
+				<?php if($st_date!=""):?><p class="date"><span><?php _e('STARTING DATE',T_DOMAIN)?></span><?php echo date_i18n(get_option('date_format'),strtotime($st_date));?></p><?php endif;?>
+				<?php if($end_date!=""):?><p class="date"><span><?php _e('ENDING DATE',T_DOMAIN)?></span><?php echo date_i18n(get_option('date_format'),strtotime($end_date));?></p><?php endif;?>
 				 <?php if($st_time!="" && $end_time!=""):?> <p class="time"><span><?php _e('TIME',T_DOMAIN)?></span><?php echo $st_time." - ".$end_time;?></p><?php endif;?>
                  <?php if($website!="" ):?> <p class="website"><span><?php _e('WEBSITE',T_DOMAIN)?></span><?php echo $website;?></p><?php endif;?>
 				</div>
@@ -58,13 +73,14 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 	{	
 		if(isset($_SESSION))
 		{
-			wp_enqueue_script( 'jquery-ui-tabs' );		
+					
 			$geo_latitude = $_SESSION['custom_fields']['geo_latitude'];
 			$geo_longitude =$_SESSION['custom_fields']['geo_longitude'];
 			$address = $_SESSION['custom_fields']['address'];
 			$map_type =$_SESSION['custom_fields']['map_view'];
 			$post_title=$_SESSION['custom_fields']['post_title'];
 	?>
+    		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 			<script type="text/javascript">
 				jQuery.noConflict();
 				jQuery(document).ready(function($) {
@@ -234,11 +250,11 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 			foreach($post_meta_info_arr as $key=> $post_meta_info)
 			 {				
 				while ($post_meta_info->have_posts()) : $post_meta_info->the_post();
-					$key_custom=get_post_meta($post->ID,'htmlvar_name',true);					
-				
-				if($post->post_name != 'post_excerpt' && $post->post_name != 'post_content' && $post->post_name != 'post_title' && $post->post_name != 'category' && $session[$post->post_name] != '')
-				{										
-					if($key_custom!='st_date' && $key_custom!='end_date' && $key_custom!='st_time' && $key_custom!='end_time' && $key_custom!='event_type' && $key_custom!='phone' && $key_custom!='email' && $key_custom!='website' && $key_custom!='twitter' && $key_custom!='facebook' && $key_custom!='video' && $key_custom!='organizer_name' && $key_custom!='organizer_email' && $key_custom!='organizer_logo' && $key_custom!='organizer_address' && $key_custom!='organizer_contact' && $key_custom!='organizer_website' && $key_custom!='organizer_mobile' && $key_custom!='organizer_desc' && $key_custom!='post_images' && $key_custom!='org_info' && $key_custom!='address' && $key_custom!='map_view'){
+					
+					$key_custom=get_post_meta($post->ID,'htmlvar_name',true);									
+				if($post->post_name != 'post_excerpt' && $post->post_name != 'post_content' && $post->post_name != 'post_title' && $post->post_name != 'category' ){		
+					
+					if($key_custom!='st_date' && $key_custom!='end_date' && $key_custom!='st_time' && $key_custom!='end_time' && $key_custom!='event_type' && $key_custom!='phone' && $key_custom!='email' && $key_custom!='website' && $key_custom!='twitter' && $key_custom!='facebook' && $key_custom!='video' && $key_custom!='organizer_name' && $key_custom!='organizer_email' && $key_custom!='organizer_logo' && $key_custom!='organizer_address' && $key_custom!='organizer_contact' && $key_custom!='organizer_website' && $key_custom!='organizer_mobile' && $key_custom!='organizer_desc' && $key_custom!='post_images' && $key_custom!='org_info' && $key_custom!='address' && $key_custom!='map_view' && $key_custom!='reg_desc'){
 						if($i==0)_e('<h3>Custom Fields</h3>',DOMAIN);
 						
 						if(get_post_meta($post->ID,"ctype",true) == 'multicheckbox')
@@ -250,9 +266,17 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 							echo "<li><p>".$post->post_title." :&nbsp;</p> <p> ".substr($_value,0,-1)."</p></li>"; 
 						}else
 						{
-	
-							 echo "<li><p>".$post->post_title." :&nbsp;</p><p>".$session[$post->post_name]."</p></li>";
-						}
+							if(get_post_meta($post->ID,"ctype",true) == 'upload')
+							{
+							   echo "<li><p>".$post->post_title." : </p> <p> Click here to download File <a href=".$_SESSION['upload_file'][$post->post_name].">Download</a></p></li>";
+							}
+							else
+							{
+							   echo "<li><p>".$post->post_title." :&nbsp;</p><p>".stripslashes($session[$post->post_name])."</p></li>";	
+							}
+							 
+						}	
+						
 						$i++;
 					}					
 				}
@@ -274,7 +298,7 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 			$org_mobile=$_SESSION['custom_fields']['organizer_mobile'];
 			$org_email=$_SESSION['custom_fields']['organizer_email'];
 			$org_website=$_SESSION['custom_fields']['organizer_website'];	
-			$reg_desc=$_SESSION['custom_fields']['reg_desc'];	
+			$reg_desc= stripslashes($_SESSION['custom_fields']['reg_desc']);	
 			$org_logo=$_SESSION['upload_file']['organizer_logo'];
 			$video=$_SESSION['custom_fields']['video'];			
 			if($org_address!="" || $org_contact!="" || $org_mobile!="" || $org_email!="" || $$org_website!='' || $reg_desc!='' || $org_logo!='' || $video!=''):
@@ -295,7 +319,7 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
                     <?php endif;?>
 				</div>				
 				<div class="org_desc"><?php echo $_SESSION['custom_fields']['organizer_desc'];?> </div>     
-				<div class="org_desc"><?php echo $reg_desc;?> </div>       
+				<div class="org_reg_desc"><?php echo $reg_desc;?> </div>       
 			</div>  
 			 <?php if($video):?>
                 <div class="org_video">
@@ -314,5 +338,7 @@ if($_SESSION['custom_fields']['cur_post_type']==CUSTOM_POST_TYPE_EVENT )
 			endif;
 		}		
 	}
+
 }
+
 ?>

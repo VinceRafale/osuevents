@@ -13,9 +13,9 @@
 ?>
 
 				<?php global $wp_query;
-
-				$add_listing_page = get_post_meta( $wp_query->post->ID, '_wp_page_template', true );
-				if((is_author() || is_page() || is_category() || get_post_type()=='post' || is_search()) && $add_listing_page !='page-template_form.php' && $add_listing_page !='page-template_map.php' )
+				$page_template=get_post_meta($post->ID,'_wp_page_template',true);
+				$add_listing_page = get_post_meta( $wp_query->post->ID, '_wp_page_template', true );				
+				if((is_author() || is_404() || is_page() || is_category() || get_post_type()=='post' || get_post_type()=='product' || is_search()) && $add_listing_page !='page-template_form.php' && $add_listing_page !='page-template_map.php' || $page_template =='page-template-archives.php' || $_REQUEST['ptype'] == 'return')
 				{
 					get_sidebar( 'primary' ); // Loads the sidebar-primary template. <br />
 					get_sidebar( 'secondary' ); // Loads the sidebar-secondary template.
@@ -44,9 +44,9 @@
 		
 	<?php do_atomic( 'before_footer' ); // supreme_before_footer ?>
 
-	<div class="footer_bg1">
-		<?php  dynamic_sidebar('footer1');?>
-    </div>
+	
+	<?php  dynamic_sidebar('footer1');?>
+    
     
     <div class="footer_bg2">
         <div class="footer_container footer_widget clearfix">

@@ -95,6 +95,17 @@ jQuery("#recurrence-per").keyup(function(){
 });
 
 /** Below function will call on change of select box which returns recurrence frequencies **/
+jQuery("#recurrence-per").blur(function(){
+	var rec_occurs = jQuery('#recurrence-occurs').val();
+	if(rec_occurs == 'daily' ){
+		if(jQuery("#recurrence-per").val() == 1){
+			jQuery("#recurrence-per").val() ==''; 	
+			jQuery("#rec-ocr-error").show();	
+		}else{
+			jQuery("#rec-ocr-error").hide();
+		}
+	}
+});
 jQuery("#recurrence-occurs").change(function(){
 	var val =  jQuery("#recurrence-occurs").val();
 	if(val == 'weekly'){

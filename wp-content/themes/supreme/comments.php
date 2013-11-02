@@ -62,18 +62,18 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 		</div><!-- #comments -->
 
 		<?php $comment_args = array( 'fields' => apply_filters( 'comment_form_default_fields', array(
-						'author' => '<div class="form_row">' .
+						'author' => '<div class="form_row clearfix">' .
 									'<input id="author" name="author" type="text" value="' .
 									esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' PLACEHOLDER="'.__('Your name','supreme').'"/>' .
 									( $req ? ' <span class="required">*</span>' : '' ) .
 									'</div><!-- #form-section-author .form-section -->',
-						'email'  => '<div class="form_row">' .
+						'email'  => '<div class="form_row clearfix">' .
 									'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' PLACEHOLDER="'.__('Email Address','supreme').'"/>' .
 									( $req ? ' <span class="required">*</span>' : '' ) .
 							'</div><!-- #form-section-email .form-section -->',
-						'url'    => '<div class="form_row">' .
+						'url'    => '<div class="form_row clearfix">' .
 									'<input id="url" name="url" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30"' . $aria_url . ' PLACEHOLDER="'.__('Website','supreme').'"/>'.'</div>')),
-						'comment_field' => '<div class="form_row">' .
+						'comment_field' => '<div class="form_row clearfix">' .
 									'<textarea id="comments" name="comment" cols="45" rows="8" aria-required="true" PLACEHOLDER="'.__('Comments','supreme').'"></textarea>' .
 									( $req ? ' <span class="required">*</span>' : '' ) .
 									'</div><!-- #form-section-comment .form-section -->',

@@ -59,7 +59,7 @@ endwhile; endif;
 
 if ($loop==0) :
 
-	echo '<p class="info">'.__('No products found which match your selection.', 'jigoshop').'</p>';
+	//echo '<p class="info">'.__('No products found which match your selection.', 'jigoshop').'</p>';
 
 else :
 

@@ -11,7 +11,7 @@
 
 get_header(); // Loads the header.php template. ?>
 
-	<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
+	<?php if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 
 	<?php do_atomic( 'before_content' ); // supreme_before_content ?>
 
@@ -60,8 +60,10 @@ get_header(); // Loads the header.php template. ?>
 
 					<?php
 						// If comments are open or we have at least one comment, load the comments template.
-						if ( comments_open() || '0' != get_comments_number() )
-							comments_template( '/comments.php', true ); // Loads the comments.php template.
+						if ( hybrid_get_setting( 'enable_comments' ) ) {
+							if ( comments_open() || '0' != get_comments_number() )
+								comments_template( '/comments.php', true ); // Loads the comments.php template.
+						}	
 					?>
 
 				<?php endwhile; ?>

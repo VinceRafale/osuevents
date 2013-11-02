@@ -1,6 +1,65 @@
 <?php
 set_time_limit(0);
 global  $wpdb;
+// COPY THE DUMMY FOLDER ======================================================================
+global $upload_folder_path;
+global $blog_id;
+if(get_option('upload_path') && !strstr(get_option('upload_path'),'wp-content/uploads'))
+{
+	$upload_folder_path = "wp-content/blogs.dir/$blog_id/files/";
+}else
+{
+	$upload_folder_path = "wp-content/uploads/";
+}
+global $blog_id;
+if($blog_id){ $thumb_url = "&amp;bid=$blog_id";}
+$folderpath = $upload_folder_path . "dummy/";
+$strpost = strpos(get_stylesheet_directory(),'wp-content');
+$dirinfo = wp_upload_dir();
+$target =$dirinfo['basedir']."/dummy"; 
+
+full_copy( get_stylesheet_directory()."/images/dummy/", $target );
+//full_copy( TEMPLATEPATH."/images/dummy/", ABSPATH . "wp-content/uploads/dummy/" );
+function full_copy( $source, $target ) 
+{
+	global $upload_folder_path;
+	$imagepatharr = explode('/',$upload_folder_path."dummy");
+	$year_path = ABSPATH;
+	for($i=0;$i<count($imagepatharr);$i++)
+	{
+	  if($imagepatharr[$i])
+	  {
+		  $year_path .= $imagepatharr[$i]."/";
+		  //echo "<br />";
+		  if (!file_exists($year_path)){
+			  mkdir($year_path, 0777);
+		  }     
+		}
+	}
+	@mkdir( $target );
+		$d = dir( $source );
+		
+	if ( is_dir( $source ) ) {
+		@mkdir( $target );
+		$d = dir( $source );
+		while ( FALSE !== ( $entry = $d->read() ) ) {
+			if ( $entry == '.' || $entry == '..' ) {
+				continue;
+			}
+			$Entry = $source . '/' . $entry; 
+			if ( is_dir( $Entry ) ) {
+				full_copy( $Entry, $target . '/' . $entry );
+				continue;
+			}
+			copy( $Entry, $target . '/' . $entry );
+		}
+	
+		$d->close();
+	}else {
+		copy( $source, $target );
+	}
+}
+
 require_once(ABSPATH.'wp-admin/includes/taxonomy.php');
 $dummy_image_path = get_stylesheet_directory_uri().'/images/dummy/';
 
@@ -26,11 +85,14 @@ if(in_array('templatic_widgets',$templatic_settings)){
 		if(!in_array('templatic_social_media',$templatic_settings['templatic_widgets'])){
 			array_push($templatic_settings['templatic_widgets'],'templatic_social_media');
 		}
+		if(!in_array('templatic_slider',$templatic_settings['templatic_widgets'])){
+			array_push($templatic_settings['templatic_widgets'],'templatic_slider');
+		}
 	}else{
-		$templatic_settings['templatic_widgets'] = array('templatic_aboust_us','templatic_recent_review','templatic_social_media');
+		$templatic_settings['templatic_widgets'] = array('templatic_aboust_us','templatic_recent_review','templatic_social_media','templatic_slider');
 	}
 }else{
-	$templatic_settings['templatic_widgets'] = array('templatic_aboust_us','templatic_recent_review','templatic_social_media');
+	$templatic_settings['templatic_widgets'] = array('templatic_aboust_us','templatic_recent_review','templatic_social_media','templatic_slider');
 }
 update_option('templatic_settings',$templatic_settings); 
 $a = get_option('supreme_theme_settings');
@@ -44,7 +106,7 @@ $b = array(
 		'supreme_header_secondary_search' 	=> $a['supreme_header_secondary_search'],
 		'supreme_author_bio_posts' 			=> $a['supreme_author_bio_posts'],
 		'supreme_author_bio_pages' 			=> $a['supreme_author_bio_pages'],
-		'footer_insert' 					=> '<p class="copyright">Copyright &copy; [the-year] [site-link].</p> <p class="themeby">THEME BY<a href="#" target="_blank"><img src="'.get_stylesheet_directory_uri().'/images/templatic.png"></a></p>',
+		'footer_insert' 					=> '<p class="copyright">Copyright &copy; [the-year] [site-link].</p> <p class="themeby">Designed by <a href="http://templatic.com/" title="Premium wordpress themes"><img src="'.get_stylesheet_directory_uri().'/images/templatic.png"></a></p>',
 		'supreme_global_layout' 			=> $a['supreme_global_layout'],
 		'supreme_bbpress_layout' 			=> $a['supreme_bbpress_layout'],
 		'supreme_buddypress_layout' 		=> $a['supreme_buddypress_layout']
@@ -350,7 +412,7 @@ function insert_taxonomy_category($category_array1)
 
 //===================== Add some Events ======================//
 $post_info = array();
-$today = date('Y-m-d');
+$today = date_i18n(get_option('date_format'),strtotime(date('Y-m-d')));
 ////Event 1 start///
 $image_array = array();
 $post_meta = array();
@@ -361,7 +423,7 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/a1.jpg";
 $image_array[] = "dummy/a2.jpg";
 $image_array[] = "dummy/a3.jpg";
-$date = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Carolina Beach Road, Wilmington, NC, United States',	
 					"geo_latitude"		=> '34.1334600363166',		
@@ -391,7 +453,8 @@ $post_meta = array(
 					"featured_h"		=> 'h',
 					"featured_c"		=> 'c',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 				);
 $post_info[] = array(
 					"post_title"	=>	'An Art Exhibition',
@@ -415,8 +478,8 @@ $tags_input = array('Festival','Nightlife');
 $image_array[] = "dummy/k1.jpg";
 $image_array[] = "dummy/k6.jpg";
 $image_array[] = "dummy/k7.jpg";
-$date = Date('Y-m-d', strtotime("+3 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("+3 days"));
+$date1 = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Dakota Street, Winnipeg, MB, Canada',	
 					"geo_latitude"		=> '49.82057499773663',		
@@ -450,7 +513,8 @@ $post_meta = array(
 					"featured_h"		=> 'h',
 					"featured_c"		=> 'c',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 				);
 $post_info[] = array(
 					"post_title"	=>	'Weekly Karate Classes',
@@ -478,7 +542,7 @@ $tags_input = array('Festival','Nightlife','location');
 $image_array[] = "dummy/ch1.jpg";
 $image_array[] = "dummy/ch2.jpg";
 $image_array[] = "dummy/ch5.jpg";
-$date = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Alaskan Way, Seattle, WA, United State',	
 					"geo_latitude"		=> '47.59064284101658',		
@@ -508,7 +572,8 @@ $post_meta = array(
 					"featured_h"		=> 'h',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Christmas Carnival',
@@ -532,8 +597,8 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/cs1.jpg";
 $image_array[] = "dummy/cs3.jpg";
 $image_array[] = "dummy/cs5.jpg";
-$date = Date('Y-m-d', strtotime("-3 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("-3 days"));
+$date1 = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'California Avenue Southwest, Seattle, WA, United States',	
 					"geo_latitude"		=> '47.550281221089804',		
@@ -563,7 +628,8 @@ $post_meta = array(
 					"featured_h"		=> 'h',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'The Royal Casinos',
@@ -588,8 +654,8 @@ $tags_input = array('Festival');
 $image_array[] = "dummy/bi1.jpg";
 $image_array[] = "dummy/bi3.jpg";
 $image_array[] = "dummy/bi4.jpg";
-$date = Date('Y-m-d', strtotime("-5 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("-5 days"));
+$date1 = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Illinois Street, San Francisco, CA, United States',	
 					"geo_latitude"		=> '37.756374007080936',		
@@ -619,7 +685,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'c',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Birthday Party on the Rocks',
@@ -643,8 +710,8 @@ $tags_input = array('Festival','Nightlife','location');
 $image_array[] = "dummy/p3.jpg";
 $image_array[] = "dummy/p4.jpg";
 $image_array[] = "dummy/p5.jpg";
-$date = Date('Y-m-d', strtotime("-5 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("-5 days"));
+$date1 = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Indiana Street, San Francisco, CA, United States',	
 					"geo_latitude"		=> '37.756085590154804',		
@@ -678,7 +745,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'c',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Painting Exhibition',
@@ -702,8 +770,8 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/d1.jpg";
 $image_array[] = "dummy/d2.jpg";
 $image_array[] = "dummy/d3.jpg";
-$date = Date('Y-m-d', strtotime("+5 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = date_i18n(get_option('date_format'), strtotime("+5 days"));
+$date1 = date_i18n(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Kansas City, KS, United States',	
 					"geo_latitude"		=> '39.114052993477756',		
@@ -733,7 +801,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Summer Dance Week',
@@ -761,7 +830,7 @@ $tags_input = array();
 $image_array[] = "dummy/t3.jpg";
 $image_array[] = "dummy/t4.jpg";
 $image_array[] = "dummy/t5.jpg";
-$date = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Kentucky Street, Lawrence, KS, United States',	
 					"geo_latitude"		=> '38.95892457569876',		
@@ -791,7 +860,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'La Tomatina',
@@ -815,8 +885,8 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/f3.jpg";
 $image_array[] = "dummy/f4.jpg";
 $image_array[] = "dummy/f5.jpg";
-$date = Date('Y-m-d', strtotime("+2 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("+2 days"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Louisiana Street, Houston, TX, United States',	
 					"geo_latitude"		=> '29.75549595189908',		
@@ -846,7 +916,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Food Streets at Night',
@@ -871,8 +942,8 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/m1.jpg";
 $image_array[] = "dummy/m2.jpg";
 $image_array[] = "dummy/m3.jpg";
-$date = Date('Y-m-d', strtotime("-5 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("-5 days"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Massachusetts Avenue Northwest, Washington, DC, United States',	
 					"geo_latitude"		=> '38.92256631958141',		
@@ -906,7 +977,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Community Meeting',
@@ -930,8 +1002,8 @@ $tags_input = array('Festival');
 $image_array[] = "dummy/c4.jpg";
 $image_array[] = "dummy/c5.jpg";
 $image_array[] = "dummy/c6.jpg";
-$date = Date('Y-m-d', strtotime("+5 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("+5 days"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Maryland Avenue, Rockville, MD, United States',	
 					"geo_latitude"		=> '39.081568368325996',		
@@ -961,7 +1033,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Old Cars Exhibition',
@@ -985,7 +1058,7 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/h3.jpg";
 $image_array[] = "dummy/h4.jpg";
 $image_array[] = "dummy/h6.jpg";
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'Maine Avenue Southwest, Washington, DC, United States',	
 					"geo_latitude"		=> '38.88207077465083',		
@@ -1015,7 +1088,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Colorful Holi',
@@ -1039,8 +1113,8 @@ $tags_input = array('Festival','Nightlife','location');
 $image_array[] = "dummy/b2.jpg";
 $image_array[] = "dummy/b4.jpg";
 $image_array[] = "dummy/b5.jpg";
-$date = Date('Y-m-d', strtotime("+7 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("+7 days"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'New Hampshire Avenue, Hillandale, MD, United States',	
 					"geo_latitude"		=> '39.02404183584668',		
@@ -1070,7 +1144,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'Baseball Champs',
@@ -1099,8 +1174,8 @@ $tags_input = array('Festival','Nightlife','location','night events');
 $image_array[] = "dummy/di1.jpg";
 $image_array[] = "dummy/di2.jpg";
 $image_array[] = "dummy/di4.jpg";
-$date = Date('Y-m-d', strtotime("-7 days"));
-$date1 = Date('Y-m-d', strtotime("+1 month"));
+$date = Date(get_option('date_format'), strtotime("-7 days"));
+$date1 = Date(get_option('date_format'), strtotime("+1 month"));
 $post_meta = array(
 					"address"			=> 'New Jersey Turnpike, Mount Laurel, NJ, United States',	
 					"geo_latitude"		=> '39.95796638154377',		
@@ -1130,7 +1205,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'The Dance Floor',
@@ -1186,7 +1262,8 @@ $post_meta = array(
 					"featured_h"		=> 'n',
 					"featured_c"		=> 'n',
 					"alive_days"		=> '30',
-					"tl_dummy_content"		=> '1'
+					"tl_dummy_content"		=> '1',
+					"show_on_detail"		=> '1'
 					);
 $post_info[] = array(
 					"post_title"	=>	'The Wedding',
@@ -1237,6 +1314,17 @@ function insert_taxonomy_posts($post_info)
 				foreach($post_meta as $mkey=>$mval)
 				{
 					update_post_meta($last_postid, $mkey, $mval);
+				}
+			}
+			if($post_meta)
+			{
+				foreach($post_meta as $mkey=>$mval)
+				{
+					if(trim(strtolower($mval)) == trim(strtolower('Recurring event')))
+					{
+						$start_date = templ_recurrence_dates($last_postid);
+						update_post_meta($last_postid,'recurring_search_date',$start_date);
+					}
 				}
 			}
 			
@@ -1346,7 +1434,7 @@ function set_post_tag($pid,$post_tags)
 
 /* ========================================= ADDING PAGE TEMPLATES =========================================== */
 $pages_array = array();
-$pages_array = array('About Us','Submit event',array('Page Templates', 'Advanced Search', 'Contact Us', 'Archives', 'Full Width', 'Sitemap'));
+$pages_array = array('About Us','Submit event','User Attending Event',array('Page Templates', 'Advanced Search', 'Contact Us', 'Archives', 'Full Width', 'Sitemap'));
 $page_info_arr = array();
 $page_info_arr['Page Templates'] = '
 <p>We are providing the following page templates with this theme : <br>
@@ -1371,12 +1459,15 @@ $page_info_arr['Page Templates'] = '
 $page_info_arr['Contact Us'] = '
 <p>Simply designed page template to display a contact form. An easy to use page template to get contacted by the users directly via an email. You can use this page template the same way mentioned in "Page Templates" page. You just need to select <strong>Contact Us</strong> template to use it.</p>';
 
+$page_info_arr['User Attending Event'] = '<p></p>';
+
 
 $page_info_arr['About Us'] = "<p>An <strong>About Us</strong> page template where you can briefly write about the services you provide on your site.</p>
 <br />
 <strong>What we do?</strong><br /><p>An event is normally a large gathering of people, who have come to a particular place at a particular time for a particular reason. Having said that, there's very little that's normal about an event. In our experience, each one is different and their variety is enormous. And that's as it should be: an event is something special. Aone - off. We plan these occasions in meticulous details, manage them from the ground, dismantle them when they are over and assess the result.</p><br /> <strong>How we do it?</strong><br /> <p>Events can be used to communicate key message, faster community relations, motivate work forces or raise funds. One of the first things we ask our clients is, what they want to achieve from their event. This is the cornerstone of the whole operation for us, our starting point and most importantly, it's the way success can be measured.</p>";
 
-$page_info_arr['Submit event'] = "Submit the events in category of your choice.";
+$page_info_arr['Submit event'] = "Submit the events in category of your choice. [form_page_template post_type='event']";
+$page_info_arr['Advanced Search'] = "[advance_search_page post_type='event']";
 
 $page_info_arr['Archives'] = 'This is Archives page template. Just select <strong>Page - Archives</strong> page template from templates section and you&rsquo;re good to go.';
 
@@ -1460,15 +1551,19 @@ function set_page_info_autorun($pages_array,$page_info_arr_arg)
 					$post_sql = "insert into $wpdb->posts (post_author,post_date,post_date_gmt,post_title,post_content,post_name,post_parent,post_type) values (\"$post_author\", \"$post_date\", \"$post_date\",  \"$post_title\", \"$post_content\", \"$post_name\",\"$post_parent_id\",'page')";
 					$wpdb->query($post_sql);
 					$last_post_id = $wpdb->get_var("SELECT max(ID) FROM $wpdb->posts");
-					$guid = get_option('home')."/?p=$last_post_id";
+					$guid = home_url()."/?p=$last_post_id";
 					$guid_sql = "update $wpdb->posts set guid=\"$guid\" where ID=\"$last_post_id\"";
 					$wpdb->query($guid_sql);
 					$ter_relation_sql = "insert into $wpdb->term_relationships (object_id,term_taxonomy_id) values (\"$last_post_id\",\"$last_tt_id\")";
 					$wpdb->query($ter_relation_sql);
 					update_post_meta( $last_post_id, 'pt_dummy_content', 1 );
 					if($post_title =='Submit event'){
-						update_post_meta( $last_post_id, '_wp_page_template', 'page-template_form.php' );
-						update_post_meta( $last_post_id, 'template_post_type', 'event' );
+						update_post_meta( $last_post_id, 'is_tevolution_submit_form', '1' );
+						update_post_meta( $last_post_id, 'submit_post_type', 'event' );
+					}
+					if($post_title =='User Attending Event'){
+						update_post_meta( $last_post_id, '_wp_page_template', 'recurring_event_user.php' );
+						update_option('recurring_event_page_template_id',$last_post_id);
 					}
 				}
 			}
@@ -1477,25 +1572,33 @@ function set_page_info_autorun($pages_array,$page_info_arr_arg)
 }
 
 //Update the page templates
-$photo_page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Advanced Search' and post_type='page'");
-update_post_meta( $photo_page_id, '_wp_page_template', 'page-template_advanced_search.php' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Advanced Search' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'default' );
 
-$photo_page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Contact Us' and post_type='page'");
-update_post_meta( $photo_page_id, '_wp_page_template', 'page-template-contact.php' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Submit event' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'default' );
+update_post_meta( $page_id, 'is_tevolution_submit_form', '1' );
+update_post_meta( $page_id, 'submit_post_type', 'event' );
 
-$photo_page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Archives' and post_type='page'");
-update_post_meta( $photo_page_id, '_wp_page_template', 'page-template-archives.php' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Contact Us' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'page-template-contact.php' );
 
-$photo_page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Full Width' and post_type='page'");
-update_post_meta( $photo_page_id, '_wp_page_template', 'default' );
-update_post_meta( $photo_page_id, 'Layout', '1c' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Archives' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'page-template-archives.php' );
 
-$photo_page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Sitemap' and post_type='page'");
-update_post_meta( $photo_page_id, '_wp_page_template', 'page-template-sitemap.php' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Full Width' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'default' );
+update_post_meta( $page_id, 'Layout', '1c' );
 
-$photo_page_id1 = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Short Codes' and post_type='page'");
-update_post_meta( $photo_page_id1, '_wp_page_template', 'page-template-short_code.php' );
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Sitemap' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'page-template-sitemap.php' );
 
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'Short Codes' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'page-template-short_code.php' );
+
+$page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts where post_title like 'User Attending Event' and post_type='page'");
+update_post_meta( $page_id, '_wp_page_template', 'recurring_event_user.php' );
+update_option('recurring_event_page_template_id',$page_id);
 
 
 //PAGE TEMPLATES END
@@ -1507,36 +1610,31 @@ $sidebars_widgets = array();
 
 //FRONT CONTENT WIDGETS ======================================================
 // 1. FRONT PAGE SLIDER
-$featuredslider = array();
-$featuredslider[1] = array(
-					"title"			=>	'',
-					"search"		=>	'1',
-					"custom_banner"	=>	'1',
-					"s1"	=>	get_stylesheet_directory_uri().'/images/dummy/inacup_donut.jpg',
-					"s1link"	=>	'#',
-					"s2"	=>	get_stylesheet_directory_uri().'/images/dummy/inacup_pumpkin.jpg',
-					"s2link"	=>	'#',
-					"s3"	=>	get_stylesheet_directory_uri().'/images/dummy/inacup_samoa.jpg',
-					"s3link"	=>	'#',
-					"s4"	=>	get_stylesheet_directory_uri().'/images/dummy/inacup_vanilla.jpg',
-					"s4link"	=>	'#',
+$templatic_slider = array();
+$templatic_slider[1] = array(
+					"title"					=>	'',
+					"search"				=>	'1',
+					"search_post_type"		=>	'event',
+					"location"				=>	'1',
+					"custom_banner_temp"			=>	'1',
+					"s1"					=> array(get_stylesheet_directory_uri().'/images/dummy/inacup_donut.jpg',get_stylesheet_directory_uri().'/images/dummy/inacup_pumpkin.jpg',get_stylesheet_directory_uri().'/images/dummy/inacup_samoa.jpg',get_stylesheet_directory_uri().'/images/dummy/inacup_vanilla.jpg'),
 					"display_text"	=>	'Looking for something to do? Search through %s events',
 					"post_number"	=>	'5',
 					);
-$featuredslider['_multiwidget'] = '1';
-update_option('widget_featuredslider',$featuredslider);
-$featuredslider = get_option('widget_featuredslider');
-krsort($featuredslider);
-foreach($featuredslider as $key1=>$val1)
+$templatic_slider['_multiwidget'] = '1';
+update_option('widget_templatic_slider',$templatic_slider);
+$templatic_slider = get_option('widget_templatic_slider');
+krsort($templatic_slider);
+foreach($templatic_slider as $key1=>$val1)
 {
-	$featuredslider_key = $key1;
-	if(is_int($featuredslider_key))
+	$templatic_slider_key = $key1;
+	if(is_int($templatic_slider_key))
 	{
 		break;
 	}
 }
 
-$sidebars_widgets["below_header"] = array("featuredslider-$featuredslider_key");
+$sidebars_widgets["below_header"] = array("templatic_slider-$templatic_slider_key");
 
 // 2. Event Listing calender WIDGET
 $event_calendar = array();
@@ -1559,7 +1657,7 @@ foreach($event_calendar as $key1=>$val1)
 // 2. Event Listing calender WIDGET
 $hybrid_categories = array();
 $hybrid_categories[1] = array(
-					"title"			=>	'Categories',
+					"title"			=>	__('Categories',T_DOMAIN),
 					"taxonomy"			=>	'ecategory',
 					"hide_empty"			=>	'0',
 					"show_count"			=>	'1',
@@ -1610,7 +1708,7 @@ $sidebars_widgets["front_sidebar"] = array("event_calendar-$event_calendar_key",
 $templatic_aboust_us = array();
 $templatic_aboust_us[1] = array(
 					"title"			=>	'',
-					"about_us"			=>	"<p class='line01'>THE OVERSIZED PARAGRAPH</p><h2>No matter what the theme is about there is always place for a nice oversizex paragraph here and there.</h2>"
+					"about_us"			=>	"<p class='line01'>THE OVERSIZED PARAGRAPH</p><h2>No matter what the theme is about there is always place for a nice oversize paragraph here and there.</h2>"
 					);
 					
 $templatic_aboust_us[2] = array(
@@ -1862,62 +1960,7 @@ $year_date = date('Y');
 
 /////////////// WIDGET SETTINGS END ///////////////
 
-// COPY THE DUMMY FOLDER ======================================================================
-global $upload_folder_path;
-global $blog_id;
-if(get_option('upload_path') && !strstr(get_option('upload_path'),'wp-content/uploads'))
-{
-	$upload_folder_path = "wp-content/blogs.dir/$blog_id/files/";
-}else
-{
-	$upload_folder_path = "wp-content/uploads/";
-}
-global $blog_id;
-if($blog_id){ $thumb_url = "&amp;bid=$blog_id";}
-$folderpath = $upload_folder_path . "dummy/";
-$strpost = strpos(get_stylesheet_directory(),'wp-content');
-$target = substr(get_stylesheet_directory(),0,$strpost).$folderpath;
-full_copy( get_stylesheet_directory()."/images/dummy/", $target );
-//full_copy( TEMPLATEPATH."/images/dummy/", ABSPATH . "wp-content/uploads/dummy/" );
-function full_copy( $source, $target ) 
-{
-	global $upload_folder_path;
-	$imagepatharr = explode('/',$upload_folder_path."dummy");
-	$year_path = ABSPATH;
-	for($i=0;$i<count($imagepatharr);$i++)
-	{
-	  if($imagepatharr[$i])
-	  {
-		  $year_path .= $imagepatharr[$i]."/";
-		  //echo "<br />";
-		  if (!file_exists($year_path)){
-			  mkdir($year_path, 0777);
-		  }     
-		}
-	}
-	@mkdir( $target );
-		$d = dir( $source );
-		
-	if ( is_dir( $source ) ) {
-		@mkdir( $target );
-		$d = dir( $source );
-		while ( FALSE !== ( $entry = $d->read() ) ) {
-			if ( $entry == '.' || $entry == '..' ) {
-				continue;
-			}
-			$Entry = $source . '/' . $entry; 
-			if ( is_dir( $Entry ) ) {
-				full_copy( $Entry, $target . '/' . $entry );
-				continue;
-			}
-			copy( $Entry, $target . '/' . $entry );
-		}
-	
-		$d->close();
-	}else {
-		copy( $source, $target );
-	}
-}
+
 
 /* ======================== CODE TO ADD RESIZED IMAGES ======================= */
 regenerate_all_attachment_sizes();

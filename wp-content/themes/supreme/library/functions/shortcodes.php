@@ -98,7 +98,7 @@ function hybrid_wp_link_shortcode() {
  *
  * @since 0.6.0
  * @access public
- * @uses get_theme_data() Gets theme (parent theme) information.
+ * @uses wp_get_theme() Gets theme (parent theme) information.
  * @return string
  */
 function hybrid_theme_link_shortcode() {
@@ -111,7 +111,7 @@ function hybrid_theme_link_shortcode() {
  *
  * @since 0.6.0
  * @access public
- * @uses get_theme_data() Gets theme (child theme) information.
+ * @uses wp_get_theme() Gets theme (child theme) information.
  * @return string
  */
 function hybrid_child_link_shortcode() {

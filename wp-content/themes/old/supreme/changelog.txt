@@ -1,0 +1,26 @@
+* 2012.07.01 - version 0.1.1
+
+* Changed theme name and prefixes
+* Change THEME_URI to get_template_directory_uri in functions.php
+* Removed 20px left padding from lable tags
+* Removed Group widget temporary style work-around due to the bug fix in BuddyPress 1.6
+* Removed add_theme_support for bbPress as bbPress 2.1 will use bbPress templat files in the theme folder if they exist.
+* Remove manual enqueue of css/bbpress.css, bbPress 2.1 automatically uses bbpress.css in "css" directory if it exists.
+* Removed BuddyPress admin bar css due to BuddyPress moving towards full integration with WP Admin Bar
+* 
+
+	// Added
+
+	* functions/
+	* functions/admin.php
+	* js/supreme-admin.js
+	* changelog.txt
+
+	// Removed
+	
+	* admin/
+	* css/buddypress-admin-bar.css
+
+	// Edited
+	
+	* all other files have been updated

@@ -31,9 +31,9 @@
 							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'supreme' ), 'after' => '</p>' ) ); ?>
 
 						</div><!-- .entry-content -->
-
+						<?php if(get_post_type()!='page'):?>
 						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( 'Filed under: [entry-terms taxonomy="category"] [entry-terms taxonomy="post_tag" before="and Tagged: "]', 'supreme' ) . '</div>' ); ?>
-
+						<?php endif;?>
 						<?php do_atomic( 'close_entry' ); // supreme_close_entry ?>
 
 					</div><!-- .hentry -->
@@ -44,14 +44,6 @@
 
 			<?php else : ?>
 			
-				<div class="<?php hybrid_entry_class(); ?>">
-
-					<h2 class="entry-title"><?php _e( 'No Entries', 'supreme' ); ?></h2>
-				
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'supreme' ); ?></p>
-					</div>
-					
-				</div><!-- .hentry .error -->
+				<?php get_template_part( 'loop-error' ); // Loads the loop-error.php template. ?>
 
 		<?php endif; ?>

@@ -12,15 +12,15 @@ class dc_jqmegamenu_widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname' => $css_class,
-			'description' => __( $desc, 'dcjq-mega-menu' ),
+			'description' => sprintf(__('%s','dcjq-mega-menu'), $desc),
 		);
 		parent::WP_Widget( 'nav_menu', __('Custom Menu','Templatic'), $widget_ops );
 		
-		$this->WP_Widget($id_base, __($name, 'dcjqmegamenu'), $widget_ops);
+		$this->WP_Widget($id_base,  sprintf(__('%s','dcjqmegamenu'), $name), $widget_ops);
 		$this->alt_option_name = $alt_option;
 		
 		//add_action( 'wp_head', array(&$this, 'styles'), 10, 1 );	
-		add_action( 'wp_footer', array(&$this, 'footer'), 10, 1 );	
+		add_action( 'wp_footer', array(&$this, 'footer'), 11, 1 );	
 
 		$this->defaults = array(
 			'title' => '',
@@ -36,12 +36,6 @@ class dc_jqmegamenu_widget extends WP_Widget {
 	function widget($args, $instance) {
 		extract( $args );
 		// Get menu
-		add_action('wp_footer', 'load_megamenu');
-		
-		function load_megamenu(){
-			wp_enqueue_script('jquerymegamenu', get_template_directory_uri()."/js/jquery.megamenu.1.2.js");
-			wp_enqueue_script('jquerymegamenuhoverint', get_template_directory_uri()."/js/jquery.hoverIntent.minified.js");
-		}
 		
 		$widget_options = wp_parse_args( $instance, $this->defaults );
 		extract( $widget_options, EXTR_SKIP );
@@ -53,7 +47,7 @@ class dc_jqmegamenu_widget extends WP_Widget {
 
 		$instance['title'] = apply_filters('widget_title', $instance['title'], $instance, $this->id_base);
 		
-		echo $args['before_widget'];
+		//echo $args['before_widget'];
 
 		if ( !empty($instance['title']) )
 			echo $args['before_title'] . $instance['title'] . $args['after_title'];
@@ -61,7 +55,7 @@ class dc_jqmegamenu_widget extends WP_Widget {
 		?>
 		<div class="mega-menu" id="<?php echo $this->id.'-item'; ?>">
 
-            <div id="menu-secondary-title" class="currentmenu2">
+            <div id="menu-secondary-title" class="currentmenu3">
                 <?php _e( 'Menu', 'supreme' ); ?>
             </div>
             
@@ -69,10 +63,16 @@ class dc_jqmegamenu_widget extends WP_Widget {
 				<?php wp_nav_menu( array( 'fallback_cb' => '',  'menu' => $nav_menu, 'container' => false, 'menu_class' => 'mega') ); ?>
             	<div class="clearfix"></div>
             </div>
+			<?php 
+				do_atomic( 'close_menu_secondary' ); // supreme_close_menu_secondary 
+				if(function_exists('dynamic_sidebar')){
+					dynamic_sidebar('header_search');	
+				} 
+			?>
 		</div>
 		<?php
 		
-		echo $args['after_widget'];
+		//echo $args['after_widget'];
 	}
 
     /** @see WP_Widget::update */
@@ -120,11 +120,11 @@ class dc_jqmegamenu_widget extends WP_Widget {
 		}
 		?>
 	<p>
-		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','Templatic') ?></label>
+		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','supreme') ?></label>
 		<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 	</p>
 	<p>
-		<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select Menu:','Templatic'); ?></label>
+		<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select Menu:','supreme'); ?></label>
 		<select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
 		<?php
 			foreach ( $menus as $menu ) {
@@ -160,17 +160,17 @@ class dc_jqmegamenu_widget extends WP_Widget {
 	<input type="hidden" value="<?php echo $subMenuWidth; ?>" class="widefat" id="<?php echo $this->get_field_id('subMenuWidth'); ?>" name="<?php echo $this->get_field_name('subMenuWidth'); ?>" />
 	<p><label for="<?php echo $this->get_field_id('effect'); ?>"><?php _e('Animation Effect:', 'dcjq-mega-menu'); ?>
 		<select name="<?php echo $this->get_field_name('effect'); ?>" id="<?php echo $this->get_field_id('effect'); ?>" >
-			<option value='fade' <?php selected( $effect, 'fade'); ?> ><?php _e('Fade In','templatic');?></option>
-			<option value='slide' <?php selected( $effect, 'slide'); ?> ><?php _e('Slide Down','templatic');?></option>
+			<option value='fade' <?php selected( $effect, 'fade'); ?> ><?php _e('Fade In','supreme');?></option>
+			<option value='slide' <?php selected( $effect, 'slide'); ?> ><?php _e('Slide Down','supreme');?></option>
 		</select>
 		</label>
 	</p>
 	<p><label for="<?php echo $this->get_field_id('speed'); ?>"><?php _e('Animation Speed:', 'dcjq-mega-menu'); ?>
 		<select name="<?php echo $this->get_field_name('speed'); ?>" id="<?php echo $this->get_field_id('speed'); ?>" >
-		    <option value='0' <?php selected( $speed, '0'); ?> ><?php _e('No Animation','templatic');?></option>
-			<option value='fast' <?php selected( $speed, 'fast'); ?> ><?php _e('Fast','templatic');?></option>
-			<option value='normal' <?php selected( $speed, 'normal'); ?> ><?php _e('Normal','templatic');?></option>
-			<option value='slow' <?php selected( $speed, 'slow'); ?> ><?php _e('Slow','templatic');?></option>
+		    <option value='0' <?php selected( $speed, '0'); ?> ><?php _e('No Animation','supreme');?></option>
+			<option value='fast' <?php selected( $speed, 'fast'); ?> ><?php _e('Fast','supreme');?></option>
+			<option value='normal' <?php selected( $speed, 'normal'); ?> ><?php _e('Normal','supreme');?></option>
+			<option value='slow' <?php selected( $speed, 'slow'); ?> ><?php _e('Slow','supreme');?></option>
 		</select>
 		</label>
 	</p>
@@ -215,8 +215,8 @@ class dc_jqmegamenu_widget extends WP_Widget {
 						subMenuWidth: '<?php echo $wpdcjqmegamenu['subMenuWidth']; ?>',
 						speed: <?php echo $wpdcjqmegamenu['speed'] == '0' ? 0 : "'".$wpdcjqmegamenu['speed']."'"; ?>,
 						effect: '<?php echo $effect; ?>',
-						event: '<?php echo $event; ?>'
-						<?php echo $fullWidth; ?>
+						event: '<?php echo $event; ?>',
+						fullWidth: true
 					});
 				});
 				
@@ -229,6 +229,5 @@ class dc_jqmegamenu_widget extends WP_Widget {
 		}
 	}
 } // class dc_jqmegamenu_widget 
-register_widget('dc_jqmegamenu_widget'); 
 
 ?>

@@ -6,12 +6,21 @@ jQuery(function() {
 		jQuery('#loop_taxonomy').addClass('eventgrid');
 		jQuery('#loop_taxonomy').addClass('indexgrid');
 		jQuery('#loop_taxonomy').removeClass('indexlist');	
+		
+		jQuery('#loop_archive').addClass('eventgrid');
+		jQuery('#loop_archive').addClass('indexgrid');
+		jQuery('#loop_archive').removeClass('indexlist');	
+		
 		jQuery("#gridview").addClass("active");	
 		jQuery("#listview").removeClass("active");	
 	} else {
 		jQuery('#loop_listing').removeClass('eventgrid');	
 		jQuery('#loop_taxonomy').removeClass('eventgrid');
 		jQuery('#loop_taxonomy').removeClass('indexgrid');
+		
+		jQuery('#loop_archive').removeClass('eventgrid');
+		jQuery('#loop_archive').removeClass('indexgrid');
+		
 		jQuery("#listview").addClass("active");	
 		jQuery("#gridview").removeClass("active");	
 	}
@@ -23,11 +32,14 @@ jQuery(document).ready(function() {
 		e.preventDefault();	
 		jQuery('#loop_listing').addClass('eventlist');
 		jQuery('#loop_listing').removeClass('eventgrid');
-		
-		//jQuery('#loop_taxonomy').addClass('eventlist');
+				
 		jQuery('#loop_taxonomy').removeClass('eventgrid');				
 		jQuery('#loop_taxonomy').addClass('indexlist');
 		jQuery('#loop_taxonomy').removeClass('indexgrid');
+		
+		jQuery('#loop_archive').removeClass('eventgrid');				
+		jQuery('#loop_archive').addClass('indexlist');
+		jQuery('#loop_archive').removeClass('indexgrid');
 		
 		jQuery('.viewsbox a').attr('class','');
 		jQuery(this).attr('class','active');
@@ -41,9 +53,12 @@ jQuery(document).ready(function() {
 		jQuery('#loop_listing').removeClass('eventlist');
 		
 		jQuery('#loop_taxonomy').addClass('eventgrid');
-		//jQuery('#loop_taxonomy').removeClass('eventlist');
 		jQuery('#loop_taxonomy').addClass('indexgrid');
 		jQuery('#loop_taxonomy').removeClass('indexlist');
+		
+		jQuery('#loop_archive').addClass('eventgrid');		
+		jQuery('#loop_archive').addClass('indexgrid');
+		jQuery('#loop_archive').removeClass('indexlist');
 		
 		jQuery('.viewsbox a').attr('class','');
 		jQuery(this).attr('class','active');

@@ -8,6 +8,8 @@
  * @package supreme
  * @subpackage Template
  */
+ 
+ if(hybrid_get_setting( 'supreme_author_bio_pages' )){
 ?>
 
 <div class="entry-author-meta">
@@ -18,3 +20,4 @@
 	<p class="author-description"><?php the_author_meta('description'); ?></p>
 
 </div><!-- .entry-author -->
+<?php } ?>

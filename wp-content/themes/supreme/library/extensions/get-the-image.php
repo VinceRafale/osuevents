@@ -57,6 +57,7 @@ function get_the_image( $args = array() ) {
 		'size' => 			'thumbnail',
 		'default_image' => 	false,
 		'order_of_image' => 	1,
+		'link_class' => 	'link_img',
 		'link_to_post' => 		true,
 		'image_class' => 		false,
 		'image_scan' => 		false,
@@ -81,6 +82,9 @@ function get_the_image( $args = array() ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	/* If $default_size is given, overwrite $size. */
+	if ( !is_null( $args['link_class'] ) )
+		$args['link_class'] = $args['link_class']; // Deprecated 0.5 in favor of $size
+/* If $default_size is given, overwrite $size. */
 	if ( !is_null( $args['default_size'] ) )
 		$args['size'] = $args['default_size']; // Deprecated 0.5 in favor of $size
 
@@ -380,7 +384,7 @@ function get_the_image_by_default( $args = array() ) {
  * @param array $image Array of image attributes ($image, $classes, $alt, $caption).
  * @return string $image Formatted image (w/link to post if the option is set).
  */
-function get_the_image_format( $args = array(), $image = false ) {
+function get_the_image_format( $args = array(), $image = false) {
 
 	/* If there is no image URL, return false. */
 	if ( empty( $image['src'] ) )
@@ -414,7 +418,7 @@ function get_the_image_format( $args = array(), $image = false ) {
 
 	/* If $link_to_post is set to true, link the image to its post. */
 	if ( $link_to_post )
-		$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( apply_filters( 'the_title', get_post_field( 'post_title', $post_id ) ) ) . '">' . $html . '</a>';
+		$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( apply_filters( 'the_title', get_post_field( 'post_title', $post_id ) ) ) . '" class="'.$args['link_class'].'">' . $html . '</a>';
 
 	/* If there is a $post_thumbnail_id, apply the WP filters normally associated with get_the_post_thumbnail(). */
 	if ( !empty( $image['post_thumbnail_id'] ) )

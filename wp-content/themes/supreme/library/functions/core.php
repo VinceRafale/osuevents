@@ -178,7 +178,7 @@ function hybrid_get_content_width() {
 
 /**
  * Gets theme data and stores it in the global $hybrid variable.  By storing it, it can be accessed quickly without 
- * having to run through the get_theme_data() function again.
+ * having to run through the wp_get_theme() function again.
  *
  * @since 1.2.0
  * @access public
@@ -190,9 +190,9 @@ function hybrid_get_theme_data( $path = 'template' ) {
 	/* If 'template' is requested, get the parent theme data. */
 	if ( 'template' == $path ) {
 
-		/* If the parent theme data isn't set, grab it with the get_theme_data() function. */
+		/* If the parent theme data isn't set, grab it with the wp_get_theme() function. */
 		if ( empty( $hybrid->theme_data ) )
-			$hybrid->theme_data = get_theme_data( trailingslashit( TEMPLATEPATH ) . 'style.css' );
+			$hybrid->theme_data = wp_get_theme( trailingslashit( get_template_directory() ) . 'style.css' );
 
 		/* Return the parent theme data. */
 		return $hybrid->theme_data;
@@ -201,9 +201,9 @@ function hybrid_get_theme_data( $path = 'template' ) {
 	/* If 'stylesheet' is requested, get the child theme data. */
 	elseif ( 'stylesheet' == $path ) {
 
-		/* If the child theme data isn't set, grab it with the get_theme_data() function. */
+		/* If the child theme data isn't set, grab it with the wp_get_theme() function. */
 		if ( empty( $hybrid->child_theme_data ) )
-			$hybrid->child_theme_data = get_theme_data( trailingslashit( STYLESHEETPATH ) . 'style.css' );
+			$hybrid->child_theme_data = wp_get_theme( trailingslashit( get_stylesheet_directory() ) . 'style.css' );
 
 		/* Return the child theme data. */
 		return $hybrid->child_theme_data;

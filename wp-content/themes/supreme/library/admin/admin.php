@@ -88,9 +88,9 @@ function hybrid_get_post_templates( $args = array() ) {
 	$args = wp_parse_args( $args, array( 'label' => array( 'Post Template' ) ) );
 
 	/* Get theme and templates variables. */
-	$themes = get_themes();
-	$theme = get_current_theme();
-	$templates = $themes[$theme]['Template Files'];
+	$themes = wp_get_themes();
+	$theme = wp_get_theme();
+	@$templates = $themes[$theme]['Template Files'];
 	$post_templates = array();
 
 	/* If there's an array of templates, loop through each template. */

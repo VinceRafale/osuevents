@@ -1,11 +1,24 @@
 <?php ob_start();
-	$color1 = hybrid_get_setting( 'color_picker_color1' );
-	$color2 = hybrid_get_setting( 'color_picker_color2' );
-	$color3 = hybrid_get_setting( 'color_picker_color3' );
-	$color4 = hybrid_get_setting( 'color_picker_color4' );
-	$color5 = hybrid_get_setting( 'color_picker_color5' );
-	$color6 = hybrid_get_setting( 'color_picker_color6' );
-
+	$file = dirname(__FILE__);
+	$file = substr($file,0,stripos($file, "wp-content"));
+	require($file . "/wp-load.php");
+	global $wpdb;
+	if(function_exists('hybrid_get_setting')){
+		$color1 = hybrid_get_setting( 'color_picker_color1' );
+		$color2 = hybrid_get_setting( 'color_picker_color2' );
+		$color3 = hybrid_get_setting( 'color_picker_color3' );
+		$color4 = hybrid_get_setting( 'color_picker_color4' );
+		$color5 = hybrid_get_setting( 'color_picker_color5' );
+		$color6 = hybrid_get_setting( 'color_picker_color6' );
+	}else{
+		$supreme_theme_settings = get_option('supreme_theme_settings');
+		$color1 = $supreme_theme_settings[ 'color_picker_color1' ];
+		$color2 = $supreme_theme_settings[ 'color_picker_color2' ];
+		$color3 = $supreme_theme_settings[ 'color_picker_color3' ];
+		$color4 = $supreme_theme_settings[ 'color_picker_color4' ];
+		$color5 = $supreme_theme_settings[ 'color_picker_color5' ];
+		$color6 = $supreme_theme_settings[ 'color_picker_color6' ];
+	}
 if($color1 != "#" || $color1 != ""){?>
 
 	.index_column h4,
@@ -62,7 +75,7 @@ if($color1 != "#" || $color1 != ""){?>
 	.ui-datepicker .ui-datepicker-header,
 	div#menu-secondary .menu li a:hover:before,
 	#content .flexslider_inner .flex-control-nav a:hover, #content .flexslider_inner .flex-control-nav a.flex-active,
-	#content .flexslider_inner .slider_content,
+	.flexslider_inner .slider_content,
 	.slide_event_info .image,
 	.slider_content .search_box input.submit:hover,
 	.slider_content .search_box,
@@ -70,6 +83,16 @@ if($color1 != "#" || $color1 != ""){?>
 	.postpagination a.active {
 		background-color: <?php echo $color1;?>;
 	}
+    
+    .widget #wp-calendar caption {
+    	border-color: <?php echo $color1;?>;
+        }
+        
+    .reverse:hover,
+	.priview_post_btn:hover {
+		background-color: <?php echo $color1;?>;
+	}
+    
 	input[type="date"]:focus, 
 	input[type="datetime"]:focus, 
 	input[type="datetime-local"]:focus, 
@@ -97,7 +120,7 @@ if($color1 != "#" || $color1 != ""){?>
 		border-color: <?php echo $color1;?>;
 	}
 	.index_column h4 {
-		border-bottom: 3px solid <?php echo $color1;?>;
+		border-bottom: 3px solid <?php echo $color1;?> !important;
 	}
 	
 
@@ -118,7 +141,8 @@ if($color2 != "#" || $color2 != ""){?>
 	.slider_content .search_box input.submit {
 		background-color: <?php echo $color2;?>;
 	}
-	
+    
+    
 <?php }
 
 
@@ -163,6 +187,8 @@ if($color3 != "#" || $color3 != ""){?>
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 		color: <?php echo $color3;?> !important;
 	}
+    
+    
 
 <?php }
 
@@ -219,7 +245,7 @@ if($color5 != "#" || $color5 != ""){?>
 
 if($color6 != "#" || $color6 != ""){?>
 
-	.header_bg1,
+	
 	.footer_bg1,
 	.footer_bg2,
 	.widget #wp-calendar th,
@@ -239,10 +265,14 @@ if($color6 != "#" || $color6 != ""){?>
 	form#commentform p.log-in-out {
 		background-color: <?php echo $color6;?>;
 	}
+	.header_bg1 {
+		background: <?php echo $color6;?>;
+	}
 
-<?php }
+<?php } ?>
 
 
+<?php
 $color_data = ob_get_contents();
 ob_clean();
 if(isset($color_data) && $color_data !=''){?>
@@ -252,6 +282,7 @@ if(isset($color_data) && $color_data !=''){?>
 <?php 
 }
 ?>
+
 
 
 

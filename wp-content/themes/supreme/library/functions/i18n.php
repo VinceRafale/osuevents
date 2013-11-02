@@ -51,7 +51,7 @@ function hybrid_load_framework_textdomain( $domain ) {
 	if ( empty( $mofile ) )
 		$mofile = trailingslashit( HYBRID_LANGUAGES ) . "{$domain}-{$locale}.mo";
 
-	return load_textdomain( $domain, $mofile );
+	return load_theme_textdomain( $domain, $mofile );
 }
 
 /**
@@ -133,7 +133,9 @@ function hybrid_load_textdomain_mofile( $mofile, $domain ) {
 
 		/* Check for a $domain-$locale.mo file in the parent and child theme root and /languages folder. */
 		$locale = get_locale();
-		$locate_mofile = locate_template( array( "languages/{$domain}-{$locale}.mo", "{$domain}-{$locale}.mo" ) );
+		//$locate_mofile = locate_template( array( "languages/{$domain}-{$locale}.mo", "{$domain}-{$locale}.mo" ) );
+		$locate_mofile = locate_template( array( "languages/supreme-en_EN.mo", "supreme-en_EN.mo" ) );
+		//$locate_mofile = locate_template( array( "languages/theme+supreme.mo", "theme+supreme.mo" ) );
 
 		/* If a mofile was found based on the given format, set $mofile to that file name. */
 		if ( !empty( $locate_mofile ) )

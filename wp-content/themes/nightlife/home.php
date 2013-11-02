@@ -10,7 +10,7 @@
  */
 
 get_header(); // Loads the header.php template. ?>
-<?php if ( current_theme_supports( 'breadcrumb-trail' ) && !is_home()) breadcrumb_trail( array( 'separator' => '&rarr;' ) ); ?>
+<?php if ( current_theme_supports( 'breadcrumb-trail' ) && !is_home() && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&rarr;' ) ); ?>
 <?php do_atomic( 'before_content' ); // supreme_before_content ?>
 <div id="content">
 
@@ -32,10 +32,19 @@ get_header(); // Loads the header.php template. ?>
 		
 	</div><!-- .hfeed -->
 	
-	<?php do_atomic( 'close_content' ); // supreme_close_content ?>
+	<?php do_atomic( 'close_content' ); // supreme_close_content ?>	
 	
-	<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
-
+     <?php if(function_exists('pagenavi_plugin')) { ?>
+     <div id="listpagi">
+          <div class="pagination pagination-position">
+                <?php  pagenavi_plugin(); ?>
+          </div>
+     </div>
+     <?php
+	}else{
+		get_template_part( 'loop-nav' ); // Loads the loop-nav.php template.	
+	}
+	?>
 
 </div><!-- #content -->
 

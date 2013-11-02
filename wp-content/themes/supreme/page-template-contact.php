@@ -2,19 +2,32 @@
 /*
 Template Name: Template - Contact Us
 */
-$tmpdata = get_option('templatic_settings');
-$display = $tmpdata['user_verification_page'];	
+add_action('wp_head','attach_supreme_contact_css');
+function attach_supreme_contact_css(){
+echo '
+	<style type="text/css">
+		.success_msg {
+			font-size:16px;
+			padding-top:10px;
+			color:green;
+		}
+	</style>
+';
+}
+include_once(ABSPATH.'wp-admin/includes/plugin.php');
+$captcha=hybrid_get_setting( 'supreme_global_contactus_captcha' );
 if($_POST['contact_s'])
 {
+	
 	function send_contact_email($data)
 	{
 		$toEmailName = get_option('blogname');
 		$toEmail = get_option('admin_email');
 		$subject = $data['your-subject'];
 		$message = '';
-		$message .= '<p>'.DEAR.$toEmailName.',</p>';
-		$message .= '<p>'.NAME.' : '.$data['your-name'].',</p>';
-		$message .= '<p>'.EMAIL.' : '.$data['your-email'].',</p>';
+		$message .= '<p>'.DEAR.' '.$toEmailName.',</p>';
+		$message .= '<p>'.NAME.' : '.$data['your-name'].'</p>';
+		$message .= '<p>'.EMAIL.' : '.$data['your-email'].'</p>';
 		$message .= '<p>'.MESSAGE.' : '.nl2br($data['your-message']).'</p>';
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
@@ -40,10 +53,7 @@ if($_POST['contact_s'])
 			}
 		echo "<script type='text/javascript'>location.href='".$url."';</script>";
 	}
-	if( $tmpdata['recaptcha'] == 'recaptcha')
-	{
-		if(file_exists(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php') && is_plugin_active('wp-recaptcha/wp-recaptcha.php') && in_array('contactus',$display))
-		{
+	if(file_exists(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php') && is_plugin_active('wp-recaptcha/wp-recaptcha.php') && $captcha == '1'){
 			require_once( ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php');
 			$a = get_option("recaptcha_options");
 			$privatekey = $a['private_key'];
@@ -51,136 +61,132 @@ if($_POST['contact_s'])
 								
 			if ($resp->is_valid =="")
 			{
-				wp_redirect($_REQUEST['request_url'].'/?ecptcha=captch');
+				wp_redirect($_REQUEST['request_url'].'&ecptcha=captch');
 				exit;		
 			}else{
 				$data = $_POST;
 				send_contact_email($data);
 			}
-		}
-	}else if(file_exists(ABSPATH.'wp-content/plugins/are-you-a-human/areyouahuman.php') && is_plugin_active('are-you-a-human/areyouahuman.php')  && in_array('contactus',$display) && $tmpdata['recaptcha'] == 'playthru')
-	{
-		require_once( ABSPATH.'wp-content/plugins/are-you-a-human/areyouahuman.php');
-		require_once(ABSPATH.'wp-content/plugins/are-you-a-human/includes/ayah.php');
-		$ayah = new AYAH();
-
-		/* The form submits to itself, so see if the user has submitted the form.
-		Use the AYAH object to get the score. */
-		$score = $ayah->scoreResult();
-	
-		if($score)			
-		{
-			$data = $_POST;
-			send_contact_email($data);			
-		}else
-		{
-			echo "<script>alert('You need to play the game to send the mail successfully.');</script>";			
-		}
+	}else{
+		$data = $_POST;
+		send_contact_email($data);
 	}
 	
 	
 }
 ?>
 <?php get_header(); ?>
-
 <?php do_atomic( 'before_content' ); // supreme_before_content ?>
-<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
+<?php if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 
 <div id="content" class="multiple">
-  <?php do_atomic( 'open_content' ); // supreme_open_content ?>
-  <div class="hfeed">
-    <!--  CONTENT AREA START -->
-    <!-- contact -->
-    <h1 class="entry-title"><?php the_title(); ?></h1>
-    <?php global $is_home; 
-	echo $post->post_content;
-	?><div style="padding:20px 0 20px 0;"><?php dynamic_sidebar('contact_page_widget');?></div>
-	<?php 
-	
-	if ( get_option( 'ptthemes_breadcrumbs' ) == 'Yes') { ?><div class="breadcums"><ul class="page-nav"><li><?php yoast_breadcrumb('',''); ?></li></ul></div><?php } ?>
-		
-	 <?php $a = get_option('recaptcha_options'); ?>
-	  <script type="text/javascript">
+<?php do_atomic( 'open_content' ); // supreme_open_content ?>
+<div class="hfeed">
+<?php while ( have_posts() ) : the_post(); ?>
+<?php do_atomic( 'before_entry' ); // supreme_before_entry ?>
+<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
+<?php do_atomic( 'open_entry' ); // supreme_open_entry ?>
+<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+<div class="entry-content">
+<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', T_DOMAIN ) ); ?>
+</div>
+<!-- .entry-content -->
+
+<?php do_atomic( 'close_entry' ); // supreme_close_entry ?>
+</div>
+<!-- .hentry -->
+
+<?php do_atomic( 'after_entry' ); // supreme_after_entry ?>
+<?php get_sidebar( 'after-singular' ); // Loads the sidebar-after-singular.php template. ?>
+<?php do_atomic( 'after_singular' ); // supreme_after_singular ?>
+<?php endwhile; ?>
+<?php if ( is_active_sidebar('contact_page_widget') ) {?>
+<div class="cont_wid_area">
+<?php dynamic_sidebar('contact_page_widget');?>
+</div>
+<?php } ?>
+<?php $a = get_option('recaptcha_options'); ?>
+<script type="text/javascript">
 			 var RecaptchaOptions = {
 				theme : '<?php echo $a['registration_theme']; ?>',
 				lang : '<?php echo $a['recaptcha_language']; ?>'
 			 };
 	  </script>
-	<?php
+<?php
 if($_REQUEST['msg'] == 'success'){
 ?>
-    <p class="success_msg"> <?php echo CONTACT_SUCCESS_TEXT;?> </p>
-    <?php
+<p class="success_msg">
+<?php _e("Contact mail successfully sent.",'supreme');?>
+</p>
+<?php
 }
 ?>
-<?php  if(isset($_REQUEST['ecptcha']) == 'captch') {
-		$a = get_option("recaptcha_options");
-		$blank_field = $a['no_response_error'];
-		$incorrect_field = $a['incorrect_response_error'];
-		echo '<div class="error_msg">'.$incorrect_field.'</div>';
+<?php  
+		if(isset($_REQUEST['ecptcha']) && $_REQUEST['ecptcha'] == 'captch' && !isset($_REQUEST['msg'])) {
+			$a = get_option("recaptcha_options");
+			$blank_field = $a['no_response_error'];
+			$incorrect_field = $a['incorrect_response_error'];
+			echo '<div class="error_msg">'.$incorrect_field.'</div>';
 		}?>
-    <form action="<?php echo get_permalink($post->ID);?>" method="post" id="contact_frm" name="contact_frm" class="wpcf7-form">
-      <input type="hidden" name="request_url" value="<?php echo $_SERVER['REQUEST_URI'];?>" />
-      <div class="form_row">
-        <label><?php _e("Name","templatic");?> <span class="indicates">*</span></label>
-        <div><input type="text" name="your-name" id="your-name" value="" class="textfield" size="40" /></div>
-        <span id="your_name_Info" class="error"></span> 
-	  </div>
-      <div class="form_row">
-        <label>
-          <?php _e("Email","templatic");?>
-          <span class="indicates">*</span></label>
-        <div><input type="text" name="your-email" id="your-email" value="" class="textfield" size="40" /></div>
-        <span id="your_emailInfo"  class="error"></span> 
-	  </div>
-      <div class="form_row">
-        <label>
-          <?php _e("Subject","templatic");?>
-          <span class="indicates">*</span></label>
-        <div><input type="text" name="your-subject" id="your-subject" value="" size="40" class="textfield" /></div>
-        <span id="your_subjectInfo"></span> 
-	  </div>
-      <div class="form_row">
-        <label>
-          <?php _e("Message","templatic");?>
-          <span class="indicates">*</span></label>
-        <div><textarea name="your-message" id="your-message" cols="40" class="textarea textarea2" rows="10"></textarea></div>
-        <span id="your_messageInfo"  class="error"></span> 
-	  </div>
-      <?php 
-			if( $tmpdata['recaptcha'] == 'recaptcha')
+<form action="<?php echo get_permalink($post->ID);?>" method="post" id="contact_frm" name="contact_frm" class="wpcf7-form">
+<input type="hidden" name="request_url" value="<?php echo $_SERVER['REQUEST_URI'];?>" />
+<h3>
+<?php _e("Inquiry Form",'supreme');?>
+</h3>
+<div class="form_row clearfix">
+<label>
+<?php _e("Name","supreme");?>
+<span class="indicates">*</span></label>
+<div>
+<input type="text" name="your-name" id="your-name" value="" class="textfield" size="40" />
+</div>
+<span id="your_name_Info" class="error"></span> </div>
+<div class="form_row clearfix">
+<label>
+<?php _e("Email","supreme");?>
+<span class="indicates">*</span></label>
+<div>
+<input type="text" name="your-email" id="your-email" value="" class="textfield" size="40" />
+</div>
+<span id="your_emailInfo"  class="error"></span> </div>
+<div class="form_row clearfix">
+<label>
+<?php _e("Subject","supreme");?>
+<span class="indicates">*</span></label>
+<div>
+<input type="text" name="your-subject" id="your-subject" value="" size="40" class="textfield" />
+</div>
+<span id="your_subjectInfo"></span> </div>
+<div class="form_row clearfix">
+<label>
+<?php _e("Message","supreme");?>
+<span class="indicates">*</span></label>
+<div>
+<textarea name="your-message" id="your-message" cols="40" class="textarea textarea2" rows="10"></textarea>
+</div>
+<span id="your_messageInfo"  class="error"></span> </div>
+<?php 
+			if($captcha == 1)
 			{
 				$a = get_option("recaptcha_options");
-				if(file_exists(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php') && is_plugin_active('wp-recaptcha/wp-recaptcha.php') && in_array('contactus',$display))
+				if(file_exists(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php') && is_plugin_active('wp-recaptcha/wp-recaptcha.php'))
 				{							
 					require_once(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php');
 					echo '<div class="form_row">';
-					echo '<label class="recaptcha_claim">'.WORD_VERIFICATION.' <span>*</span></label>';
+					echo '<label class="recaptcha_claim">'.__('Verify words','supreme').' <span>*</span></label>';
 					$publickey = $a['public_key']; // you got this from the signup page 					
 					?>
-					<div class="claim_recaptcha_div"><?php echo recaptcha_get_html($publickey); ?> </div>
-                    
-			<?php 
+<div class="claim_recaptcha_div"><?php echo recaptcha_get_html($publickey); ?><span id="recaptcha_response_fieldInfo"  class="error"></span> </div>
+<?php 
 					echo '</div>';
 				}
-			}
-			elseif($tmpdata['recaptcha'] == 'playthru')
-			{ ?>
-			<?php /* CODE TO ADD PLAYTHRU PLUGIN COMPATIBILITY */
-				if(file_exists(ABSPATH.'wp-content/plugins/are-you-a-human/areyouahuman.php') && is_plugin_active('are-you-a-human/areyouahuman.php')  && in_array('contactus',$display))
-				{
-					echo '<div class="form_row">';
-					require_once( ABSPATH.'wp-content/plugins/are-you-a-human/areyouahuman.php');
-					require_once(ABSPATH.'wp-content/plugins/are-you-a-human/includes/ayah.php');
-					$ayah = ayah_load_library();
-					echo $ayah->getPublisherHTML();
-					echo '</div>';
-				}
-			}
+			}			
 		?>
-      <div class="form_row"><input type="submit" value="Send" name="contact_s" class="b_submit" /></div>
-    </form>
-    <script type="text/javascript">
+<div class="form_row">
+<input type="submit" value="<?php _e('Send','supreme'); ?>" name="contact_s" class="b_submit" />
+</div>
+</form>
+<script type="text/javascript">
 var $c = jQuery.noConflict();
 $c(document).ready(function(){
 
@@ -190,11 +196,13 @@ $c(document).ready(function(){
 	var your_email = $c("#your-email");
 	var your_subject = $c("#your-subject");
 	var your_message = $c("#your-message");
+	var recaptcha_response_field = $c("#recaptcha_response_field");
 	
 	var your_name_Info = $c("#your_name_Info");
 	var your_emailInfo = $c("#your_emailInfo");
 	var your_subjectInfo = $c("#your_subjectInfo");
 	var your_messageInfo = $c("#your_messageInfo");
+	var recaptcha_response_fieldInfo = $c("#recaptcha_response_fieldInfo");
 	
 	//On blur
 	your_name.blur(validate_your_name);
@@ -212,7 +220,16 @@ $c(document).ready(function(){
 
 	//On Submitting
 	enquiryfrm.submit(function(){
-		if(validate_your_name() & validate_your_email() & validate_your_subject() & validate_your_message())
+		if(validate_your_name() & validate_your_email() & validate_your_subject() & validate_your_message() 
+			<?php 
+			 if( $captcha == 1){
+			   if(file_exists(ABSPATH.'wp-content/plugins/wp-recaptcha/recaptchalib.php') && is_plugin_active('wp-recaptcha/wp-recaptcha.php')){
+			 ?>
+				& validate_recaptcha() 		
+			 <?php }
+			 }  
+			?>
+		  )
 		{
 			hideform();
 			return true
@@ -230,7 +247,7 @@ $c(document).ready(function(){
 		if($c("#your-name").val() == '')
 		{
 			your_name.addClass("error");
-			your_name_Info.text("<?php _e('Please enter your name','templatic'); ?>");
+			your_name_Info.text("<?php _e('Please enter your name','supreme'); ?>");
 			your_name_Info.addClass("message_error");
 			return false;
 		}
@@ -265,7 +282,7 @@ $c(document).ready(function(){
 		if(isvalidemailflag)
 		{
 			your_email.addClass("error");
-			your_emailInfo.text("<?php _e('Please enter valid email address','templatic'); ?>");
+			your_emailInfo.text("<?php _e('Please enter valid email address','supreme'); ?>");
 			your_emailInfo.addClass("message_error");
 			return false;
 		}else
@@ -284,7 +301,7 @@ $c(document).ready(function(){
 		if($c("#your-subject").val() == '')
 		{
 			your_subject.addClass("error");
-			your_subjectInfo.text("<?php _e('Please enter a subject','templatic'); ?>");
+			your_subjectInfo.text("<?php _e('Please enter a subject','supreme'); ?>");
 			your_subjectInfo.addClass("message_error");
 			return false;
 		}
@@ -301,7 +318,7 @@ $c(document).ready(function(){
 		if($c("#your-message").val() == '')
 		{
 			your_message.addClass("error");
-			your_messageInfo.text(" <?php _e("Please enter message","templatic"); ?> ");
+			your_messageInfo.text(" <?php _e("Please enter message",'supreme'); ?> ");
 			your_messageInfo.addClass("message_error");
 			return false;
 		}
@@ -312,12 +329,29 @@ $c(document).ready(function(){
 			return true;
 		}
 	}
+	
+	function validate_recaptcha()
+	{
+		if($c("#recaptcha_response_field").val() == '')
+		{
+			recaptcha_response_field.addClass("error");
+			recaptcha_response_fieldInfo.text(" <?php _e("Please enter captcha","supreme"); ?> ");
+			recaptcha_response_fieldInfo.addClass("message_error");
+			return false;
+		}
+		else{
+			recaptcha_response_field.removeClass("error");
+			recaptcha_response_fieldInfo.text("");
+			recaptcha_response_fieldInfo.removeClass("message_error");
+			return true;
+		}
+	}
 
 });
-</script>
-  </div>
-  <?php do_atomic( 'close_content' ); // supreme_close_content ?>
-  <!--  CONTENT AREA END -->
+</script> 
+</div>
+<?php do_atomic( 'close_content' ); // supreme_close_content ?>
+<!--  CONTENT AREA END --> 
 </div>
 <?php do_atomic( 'after_content' ); // supreme_after_content ?>
 <?php get_footer();?>

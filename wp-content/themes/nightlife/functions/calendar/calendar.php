@@ -2,11 +2,8 @@
 /* File for calendar widget function will call tha calendar ajax file */
 if(!function_exists('get_my_event_calendar'))
 {
-
-
 function get_my_event_calendar()
-{
-	
+{	
 	?> 
     <div class="widget calendar widget-calendar" id="eventcal" align="center">
 	
@@ -17,6 +14,11 @@ function get_my_event_calendar()
 function change_calendar(mnth,yr)
 {  	
 
+	<?php if(is_plugin_active('wpml-translation-management/plugin.php')){
+		global $sitepress;
+		$current_lang_code= ICL_LANGUAGE_CODE;
+		$language="&language=".$current_lang_code;
+	}?>
 	  document.getElementById("eventcal").innerHTML="<img src='<?php echo get_stylesheet_directory_uri()."/functions/calendar/process.gif"; ?>' alt='Processing....'/>";
 	
 	  if (window.XMLHttpRequest)
@@ -34,7 +36,7 @@ function change_calendar(mnth,yr)
 		document.getElementById("eventcal").innerHTML=xmlhttp.responseText;
 		}
 	  } 
-	  url = "<?php echo get_stylesheet_directory_uri(); ?>/functions/calendar/ajax_calendar.php?mnth="+mnth+"&yr="+yr
+	  url = "<?php echo get_stylesheet_directory_uri(); ?>/functions/calendar/ajax_calendar.php?mnth="+mnth+"&yr="+yr+"<?php echo $language;?>"
 
 	  xmlhttp.open("GET",url,true);
 	  xmlhttp.send();
@@ -43,11 +45,17 @@ function change_calendar(mnth,yr)
 <script language='javascript'>
 function show_calendar()
 {  	
+	<?php if(is_plugin_active('wpml-translation-management/plugin.php')){
+		global $sitepress;
+		$current_lang_code= ICL_LANGUAGE_CODE;
+		$language="&language=".$current_lang_code;
+	}
+	?>
 
 	  document.getElementById("eventcal").innerHTML="<img src='<?php echo get_stylesheet_directory_uri()."/functions/calendar/process.gif"; ?>' alt='Processing....'/>";
 	  url = "<?php echo get_stylesheet_directory_uri(); ?>/functions/calendar/ajax_calendar.php"
-	  var data = 'page=' + document.location.hash.replace(/^.*#/, '');
-    	jQuery.ajax({
+	  var data = 'page=' + document.location.hash.replace(/^.*#/, '')+'<?php echo $language;?>';
+    	  jQuery.ajax({
         url: url, 
         type: "GET",       
         data: data,    

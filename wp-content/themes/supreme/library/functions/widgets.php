@@ -64,6 +64,26 @@ function hybrid_register_widgets() {
 	}else{
 		require_once( trailingslashit( HYBRID_CLASSES ) . 'widget-mega_menu.php' );
 	}
+	/* Load the subscribe widget class */
+	if(file_exists( trailingslashit( HYBRID_CLASSES ) . 'widget-subscribe.php' )){
+		require_once( trailingslashit( HYBRID_CLASSES ) . 'widget-subscribe.php' );
+	}
+	
+	/* Load the Social media widget class */
+	if(file_exists( trailingslashit( HYBRID_CLASSES ) . 'widget-social_media.php' )){
+		require_once( trailingslashit( HYBRID_CLASSES ) . 'widget-social_media.php' );
+	}
+	
+	/* Load the Flicker widget class */
+	
+	if(file_exists( trailingslashit( HYBRID_CLASSES ) . 'widget_flicker.php' )){
+		require_once( trailingslashit( HYBRID_CLASSES ) . 'widget_flicker.php' );
+	}
+	
+	/* Load the Testimonial widget class */
+	if(file_exists( trailingslashit( HYBRID_CLASSES ) . 'widget-testimonials.php' )){
+		require_once( trailingslashit( HYBRID_CLASSES ) . 'widget-testimonials.php' );
+	}
 	
 	require_once( trailingslashit( HYBRID_CLASSES ) . 'widget-google_map.php' );
 	

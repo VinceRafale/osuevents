@@ -4,13 +4,23 @@ $file = dirname(__FILE__);
 $file = substr($file,0,stripos($file, "wp-content"));
 require($file . "/wp-load.php");
 global $post,$wpdb;
+if(is_plugin_active('wpml-translation-management/plugin.php'))
+{
+	global  $sitepress;
+	$sitepress->switch_lang($_REQUEST['language']);
+}
+
 function get_calendar_month_name($number){
 	
-    $month = date("M", mktime(0, 0, 0, $number, 10));
+    $month = date_i18n("M", mktime(0, 0, 0, $number, 10));
 	return  $month;
 }
+function calendar_week_mod_end($num) {
+	$base = 7;
+	return ($num - $base*floor($num/$base));
+}
 /* display calendar fetching all event */
-$monthNames = Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+$monthNames = Array(__("January",T_DOMAIN), __("February",T_DOMAIN), __("March",T_DOMAIN), __("April",T_DOMAIN), __("May",T_DOMAIN), __("June",T_DOMAIN), __("July",T_DOMAIN), __("August",T_DOMAIN), __("September",T_DOMAIN), __("October",T_DOMAIN), __("November",T_DOMAIN), __("December",T_DOMAIN));
 	
 	if (!isset($_REQUEST["mnth"])) $_REQUEST["mnth"] = date("n");
 	if (!isset($_REQUEST["yr"])) $_REQUEST["yr"] = date("Y");
@@ -55,24 +65,24 @@ $monthNames = Array("January", "February", "March", "April", "May", "June", "Jul
 	<caption><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></caption>
 		     
 	<tr>
-	<td style="padding:0px;">
+	<td style="padding:0px; border:none;">
 	<table width="100%" border="0" cellpadding="2" cellspacing="2"  class="calendar_widget" style="padding:0px; margin:0px; border:none;">
 	
 	<thead>
-		<th title="<?php _e('Monday','supreme'); ?>" class="days" >Mon</th>
-		<th title="<?php _e('Tuesday','supreme'); ?>" class="days" >Tues</th>
-		<th title="<?php _e('Wednesday','supreme'); ?>" class="days" >Wed</th>
-		<th title="<?php _e('Thursday','supreme'); ?>" class="days" >Thur</th>
-		<th title="<?php _e('Friday','supreme'); ?>" class="days" >Fri</th>
-		<th title="<?php _e('Saturday','supreme'); ?>" class="days" >Sat</th>
-		<th  title="<?php _e('Sunday','supreme'); ?>" class="days" >Sun</th>
+		<th title="<?php _e('Monday',T_DOMAIN); ?>" class="days" ><?php _e('Mon',T_DOMAIN);?></th>
+		<th title="<?php _e('Tuesday',T_DOMAIN); ?>" class="days" ><?php _e('Tues',T_DOMAIN);?></th>
+		<th title="<?php _e('Wednesday',T_DOMAIN); ?>" class="days" ><?php _e('Wed',T_DOMAIN);?></th>
+		<th title="<?php _e('Thursday',T_DOMAIN); ?>" class="days" ><?php _e('Thur',T_DOMAIN);?></th>
+		<th title="<?php _e('Friday',T_DOMAIN); ?>" class="days" ><?php _e('Fri',T_DOMAIN);?></th>
+		<th title="<?php _e('Saturday',T_DOMAIN); ?>" class="days" ><?php _e('Sat',T_DOMAIN);?></th>
+		<th  title="<?php _e('Sunday',T_DOMAIN); ?>" class="days" ><?php _e('Sun',T_DOMAIN);?></th>
 	</thead> 
 	<?php
 	$timestamp = mktime(0,0,0,$cMonth,1,$cYear);
 	$maxday = date("t",$timestamp);
 	$thismonth = getdate ($timestamp);
 	$startday = $thismonth['wday'];
-			
+//	echo $endday = ($thismonth['yday']);		
 	if(@$_GET['m'])
 	{
 		$m = $_GET['m'];	
@@ -105,9 +115,9 @@ $monthNames = Array("January", "February", "March", "April", "May", "June", "Jul
 			
 			if(strlen($the_cal_date)==1){$the_cal_date = '0'.$the_cal_date;}
 			if(strlen($cMonth_date)==1){$cMonth_date = '0'.$cMonth_date;}
-			global $post,$wpdb;
+			//global $post,$wpdb;
 			$urlddate = "$cYear$cMonth_date$calday";
-			$thelink = get_option('home')."/?s=Calender-Event&amp;m=$urlddate";
+			$thelink = home_url()."/?s=Calender-Event&amp;m=$urlddate";
 			
 			$todaydate = "$cYear-$cMonth_date-$the_cal_date";
 			$date_num=date('N',strtotime($todaydate))."<br>";
@@ -127,33 +137,33 @@ $monthNames = Array("January", "February", "March", "April", "May", "June", "Jul
 			global $todaydate;
 				$args=
 				array( 'post_type' => 'event',
-				'posts_per_page' => -1	,
-				'post_status' => array('publish','private')	,
-				'meta_key' => 'st_date',
-				'orderby' => 'meta_value',
-				'order' => 'ASC',
-				'meta_query' => array(
-					'relation' => 'AND',
-					array(
-						'key' => 'st_date',
-						'value' => $todaydate,
-						'compare' => '<=',
-						'type' => 'DATE'
-					),
-			// this array results in no return for both arrays
-					array(
-						'key' => 'end_date',
-						'value' => $todaydate,
-						'compare' => '>=',
-						'type' => 'DATE'
+					'posts_per_page' => -1	,
+					'post_status' => array('publish','private')	,
+					'meta_key' => 'st_date',
+					'orderby' => 'meta_value',
+					'order' => 'ASC',
+					'meta_query' => array(
+						'relation' => 'AND',
+						array(
+							'key' => 'st_date',
+							'value' => $todaydate,
+							'compare' => '<=',
+							'type' => 'DATE'
+						),
+						// this array results in no return for both arrays
+						array(
+							'key' => 'end_date',
+							'value' => $todaydate,
+							'compare' => '>=',
+							'type' => 'DATE'
+						)
 					)
-				)
 				);
+				
 
 
 				$my_query1 = null;
-				$my_query1 = new WP_Query($args);
-				
+				$my_query1 = new WP_Query($args);								
 				//add_action('posts_orderby','wpcal_orederby');
 				
 				$post_info = '';
@@ -163,66 +173,85 @@ $monthNames = Array("January", "February", "March", "April", "May", "June", "Jul
 				{ 
 					$post_info .='<span class="calendar_tooltip" '.$style.'><span class="shape"></span>';
 					while ($my_query1->have_posts()) : $my_query1->the_post();
+				
 							/* separate out recurring events with regular events */
 							$is_recurring = get_post_meta($post->ID,'event_type',true);
-							if(strtolower(trim($is_recurring)) == strtolower(trim('Recurring event'))){
-									$recurrence_occurs = get_post_meta($post->ID,'recurrence_occurs',true);
-									$rec_date = templ_recurrence_dates($post->ID);
-									if(strstr($rec_date,',')){
-										$rec_dates = explode(',',$rec_date);
-									}else{
-										$rec_dates = $rec_date;
-									}													
-							}
-
-							if(is_array($rec_dates) && strtolower(trim($is_recurring)) == strtolower(trim('Recurring event')) && in_array($todaydate,$rec_dates)){ /* if recurring event */
-							$c = $counter++;
+							if(tmpl_is_parent($post)){
+								$recurrence_occurs = get_post_meta($post->post_parent,'recurrence_occurs',true);
+								$rec_date = templ_recurrence_dates($post->post_parent);
+							}else{
+								$recurrence_occurs = get_post_meta($post->post_parent,'recurrence_occurs',true);
+								$rec_date = templ_recurrence_dates($post->post_parent);
+							}							
+							if(strstr($rec_date,',')){ $rec_dates = explode(',',$rec_date); }else{ $rec_dates = $rec_date; }
+							
+							if(tmpl_is_parent($post)){ 												
 								$post_info .=' 
-								<a class="event_title" href="'.get_permalink($post->ID).'">'.$post->post_title.'</a><small>'.
-								__('<b>Location : </b>').get_post_meta($post->ID,'address',true) .'<br>'.
-								__('<b>Start Date : </b>').get_formated_date(get_post_meta($post->ID,'st_date',true)).' '.get_formated_time(get_post_meta($post->ID,'st_time',true)) .'<br />'. 
-								__('<b>End Date : </b>').get_formated_date(get_post_meta($post->ID,'end_date',true)).' '.get_formated_time(get_post_meta($post->ID,'end_time',true)) .'</small>';
-							}else if(strtolower($is_recurring) == strtolower('Regular event')){ /* if regular event */
+								<a class="event_title" href="'.get_permalink($post->post_parent).'">'.$post->post_title.'</a><small>'.
+								__('<b>Location : </b>','T_DOMAIN').get_post_meta($post->post_parent,'address',true) .'<br>'.
+								__('<b>Start Date : </b>','T_DOMAIN').get_formated_date(get_post_meta($post->ID,'st_date',true)).' '.get_formated_time(get_post_meta($post->post_parent,'st_time',true)) .'<br />'. 
+								__('<b>End Date : </b>','T_DOMAIN').get_formated_date(get_post_meta($post->ID,'end_date',true)).' '.get_formated_time(get_post_meta($post->post_parent,'end_time',true)) .'</small>';
+							}else{
+								if(strtolower($is_recurring) == strtolower('Regular event')){
 									$post_info .=' 
-								<a class="event_title" href="'.get_permalink($post->ID).'">'.$post->post_title.'</a><small>'.
-								__('<b>Location : </b>').get_post_meta($post->ID,'address',true) .'<br>'.
-								__('<b>Start Date : </b>').get_formated_date(get_post_meta($post->ID,'st_date',true)).' '.get_formated_time(get_post_meta($post->ID,'st_time',true)) .'<br />'. 
-								__('<b>End Date : </b>').get_formated_date(get_post_meta($post->ID,'end_date',true)).' '.get_formated_time(get_post_meta($post->ID,'end_time',true)) .'</small>';							
+									<a class="event_title" href="'.get_permalink($post->ID).'">'.$post->post_title.'</a><small>'.
+									__('<b>Location : </b>','T_DOMAIN').get_post_meta($post->ID,'address',true) .'<br>'.
+									__('<b>Start Date : </b>','T_DOMAIN').get_formated_date(get_post_meta($post->ID,'st_date',true)).' '.get_formated_time(get_post_meta($post->ID,'st_time',true)) .'<br />'. 
+									__('<b>End Date : </b>','T_DOMAIN').get_formated_date(get_post_meta($post->ID,'end_date',true)).' '.get_formated_time(get_post_meta($post->ID,'end_time',true)) .'</small>';
+								}
 							}
+							
 					endwhile;
 					$post_info .='</span>';
 				}
 				echo "<td class='date_n' >";
 				if($my_query1->have_posts())
 				{	
-				
+					$temp_calendar_date='';
+					while ($my_query1->have_posts()) : $my_query1->the_post();
 						/* separate out recurring events with regular events */
-							$is_recurring = get_post_meta($post->ID,'event_type',true);
-							if(strtolower(trim($is_recurring)) == strtolower(trim('Recurring event'))){
-									$recurrence_occurs = get_post_meta($post->ID,'recurrence_occurs',true);
-									$rec_date = templ_recurrence_dates($post->ID);
-									if(strstr($rec_date,',')){
-										$rec_dates = explode(',',$rec_date);
-									}else{
-										$rec_dates = $rec_date;
-									}													
-							}
-							
+						$is_recurring = get_post_meta($post->ID,'event_type',true);
 						if(is_array($rec_dates) && strtolower(trim($is_recurring)) == strtolower(trim('Recurring event')) && in_array($todaydate,$rec_dates) && $c >=0){ /* if recurring event */
-							echo "<div><a class=\"more_events\" href=\"$thelink\">". ($cal_date) . "</a>".$post_info;
+							$calendar_date= "<a class=\"more_events\" href=\"$thelink\">". ($cal_date) . "</a>";
 						}elseif(strtolower(trim($is_recurring)) == strtolower(trim('Regular event'))){
-							echo "<div><a class=\"more_events\" href=\"$thelink\">". ($cal_date) . "</a>".$post_info;
+							$calendar_date= "<a class=\"more_events\" href=\"$thelink\">". ($cal_date) . "</a>";
 						}else{
-							echo "<span class=\"no_event\" >". ($cal_date) . "</span>";
-						}
+							$flg=1;							
+							$calendar_date="<span class=\"no_event\" >". ($cal_date) . "</span>";
+						}						
+						
+						if($cal_date!=$tmp_date)
+						{							
+							if($flg==1)						
+							{
+								$flg=0;
+								$p=1;
+								$temp_calendar_date=$calendar_date;								
+							}
+							else	
+							{
+								$p=0;
+								$temp_calendar_date=$calendar_date;
+								$tmp_date=$cal_date;
+							}
+						}	
+					endwhile;	
+					if($p==1)
+						echo $temp_calendar_date;
+					else
+						echo '<div>'.$temp_calendar_date.$post_info."</div>";
+					
 				}else
 				{	
 						echo "<span class=\"no_event\" >". ($cal_date) . "</span>";
 				}
-				echo "</div></td>\n";
+				echo "</td>\n";
 		}
 		if(($i % 7) == 0 ) echo "</tr>\n";
 	}
+	$pad = 7 - calendar_week_mod_end(date('w', strtotime($todaydate)));
+	if ( $pad != 0 && $pad != 7 )
+		echo "\n\t\t".'<td class="pad" colspan="'. esc_attr($pad) .'">&nbsp;</td>';
 	?>
 	</tr>
 	</tbody>

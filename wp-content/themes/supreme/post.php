@@ -13,7 +13,7 @@ get_header(); // Loads the header.php template. ?>
 
 	<?php do_atomic( 'before_content' ); // supreme_before_content ?>
 	
-	<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
+	<?php if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 
 	<div id="content">
 
@@ -35,7 +35,7 @@ get_header(); // Loads the header.php template. ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 						
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __('[entry-author] [entry-published] [entry-comments-link zero="Respond" one="%1$s" more="%1$s"] [entry-edit-link]', 'supreme' ) . '</div>'); ?>
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __('[entry-author] [entry-published] [entry-comments-link zero="Respond" one="%1$s Comment" more="%1$s Comments"] [entry-edit-link]', 'supreme' ) . '</div>'); ?>
 
 						<?php get_sidebar( 'entry' ); // Loads the sidebar-entry.php template. ?>
 						
@@ -66,7 +66,11 @@ get_header(); // Loads the header.php template. ?>
 				
                 	<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 				
-                	<?php comments_template( '/comments.php', true ); // Loads the comments.php template. ?>
+                	<?php 
+						if ( hybrid_get_setting( 'enable_comments' ) ) {
+							comments_template( '/comments.php', true ); // Loads the comments.php template. 
+						}
+					?>
 
 				<?php endwhile; ?>
 

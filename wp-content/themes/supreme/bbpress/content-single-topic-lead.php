@@ -34,7 +34,7 @@
 	<?php bbp_topic_content(); ?>
 	<?php bbp_topic_admin_links( array( 'sep' => ' &#160; ' ) ); ?>
 </div><!-- .entry-content -->
-
+<?php  if(hybrid_get_setting( 'supreme_author_bio_pages' )){ ?>
 <div class="entry-author-meta">
 
 	<a href="<?php echo bbp_get_topic_author_url(); ?>" title="<?php the_author_meta('display_name'); ?>" class="avatar-frame"><?php echo get_avatar(get_the_author_meta('ID'), '50', '', ''); ?></a>
@@ -43,3 +43,4 @@
 	<p class="author-description"><?php the_author_meta('description'); ?></p>
 
 </div><!-- .entry-author -->
+<?php } ?>

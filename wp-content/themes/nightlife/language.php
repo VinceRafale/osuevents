@@ -6,7 +6,7 @@ define('SEARCH_FOR_TEXT',__('Search For',T_DOMAIN));
 define('SEARCH_EVENT_TEXT',__('Enter Event name',T_DOMAIN));
 define('SELECT_CATEGORY_TEXT',__('Select a Category',T_DOMAIN));
 define('EVENT_START_TEXT',__('Event start date',T_DOMAIN));
-define('ZIP_OR_ADD_TEXT',__('Zip Code or Address',T_DOMAIN));
+define('ZIP_OR_ADD_TEXT',__('Address',T_DOMAIN));
 define('SEARCH_EVENTS_TEXT',__('Search Events',T_DOMAIN));
 define('CAT_IDS_TEXT',__('Exclude Category IDs',T_DOMAIN));
 define('START_DATE_TEXT',__('Start Date',T_DOMAIN));
@@ -19,7 +19,6 @@ define('CATEGORY_SLUGS_TEXT',__('Please enter any one of Category (<code>Slugs</
 define('DISPLAY_TEXT',__('Display Text',T_DOMAIN));
 define('NUMBER_POSTS_TEXT',__('Number of Posts',T_DOMAIN));
 define('NUMBER_PHOTOS_TEXT',__('Number of Photos',T_DOMAIN));
-define('NUMBER_REVIEWS_TEXT',__('Number of Reviews',T_DOMAIN));
 define('WIDGET_TITLE_TEXT',__('Title',T_DOMAIN));
 define('DESCRIPTION_TEXT',__('Address',T_DOMAIN));
 define('CONTACTNO_TEXT',__('Contact No.',T_DOMAIN));
@@ -53,7 +52,7 @@ define('HIDE_FACEBOOK_SETTING',__('Hide Setting',T_DOMAIN));
 define('CONTACT_SUCCESS_TEXT',__('Your message sent successfully.',T_DOMAIN));
 /*Attend event msg and text  */
 define('ATTEND_EVENT_MSG',__('are you going to attend',T_DOMAIN));
-define('REMOVE_EVENT_MSG',__('You are going to attend this event.',T_DOMAIN));
+define('REMOVE_EVENT_MSG',__('You are going to attend',T_DOMAIN));
 define('ATTEND_EVENT_TEXT',__('Yes, I am',T_DOMAIN));
 define('REMOVE_EVENT_TEXT',__('Not attending',T_DOMAIN));
 
@@ -64,4 +63,5 @@ define('PRO_ATTEND_EVENT_TEXT',__('Attending Events',T_DOMAIN));
 define('FACEBOOK_EVENT_TEXT',__('Facebook Events',T_DOMAIN));
 define('NO_FACEBOOK_EVENT',__('You do not have any Facebook event on your site.',T_DOMAIN));
 define('USER_NO_FACEBOOK_EVENT',__('Apologies, the user is not having any Facebook event.',T_DOMAIN));
+define('TMPL_RECURRING_POST_TYPE',__('recurring-event',T_DOMAIN));
 ?>

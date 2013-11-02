@@ -40,9 +40,9 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider { position: relative; zoom: 1;}
+.flexslider { position: relative; zoom: 1; height: auto !important; }
 .flexslider .slides {zoom: 1;}
-.flexslider .slides > li {position: relative; text-align: center; padding: 0;}
+.flexslider .slides > li { border: none; position: relative; text-align: center; padding: 0;}
 /* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
 .flex-container {zoom: 1; position: relative;}
 
@@ -54,15 +54,15 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 
 /* Direction Nav */
 .flex-direction-nav { height: 0; }
-.flex-direction-nav a { width: 50px; height: 50px; margin: 0; display: block; background: #000000 url(../images/small_icons.png) no-repeat; opacity: .2; position: absolute; top: 44%; cursor: pointer; text-indent: -999em; }
-.flex-direction-nav .flex-next { background-position: left -2397px; right: 0px; border-radius: 4px 0 0 4px; }
-.flex-direction-nav .flex-prev { background-position: -4px -2347px; left: 0px; border-radius: 0 4px 4px 0; }
+.flex-direction-nav a { width: 50px; height: 50px; margin: 0; display: block; background: #000000 url(../images/small_icons.png) no-repeat !important; opacity: .5 !important; position: absolute; bottom: 46%; cursor: pointer; text-indent: -999em; }
+.flex-direction-nav .flex-next { background-position: left -2397px !important; right: 0px; border-radius: 4px 0 0 4px; }
+.flex-direction-nav .flex-prev { background-position: -4px -2347px !important; left: 0px; border-radius: 0 4px 4px 0; }
 .flex-direction-nav a:hover {
 	-webkit-transition:all ease-in-out .4s;
 	-moz-transition:all ease-in-out .4s;
 	-o-transition:all ease-in-out .4s;
 	transition:all ease-in-out .4s;
-	opacity: .7;
+	opacity: .7 !important;
 	}
 .flex-direction-nav .flex-disabled { opacity: .3; filter:alpha(opacity=30); cursor: default; }
 
@@ -81,9 +81,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 	
 /*----- flex slider inner -----*/
 
-.flexslider_inner .flex-direction-nav a { width: 32px; height: 22px; background: url(../images/small_icons.png) no-repeat; border-radius: 0; opacity: 1; bottom: 38px; top: auto; }
-.flexslider_inner .flex-direction-nav .flex-next { background-position: 0px -2614px; right: 30px; }
-.flexslider_inner .flex-direction-nav .flex-prev { background-position: -19px -2564px; left: auto; right: 62px; border-right: 1px solid #FF9C75; }
+.flexslider_inner .flex-direction-nav a { width: 32px; height: 22px; background: url(../images/small_icons.png) no-repeat !important; border-radius: 0; opacity: 1 !important; bottom: 38px; top: auto; z-index: 10; }
+.flexslider_inner .flex-direction-nav .flex-next { background-position: 0px -2614px !important; right: 30px; }
+.flexslider_inner .flex-direction-nav .flex-prev { background-position: -19px -2564px !important; left: auto; right: 62px; border-right: 1px solid #FF9C75; }
 
 .flexslider_inner .flex-control-nav { width: auto; left: 30px; top: 30px; bottom: auto; text-align: left; }
 .flexslider_inner .flex-control-nav a { width: 20px; height: 20px; border-radius: 3px; background: #ffffff; font-size: 11px; color: #75787D; font-weight: normal; line-height: 22px; text-align: center; text-indent: 0px; }
@@ -97,3 +97,4 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .flex-control-nav a { width: 13px; height: 13px; display: block; background: url(images/bg_control_nav.png) no-repeat; cursor: pointer; text-indent: -999em;}
 .flex-control-nav a:hover { background-position: 0 -13px; }
 .flex-control-nav a.flex-active { background-position: 0 -26px; cursor: default; }
+

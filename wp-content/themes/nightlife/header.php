@@ -20,22 +20,31 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php 
+		$GetSupremeThemeOptions = get_option('supreme_theme_settings');
+		
+		if(isset($f_icon) && $f_icon!=''):
+			$GetFaviconIcon = $GetSupremeThemeOptions['supreme_favicon_icon'];
+		else:
+			$GetFaviconIcon='';
+		endif;
+		
+		$f_icon = $GetFaviconIcon;
+		if($GetFaviconIcon!=""){
+	 ?>
+			<link rel="shortcut icon" type="image/png" href="<?php echo $GetFaviconIcon; ?>">
+	<?php 
+		}
+	?>
 	<?php wp_head(); // wp_head ?>
-    
+    <?php 
+		$nightlife_theme_settings = get_option('supreme_theme_settings');
+		if ( isset($nightlife_theme_settings['customcss']) && $nightlife_theme_settings['customcss']==1 ) { ?>
+			<link href="<?php echo get_stylesheet_directory_uri(); ?>/custom.css" rel="stylesheet" type="text/css" />
+	<?php } ?>
     <!-- FlexSlider pieces -->
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flexslider.css" type="text/css" media="screen" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flexslider.css" type="text/css" media="screen" />	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.flexslider-min.js"></script>
-	
-	<!-- Hook up the FlexSlider -->
-	<script type="text/javascript">
-		jQuery(window).load(function() {
-			jQuery('.flexslider').flexslider({
-				touch: true
-			});
-			
-		});
-	</script>
     
 </head>
 
@@ -45,7 +54,7 @@
     
     <div class="header_bg1">
 		
-        <div id="header">
+        <div id="header" class="clearfix">
 
 			<?php 
 			remove_action('pre_get_posts', 'custom_post_author_archive');
@@ -120,12 +129,18 @@
 	<?php if(is_home()) { ?>
 	    <div class="flexslider_wrap"><?php if (function_exists('dynamic_sidebar')) { dynamic_sidebar('below_header'); } ?><div class="clearfix"></div></div>
     <?php } ?>
+    <?php if(!is_home()) { ?>
+        <div class="header_search_wrap"><?php if (function_exists('dynamic_sidebar')) { dynamic_sidebar('header_search'); } ?></div>
+    <?php } ?>
     <div class="header_bg2">
     	
     	<?php
 			if ( current_theme_supports( 'theme-layouts' ) ) {
-
-				$supreme_layout = theme_layouts_get_layout();
+				if(function_exists('theme_layouts_get_layout')){
+				$supreme_layout = theme_layouts_get_layout(); 
+				}else{
+				$supreme_layout = 'layout-default';
+				}
 							
 				if ( $supreme_layout == 'layout-default' || $supreme_layout == 'layout-1c' || $supreme_layout == 'layout-2c-l' || $supreme_layout == 'layout-2c-r' || $supreme_layout == 'layout-3c-c' || $supreme_layout == 'layout-3c-l' || $supreme_layout == 'layout-3c-r' ) {
 

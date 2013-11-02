@@ -6,7 +6,7 @@ Template Name: Template - Archives
 <?php 
 	get_header(); 
 	do_atomic( 'before_content' ); // supreme_before_content
-	if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); 
+	if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); 
 ?>
 <!--  CONTENT AREA START -->
 
@@ -14,8 +14,17 @@ Template Name: Template - Archives
   <?php do_atomic( 'open_content' ); // supreme_open_content ?>
   <div class="hfeed">
     <h1 class="entry-title"><?php the_title(); ?></h1>
+    <div class="entry-content">
+		<?php 
+          $content = $post->post_content;
+          $content = apply_filters('the_content', $content);	
+          echo $content;
+          ?>  
+     </div><!-- .entry-content -->
+    
 	<?php 
 		global $post;
+		$archives_post=$post;
 		$templatic_catelog_post_type = get_post_meta($post->ID,'template_post_type',true);
 		if(isset($templatic_catelog_post_type) && $templatic_catelog_post_type!=""){
 			$templatic_catelog_post_type = $templatic_catelog_post_type;
@@ -47,9 +56,12 @@ Template Name: Template - Archives
                         <a href="<?php the_permalink() ?>">
                             <?php the_title(); ?>
                         </a><br />
-                        <span class="arclist_date">  <?php _e('by','templatic');?>
+                        <span class="arclist_date">  
+						<?php _e('&nbsp;by&nbsp;','supreme');?>
                         <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" title="Posts by <?php the_author(); ?>"><?php the_author(); ?></a>
-                        <?php _e('on','templatic');?>  <?php the_time(__('M j, Y'),'templatic') ?> // <?php comments_popup_link(__('No Comments','templatic'), __('1 Comment','templatic'), __('% Comments','templatic'), '', __('Comments Closed','templatic')); ?>
+                        <?php _e('&nbsp;on&nbsp;','supreme');?> 
+                        <?php the_time(__('M j, Y','supreme')) ?> // 
+						<?php comments_popup_link(__('&nbsp;No Comments&nbsp;','supreme'), __('&nbsp;1 Comment&nbsp;','supreme'), __('% Comments','supreme'), '', __('&nbsp;Comments Closed&nbsp;','supreme')); ?>
                         </span>
                     </li> 
           <?php endwhile; endif; ?>
@@ -58,6 +70,7 @@ Template Name: Template - Archives
                 <?php
 			}
 		}
+		$post=$archives_post;
 	 ?> 
   </div>
   <?php do_atomic( 'close_content' ); // supreme_close_content ?>

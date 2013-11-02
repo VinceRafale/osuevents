@@ -380,7 +380,48 @@ img.ui-datepicker-trigger {
 	margin-right: 4px!important;
 	zoom: 1;
 	}
+	
+/*------ Compatibel css ------*/
 
+.gform_body input[type="password"], 
+.gform_body input[type="text"], 
+.gform_body select, 
+.gform_body textarea {
+	padding: 10px;
+	}
+	 
+.gform_wrapper .ginput_complex select,
+.gform_wrapper select {
+	padding: 8px !important;
+	}
+	
+img.ui-datepicker-trigger {
+	margin: 10px 0 0 10px;
+	}
+	
+body .gform_wrapper .top_label .gfield_label {
+	margin: 0;
+	}
+	
+.ui-datepicker-header .ui-datepicker-new-month, 
+.ui-datepicker-header .ui-datepicker-new-year {
+	padding: 2px;
+	}
+	
+div.ui-datepicker-header select.ui-datepicker-new-year {
+	left: 11em;
+	}
+	
+div.ui-datepicker-next a {
+	float: right !important;
+	left: auto;
+	}
+
+table.ui-datepicker th, 
+table.ui-datepicker td {
+	padding: 5px;
+	}
+	
 @media only screen and (max-width: 999px) {
 	span.ginput_left,
 	span.ginput_right {

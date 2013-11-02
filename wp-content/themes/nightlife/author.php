@@ -13,7 +13,7 @@ get_header(); // Loads the header.php template. ?>
 
 <?php do_atomic( 'before_content' ); // supreme_before_content ?>
 
-<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
+<?php if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 
 <div id="content">
 	
@@ -38,7 +38,7 @@ get_header(); // Loads the header.php template. ?>
                                $user_link = get_author_posts_url($user_id, $author_nicename = '');
                             ?>
                             <li <?php if(isset($_REQUEST['list']) && $_REQUEST['list']=='attend'){ echo 'class="active" ';}?>>  <a href="<?php if(strstr($user_link,'?') ){echo $user_link.'&amp;list=attend';}else{echo $user_link.'?list=attend';}?>"> <?php echo PRO_ATTEND_EVENT_TEXT;?> </a></li>
-                            <li <?php if(isset($_REQUEST['list']) && $_REQUEST['list']=='facebook_event'){ echo 'class="active" ';}?>>  <a href="<?php if(strstr($user_link,'?') ){echo $user_link.'&amp;list=facebook_event';}else{echo $user_link.'?list=facebook_event';}?>"> <?php echo FACEBOOK_EVENT_TEXT;?> </a></li>
+                            <li <?php if(isset($_REQUEST['list']) && $_REQUEST['list']=='facebook_event'){ echo 'class="active" ';}?>>  <a href="<?php if(strstr($user_link,'?') ){echo $user_link.'&amp;list=facebook_event';}else{echo $user_link.'?list=facebook_event';}?>"> <?php _e(FACEBOOK_EVENT_TEXT,T_DOMAIN);?> </a></li>
                             <?php 
                             } ?>
             </ul>
@@ -50,7 +50,11 @@ get_header(); // Loads the header.php template. ?>
 			<?php do_atomic( 'before_entry' ); // supreme_before_entry ?>			
 					<div id="post-<?php the_ID(); ?>" class="post <?php hybrid_entry_class(); ?>">						
                         <div class="post_img img listimg"><?php
-						get_the_image(array('post_id'=> get_the_ID(),'link_to_post'=>'false','size'=>'thumbnail','image_class'=>'post_img img listimg','default_image'=>get_stylesheet_directory_uri()."/images/img_not_available.png"));
+						if(tmpl_is_parent($post)){
+							get_the_image(array('post_id'=> $post->post_parent,'link_to_post'=>'false','size'=>'thumbnail','image_class'=>'post_img img listimg','default_image'=>get_stylesheet_directory_uri()."/images/img_not_available.png"));
+						}else{
+							get_the_image(array('post_id'=> get_the_ID(),'link_to_post'=>'false','size'=>'thumbnail','image_class'=>'post_img img listimg','default_image'=>get_stylesheet_directory_uri()."/images/img_not_available.png"));
+						}
                         ?></div>
                         <!-- List view image -->
                         
@@ -59,25 +63,34 @@ get_header(); // Loads the header.php template. ?>
 						<div class="entry-content">
                         <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 						<?php do_action('templ_show_edit_renew_delete_link');/* Display edit ,reenew,delete link for user wise */?>
-						<?php //echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __('Published by [entry-author] on [entry-published] [entry-comments-link zero="Respond" one="%1$s" more="%1$s"] [entry-edit-link] [entry-permalink]', 'supreme' ) . '</div>'); ?>
+					
                         <div class="custom_meta clearfix">
                         	<div class="col1">
                             <?php
-							$st_time=get_post_meta($post->ID,'st_time',true);
-							$en_time=get_post_meta($post->ID,'end_time',true);
+							if(tmpl_is_parent($post)){
+								$st_time= get_post_meta($post->post_parent,'st_time',true);
+								$en_time= get_post_meta($post->post_parent,'end_time',true);
+								$address = get_post_meta($post->post_parent,'address',true);
+								
+							}else{
+								$st_time=get_post_meta($post->ID,'st_time',true);
+								$en_time=get_post_meta($post->ID,'end_time',true);
+								$address = get_post_meta($post->ID,'address',true);
+							}
+							
 							?>
 							
-                            <?php if(get_post_meta($post->ID,'st_date',true)!=""):?><p class="date"><span><?php _e('STARTING DATE',T_DOMAIN)?> : </span> <?php echo date("M dS,Y",strtotime(get_post_meta($post->ID,'st_date',true)));?></p><?php endif;?>
-							<?php if(get_post_meta($post->ID,'end_date',true)!=""):?><p class="date"><span><?php _e('ENDING TIME',T_DOMAIN)?> : </span> <?php echo date("M dS,Y",strtotime(get_post_meta($post->ID,'end_date',true)));?></p><?php endif;?>
+                            <?php  if(get_post_meta($post->ID,'st_date',true)!=""):?><p class="date"><span><?php _e('STARTING DATE',T_DOMAIN)?> : </span> <?php echo date_i18n(get_option('date_format'),strtotime(get_post_meta($post->ID,'st_date',true)));?></p><?php endif;?>
+							<?php if(get_post_meta($post->ID,'end_date',true)!=""):?><p class="date"><span><?php _e('ENDING DATE',T_DOMAIN)?> : </span> <?php echo date_i18n(get_option('date_format'),strtotime(get_post_meta($post->ID,'end_date',true)));?></p><?php endif;?>
                             <?php if($st_time!="" && $en_time!=""):?> <p class="time"><span><?php _e('TIME',T_DOMAIN)?> : </span> <?php echo $st_time." - ".$en_time;?></p><?php endif;?>                        	
                             </div>
                             <div class="col2">
-                            	<?php if(get_post_meta($post->ID,'address',true)!=""):?><p class="location"><span><?php _e('LOCATION',T_DOMAIN)?> : </span> <?php echo get_post_meta($post->ID,'address',true);?></p><?php endif;?>
+                            	<?php if($address != ""):?><p class="location"><span><?php _e('LOCATION',T_DOMAIN)?> : </span> <?php echo $address;?></p><?php endif;?>
                             </div>
                         </div>
 							<?php the_taxonomies(array('before'=>'<p class="bottom_line"><span class="i_category">','sep'=>'</span>&nbsp;&nbsp;<span class="i_tag">','after'=>'</span></p>'));?>
-							<?php //the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'supreme' ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'supreme' ), 'after' => '</p>' ) ); ?>
+							
+							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', T_DOMAIN ), 'after' => '</p>' ) ); ?>
 
 						</div><!-- .entry-content -->						
 
@@ -87,13 +100,19 @@ get_header(); // Loads the header.php template. ?>
 			
 			<?php do_atomic( 'after_entry' ); // supreme_after_entry ?>
 			
-				<?php endwhile; ?>
+				<?php endwhile; wp_reset_query(); ?>
 			<?php else : ?>			
 				<div class="<?php hybrid_entry_class(); ?>">
-					<h2 class="entry-title"><?php _e( 'No Entries', 'supreme' ); ?></h2>				
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'supreme' ); ?></p>
-					</div>					
+					<h2 class="entry-title"><?php _e( 'No Entries', T_DOMAIN ); ?></h2>				
+		
+						<p><?php 
+						if($_REQUEST['list'] =='attend'){
+							_e( 'You are not attending any event, Find events which may interest you by using event search. ', T_DOMAIN); 
+						}else{
+							_e( 'Yet, you are not sumited any listing. Please go to the submit/Add listing page to submit your listing.', T_DOMAIN ); 
+						}
+						?></p>
+								
 				</div><!-- .hentry .error -->
 		<?php endif; ?>
         <?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
@@ -101,7 +120,7 @@ get_header(); // Loads the header.php template. ?>
 					if(_iscurlinstalled() && $current_user->ID == $curauth->ID){
 						?>
                         <div class="setting_tab">
-                        <button id="hide_fb_fields" class="reverse" style="<?php if(get_user_meta($curauth->ID,'appID')){?> display:none; <?php } else { ?> <?php } ?>" onclick="return showFacebookSetting('hide_facebook_setting');">
+                        <button id="hide_fb_fields" class="reverse" style="<?php if(get_user_meta($curauth->ID,'appID')){?> display:none; <?php } else { ?> <?php } ?>" onclick="return showFacebookSetting('hide_facebook_setting');" >
 							<?php echo HIDE_FACEBOOK_SETTING; ?>
                         </button>
                         <button id="edit_fb_fields" class="reverse" style="<?php if(get_user_meta($curauth->ID,'appID')){?> <?php } ?>" onclick="return showFacebookSetting('show_facebook_setting');">
@@ -122,7 +141,7 @@ get_header(); // Loads the header.php template. ?>
                                  <input type="text" name="page_id" id="page_id" value="<?php echo get_user_meta($curauth->ID,'pageID',true); ?>"/>
                             </div>
                             <div class="form_row">
-                            	<input type="submit" name="submit" id="submit" value="Submit" onclick="return save_FbSetting(<?php echo $curauth->ID; ?>);" />
+                            	<input type="submit" name="submit" id="submit" value="<?php _e('Submit',T_DOMAIN); ?>" onclick="return save_FbSetting(<?php echo $curauth->ID; ?>);" />
                             </div>                        	  	
                         </div>
                         

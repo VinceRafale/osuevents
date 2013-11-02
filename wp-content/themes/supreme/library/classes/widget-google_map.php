@@ -45,6 +45,7 @@ if(!class_exists('templatic_google_map'))
 			$map_width = empty($instance['map_width']) ? '200' : apply_filters('widget_map_width', $instance['map_width']);
 			$map_height = empty($instance['map_height']) ? '200' : apply_filters('widget_map_height', $instance['map_height']);
 			$scale = empty($instance['scale']) ? '10' : apply_filters('widget_scale', $instance['scale']);
+			echo $before_widget;
 			if (!empty($instance['title']))
 				echo $before_title . apply_filters('widget_title', $instance['title']) . $after_title;
 			?>						
@@ -80,9 +81,10 @@ if(!class_exists('templatic_google_map'))
               }
              google.maps.event.addDomListener(window, 'load', initialize); 
             </script>
-			<div class="graybox">
+			<div class="wid_gmap graybox">
 			<div id="map-canvas" style="height:<?php echo $map_height; ?>px;"></div></div>
        <?php 
+	   	echo $after_widget;
 		}
 		function update($new_instance, $old_instance) {
 		//save the widget
@@ -110,16 +112,16 @@ if(!class_exists('templatic_google_map'))
 			$scale = strip_tags($instance['scale']);
 			
 	?>
-	<p><label for="<?php  echo $this->get_field_id('title'); ?>"><?php _e('Title','templatic');?>: <input class="widefat" id="<?php  echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+	<p><label for="<?php  echo $this->get_field_id('title'); ?>"><?php _e('Title','supreme');?>: <input class="widefat" id="<?php  echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 	
-	<p><label for="<?php echo $this->get_field_id('address'); ?>"><?php  _e('Address <small>(eg: 230 Vine Street And locations throughout Old City, Philadelphia, PA 19106)</small>','templatic');?> : 
+	<p><label for="<?php echo $this->get_field_id('address'); ?>"><?php  _e('Address <small>(eg: 230 Vine Street And locations throughout Old City, Philadelphia, PA 19106)</small>','supreme');?> : 
 	<input type="text" class="widefat" rows="6" cols="20" id="<?php echo $this->get_field_id('address'); ?>" name="<?php echo $this->get_field_name('address'); ?>"  value="<?php echo esc_attr($address); ?>"></label></p>
 	
-	<p><label for="<?php echo $this->get_field_id('map_height'); ?>"><?php  _e('Map Height in pixcels <small>(eg: 200)</small>','templatic');?> : <input type="text" class="widefat" rows="6" cols="20" id="<?php echo $this->get_field_id('map_height'); ?>" name="<?php echo $this->get_field_name('map_height'); ?>" value="<?php echo esc_attr($map_height); ?>"></label></p>
+	<p><label for="<?php echo $this->get_field_id('map_height'); ?>"><?php  _e('Map Height in pixcels <small>(eg: 200)</small>','supreme');?> : <input type="text" class="widefat" rows="6" cols="20" id="<?php echo $this->get_field_id('map_height'); ?>" name="<?php echo $this->get_field_name('map_height'); ?>" value="<?php echo esc_attr($map_height); ?>"></label></p>
 	
 	
 	<p>
-	<label for="<?php echo $this->get_field_id('scale'); ?>"><?php  _e('Map Zooming Factor','templatic');?> : 
+	<label for="<?php echo $this->get_field_id('scale'); ?>"><?php  _e('Map Zooming Factor','supreme');?> : 
 	<select id="<?php echo $this->get_field_id('scale'); ?>" name="<?php echo $this->get_field_name('scale'); ?>">
 	<?php
 	for($i=3;$i<20;$i++)
@@ -132,10 +134,10 @@ if(!class_exists('templatic_google_map'))
 	</select>
 	</label></p>	
 	<p>
-	<label for="<?php echo $this->get_field_id('map_type'); ?>"><?php  _e('Select Map Type','templatic');?> : 
+	<label for="<?php echo $this->get_field_id('map_type'); ?>"><?php  _e('Select Map Type','supreme');?> : 
 	<select id="<?php echo $this->get_field_id('map_type'); ?>" name="<?php echo $this->get_field_name('map_type'); ?>">
-        <option value="ROADMAP" <?php if(esc_attr($map_type)=='ROADMAP'){echo 'selected="selected"';}?> ><?php  _e('Road Map','templatic');?></option>
-        <option value="SATELLITE" <?php if(esc_attr($map_type)=='SATELLITE'){echo 'selected="selected"';}?>><?php  _e('Satellite Map','templatic');?></option>
+        <option value="ROADMAP" <?php if(esc_attr($map_type)=='ROADMAP'){echo 'selected="selected"';}?> ><?php  _e('Road Map','supreme');?></option>
+        <option value="SATELLITE" <?php if(esc_attr($map_type)=='SATELLITE'){echo 'selected="selected"';}?>><?php  _e('Satellite Map','supreme');?></option>
 	</select>
 	</label>
 	</p>

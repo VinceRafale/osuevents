@@ -4,9 +4,7 @@ Template Name: Template - Facebook Events
 */
 get_header(); // Loads the header.php template. ?>
 
-	<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
-
-	<?php do_atomic( 'before_content' ); // supreme_before_content ?>
+    <?php do_atomic( 'before_content' ); // supreme_before_content ?>
 
 	<div id="content">
 
@@ -15,7 +13,7 @@ get_header(); // Loads the header.php template. ?>
 		<div class="hfeed">
 			
 			<?php get_sidebar( 'before-content' ); // Loads the sidebar-before-content.php template. ?>
-
+			<?php if (current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb')) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -29,7 +27,8 @@ get_header(); // Loads the header.php template. ?>
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
 						<div class="entry-content">
-							<?php if ( get_option( 'ptthemes_breadcrumbs' ) == 'Yes') { ?><div class="breadcums"><ul class="page-nav"><li><?php yoast_breadcrumb('',''); ?></li></ul></div><?php } ?>
+                              	<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', T_DOMAIN ) ); ?>
+		
 	 						<?php global $current_user; echo facebook_events_template(); ?>
 						</div><!-- .entry-content -->						
 						

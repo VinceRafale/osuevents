@@ -31,13 +31,19 @@ require_once( trailingslashit ( get_template_directory() ) . 'library/hybrid.php
 $theme = new Hybrid(); // Part of the framework.
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'supreme_theme_setup' );
+$currrent_theme_name = wp_get_theme();
+$templatic_woocommerce_themes = get_option('templatic_woocommerce_themes');
+update_option('templatic_woocommerce_themes',$templatic_woocommerce_themes.",".$currrent_theme_name);
 
+require_once('wp-updates-theme.php');
+new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 135, basename(get_template_directory()) );
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
  * actions and filters.
  *
  * @since 0.1.0
  */
+ //error_reporting(E_ALL);
 function supreme_theme_setup() {
 	/* Get action/filter hook prefix. */
 	$prefix = hybrid_get_prefix(); // Part of the framework, cannot be changed or prefixed.
@@ -45,7 +51,11 @@ function supreme_theme_setup() {
 	if(file_exists(get_template_directory().'/templatic_customizer.php')){
 		require_once((get_template_directory().'/templatic_customizer.php'));
 	}
+	if(file_exists(get_template_directory().'/functions/templatic_news.php')){
+		require_once(get_template_directory().'/functions/templatic_news.php');
+	}
 	
+	add_action('init','attach_mega_menu_js');
 	/* Add theme settings */
 	if ( is_admin() )
 	    require_once( trailingslashit ( get_template_directory() ) . 'functions/admin.php' );
@@ -187,6 +197,13 @@ function supreme_theme_setup() {
 	}
 }
 
+function attach_mega_menu_js(){
+		  add_action('wp_footer', 'load_megamenu');				
+	}
+	function load_megamenu(){
+			wp_enqueue_script('jquerymegamenu', get_template_directory_uri()."/js/jquery.megamenu.1.2.js");
+			wp_enqueue_script('jquerymegamenuhoverint', get_template_directory_uri()."/js/jquery.hoverIntent.minified.js");
+		}
 /**
  * Loads the theme scripts.
  *
@@ -196,7 +213,7 @@ function supreme_resources() {
 	
 	wp_enqueue_script ( 'supreme-scripts', trailingslashit ( get_template_directory_uri() ) . 'js/supreme.js', array( 'jquery' ), '20120606', true );?>
 	<script type="text/javascript" language="javascript">var rootfolderpath = '<?php echo trailingslashit ( get_template_directory_uri() ) ;?>images/';</script>
-<?php
+	<?php
 	wp_enqueue_script( 'dhtmlgoodies_calendar', get_template_directory_uri().'/js/dhtmlgoodies_calendar.js');
 	wp_enqueue_style( 'dhtmlgoodies_calendar_css', get_template_directory_uri().'/css/dhtmlgoodies_calendar.css');	
 	
@@ -867,7 +884,7 @@ function supreme_register_sidebars() {
 	
 	$widgets_template = array(
 		'id' => 'widgets-template',
-		'name' => _x( 'Widgets Template', 'sidebar', 'supreme' ),
+		'name' => __( 'Widgets Template', 'sidebar', 'supreme' ),
 		'description' => __( 'Used on widgets only page template.', 'supreme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-%2$s"><div class="widget-wrap widget-inside">',
 		'after_widget' => '</div></div>',
@@ -878,7 +895,7 @@ function supreme_register_sidebars() {
 
 	$widgets_mega_menu = array(
 		'id' => 'mega_menu',
-		'name' => _x('JQuery Mega Menu','supreme'),
+		'name' => __('JQuery Mega Menu','supreme'),
 		'description' => __('Display jquery mega menu.','supreme'),
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
@@ -888,7 +905,7 @@ function supreme_register_sidebars() {
 	
 	$widgets_contact_page = array(
 		'id' => 'contact_page_widget',
-		'name' => _x('Contact Page Widget Area','supreme'),
+		'name' => __('Contact Page Widget Area','supreme'),
 		'description' => __('Displays widgets on contact us page.','supreme'),
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
@@ -928,11 +945,16 @@ function templatic_searching_filter_where($where){
 	$query_and = "";
 	if(isset($_REQUEST['catelog_todate']) && $_REQUEST['catelog_todate'] != ""){
 		$todate = $_REQUEST['catelog_todate'];
+		$todate= explode('/',$todate);
+		$todate = $todate[2]."-".$todate[0]."-".$todate[1];
+		
 	}else{
 		$todate = date('Y-m-d');
 	}
 	if(isset($_REQUEST['catelog_frmdate']) && $_REQUEST['catelog_frmdate'] != ""){
 		$fromdate = $_REQUEST['catelog_frmdate'];
+		$fromdate= explode('/',$fromdate);
+		$fromdate = $fromdate[2]."-".$fromdate[0]."-".$fromdate[1];
 	}else{
 		$fromdate = date('Y-m-d');
 	}
@@ -968,5 +990,239 @@ function templatic_searching_filter_where($where){
 	
 	$where.=$query_and;
 	return $where; 
+}
+add_action('admin_init','supreme_wpup_changes',20);
+
+function supreme_wpup_changes(){
+	 remove_action( 'after_theme_row_supreme', 'wp_theme_update_row' ,10, 2 );
+}
+if(!function_exists('customAdmin')){
+function customAdmin() {
+    echo "<style>
+	
+	.table_tnews {
+		float: right;
+		width: 63%;
+		}
+		
+	.t_theme {
+		float: left;
+		width: 34%;
+		margin-right: 3%;
+		}
+		
+	.t_theme img {
+		max-width: 100%;
+		}
+		
+	.clearfix { clear:both; }
+
+	.clearfix:after{
+		clear: both;
+		content: ".";
+		display: block;
+		font-size: 0;
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+		}
+	
+	.theme_meta .more a.btn_viewdetails,
+	.theme_meta .more a.btn_viewdemo {
+		margin: 10px 10px 0px 0px;
+		}
+		
+	.table_tnews .news li p {
+		margin-top: 0;
+		}
+	.templatic-dismiss {
+		background: url('images/xit.gif') no-repeat scroll 0px 2px transparent;
+		position: absolute;
+		right: 60px;
+		top: 8px;
+		width: 0px;
+		font-size: 13px;
+		line-height: 1;
+		padding: 0 0 0 10px;
+		text-decoration: none;
+		text-indent: 3px;
+	}
+
+	.templatic-dismiss:hover {
+		background-position: -10px 2px;
+	}
+	
+	.templatic_autoinstall{
+		position:relative;
+	}
+	div.updated, .login .message,
+	{
+		background: #FFFBE4;
+		border-color: #DFDFDF;
+		}
+	
+	.postbox .inside {
+		margin: 15px 0 !important;
+		}
+	
+	.themeunit{
+		margin-bottom: 10px;
+		}
+	
+	
+	#TB_window,
+	#TB_iframeContent {
+		width: 550px !important;
+		height: 460px !important;
+		margin-top: 0 !important;
+		}
+		
+	#TB_iframeContent body {
+		padding: 0 !important;
+		}
+	
+	.templatic_login {
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #E5E5E5;
+		box-shadow: 0 4px 10px -1px rgba(200, 200, 200, 0.7);
+		font-size: 14px;
+		font-weight: normal;
+		margin: 20px !important;
+		padding: 26px 24px;
+		}
+		
+	.templatic_login label {
+		color: #777777;
+		font-size: 14px;
+		}
+		
+	.templatic_login form .input, .templatic_login input[type='text'], .templatic_login input[type='password'] {
+		background: none repeat scroll 0 0 #FBFBFB;
+		border: 1px solid #E5E5E5;
+		box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.2) inset;
+		color: #555555;
+		font-size: 24px;
+		font-weight: 200;
+		line-height: 1;
+		margin-bottom: 16px;
+		margin-right: 6px;
+		margin-top: 2px;
+		outline: 0 none;
+		padding: 10px 8px 6px;
+		width: 100%;
+		}
+		
+	.templatic_login input[type='submit'] {
+		background-color: #21759B;
+		background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+		border-color: #21759B #21759B #1E6A8D;
+		box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		height: 30px;
+    	line-height: 28px;
+   		padding: 0 12px 2px;
+		border-radius: 3px 3px 3px 3px;
+		border-style: solid;
+		border-width: 1px;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 12px;
+		margin-right: 10px;
+		}
+		
+	.templatic_login p.info {
+		margin-top: 0; 
+		}
+	
+	body {
+		height: auto;
+		min-width: 380px !important;
+		}
+		
+	#pblogo {
+		margin-top: 0;
+		}
+		
+	#TB_window {
+		left: 53% !important;
+		top: 100px !important;
+		}
+	
+	
+	</style>";
+}
+}
+add_action('admin_head', 'customAdmin', 11);
+
+
+/* filter for excerpt length */
+if(!function_exists('tevolution_excerpt_length')){
+	function tevolution_excerpt_length() {
+		$tmpdata = get_option('supreme_theme_settings');
+		if($tmpdata['templatic_excerpt_length']){
+			return $tmpdata['templatic_excerpt_length'];
+		}else{
+			return 400;
+		}
+	}
+}
+
+/*
+Name : new_excerpt_more
+Desc : Read more link filter
+*/
+if(!function_exists('new_excerpt_more')){
+	function new_excerpt_more($more) {
+		global $post;
+		$tmpdata = get_option('supreme_theme_settings');
+		if($tmpdata['templatic_excerpt_link']){
+			return '... <a class="moretag" href="'. get_permalink($post->ID) . '">'.$tmpdata['templatic_excerpt_link'].'</a>';
+		}else{
+			return '... <a class="moretag" href="'. get_permalink($post->ID) . '">'.__('Read more &raquo;',DOMAIN).'</a>';
+		}
+	}
+}
+
+// Variable & intelligent excerpt length.
+if(!function_exists('print_excerpt')){
+	function print_excerpt($length) { // Max excerpt length. Length is set in characters
+		global $post;
+		$tmpdata = get_option('supreme_theme_settings');
+		$morelink=$tmpdata['templatic_excerpt_link'];
+		if($morelink!="")
+			$morelink=sprintf(__("<a href='%s'>%s</a>",'supreme'),get_permalink(),$morelink);
+		else
+			$morelink=sprintf(__("<a href='%s'>Read More...</a>",'supreme'),get_permalink());
+			
+		$text = $post->post_excerpt;
+		if ($text =='') {
+			$text = get_the_content($post->ID);
+			$text = apply_filters('the_excerpt', $text);
+			$text = str_replace(']]>', ']]>', $text);
+		}
+		$text = strip_shortcodes($text); // optional, recommended
+		$text = strip_tags($text); // use ' $text = strip_tags($text,'<p><a>'); ' if you want to keep some tags
+
+		$text = substr($text,0,$length);		
+		if(reverse_strrchr($text, '.', 1)){
+			$excerpt = reverse_strrchr($text, '.', 1)." ".$morelink;
+		}else{
+			$excerpt = $text." ".$morelink;
+		}
+		
+		if( $excerpt ) {
+			echo apply_filters('the_excerpt',$excerpt);
+		} else {
+			echo apply_filters('the_excerpt',$text);
+		}
+	}
+}
+// Returns the portion of haystack which goes until the last occurrence of needle
+if(!function_exists('reverse_strrchr')){
+	function reverse_strrchr($haystack, $needle, $trail) {
+		return strrpos($haystack, $needle) ? substr($haystack, 0, strrpos($haystack, $needle) + $trail) : false;
+	}
 }
 ?>

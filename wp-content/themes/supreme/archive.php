@@ -13,7 +13,7 @@ get_header(); // Loads the header.php template. ?>
 
 	<?php do_atomic( 'before_content' ); // supreme_before_content ?>
 	
-	<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
+	<?php if ( current_theme_supports( 'breadcrumb-trail' ) && hybrid_get_setting('supreme_show_breadcrumb') ) breadcrumb_trail( array( 'separator' => '&raquo;' ) ); ?>
 
 	<div id="content">
 
@@ -29,11 +29,11 @@ get_header(); // Loads the header.php template. ?>
 
 				if( hybrid_get_setting( 'supreme_archive_display_excerpt' ) ) {
 
-					get_template_part( 'loop' ); // Loads the loop.php template.					
-					
-				} else {				
-
 					get_template_part( 'loop', 'excerpt' ); // Loads the loop-excerpt.php template.
+					
+				} else {
+				
+					get_template_part( 'loop' ); // Loads the loop.php template.
 				
 				}
 		
