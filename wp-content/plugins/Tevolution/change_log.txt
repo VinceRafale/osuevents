@@ -1,0 +1,448 @@
+Templatic Plugin - Tevolution.       
+=================================================================================================================================================================================================================
+7th February 2013 (version: 1.0.5)
+--------------------------------------------------------------------------------------
+Added terms and conditions check box on submit form and enble/disble option in backend.
+
+Moved excerpt length option from tevolution to supreme theme customizer.
+
+Issue of add do_action before after post title and post content - Solved.
+
+Email content not coming from Email setting - Solved.
+
+Issue of event date and title set for slider - Solved.
+
+Issue of show fields only function exist - Solved.
+
+Excerpt option added in supreme theme settings.
+
+Issues paypal return successfull page - Solved.
+
+Sidebar not display on success page - Solved.
+
+IE8 featured images issue - Solved.
+
+Translation related issues - Solved.
+
+Backend running slow - Solved.
+
+Zooming factor issue - Solved.
+
+.po .mo files updated.
+--------------------------------------------------------------------------------------
+
+
+---------------------------------
+11th January 2013 (version: 1.0.4)
+---------------------------------
+New Secured auto updates related changes
+WPML plugin compatibility related improvements
+Validation issues resolved in image uploader and other custom fields 
+Manage Coupons section pagination issue
+Solved ordering issues on post listing pages
+Added an option to change the position of pagination 
+Solved custom fields issue on edit and goback page
+Solved ordering issues on custom field listing page
+
+
+18th December 2012 (version 1.0.3)
+---------------------------------------------------------
+login and register url link problem when wpml plugin activate
+---------------------------------------------------------
+tmplconnector/monetize/templatic-registration/install.php
+
+---------------------------------------------------------------------------------------
+changed the way of displaying single post title from taxonomy slug to taxonomy name/label
+---------------------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_taxonomy/single-post.php
+tmplconnector/monetize/templatic-monetization/admin_transaction_class.php
+
+---------------------------------
+Localization improvements - Done.
+---------------------------------
+tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/ajax_check_coupon_code.php
+tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php
+tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php
+tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php
+tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php
+tmplconnector/monetize/templatic-custom_taxonomy/taxonomy-category.php
+tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php
+tmplconnector/monetize/templatic-monetization/price_package_functions.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_preview.php
+tmplconnector/monetize/templatic-custom_taxonomy/taxonomy-tags.php
+tmplconnector/monetize/templatic-registration/registration_functions.php
+tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php
+tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php
+tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php
+tmplconnector/monetize/templatic-custom_taxonomy/single-post.php
+tmplconnector/monetize/templatic-custom_fields/image_uploader.php
+tmplconnector/monetize/templatic-custom_taxonomy/single-post.php
+tmplconnector/monetize/templatic-registration/login_box_widget.php
+tmplconnector/monetize/templatic-registration/registration_form.php
+tmplconnector/monetize/templatic-monetization/language.php
+tmplconnector/monetize/templatic-registration/login_form.php
+tmplconnector/templatic-connector.php
+templatic.php
+
+---------------------------------------------------------------
+Issue of add class to div also for particular custom fields - Solved.
+---------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+-----------------------------------------------------------------------------------------------------------
+replace post category, post title, post content, post expert, post images as per submit form post type - Solved.
+-----------------------------------------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+
+---------------------------------
+Issue of add stripslashes - Solved.
+---------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_preview.php
+
+------------------------------------------------------------------------
+if free post is submitted than no need to show transaction status - Solved.
+------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/success.php
+
+-------------------------------
+Issue of edit renew link - Solved.
+-------------------------------
+tmplconnector/templatic-connector.php
+
+---------------------------------
+upload custom field issue - Solved.
+validation issue - Solved.
+---------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+
+------------------------
+auto login issue - Solved.
+------------------------
+tmplconnector/monetize/templatic-registration/registration.php
+tmplconnector/monetize/templatic-registration/registration_functions.php
+
+---------------------------------------------
+issue of submit validation not working - Solved.
+---------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/submition_validation.php
+
+--------------------------------------------------------
+Issue of crop the uploaded image from front side - Solved.
+--------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+tmplconnector/monetize/templatic-custom_fields/install.php
+
+------------
+deleted files.
+------------
+languages/en_US.mo
+languages/en_US.pot
+
+---------------------
+update po file - Done.
+---------------------
+languages/en_US.mo
+languages/en_US.po
+
+--------------------------
+Issue of close div - Solved.
+--------------------------
+tmplconnector/monetize/templatic-custom_fields/success.php
+tmplconnector/monetize/templatic-monetization/price_package_functions.php
+
+--------------------------
+Issue of currency - Solved.
+--------------------------
+tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php
+
+-----------------------------
+added sharing buttons - Done.
+-----------------------------
+tmplconnector/templatic-connector.php
+
+-----------------------------------------------
+Issue of multicheck box value reapeted - Solved.
+-----------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/success.php
+
+------------------------
+Issue of layout - Solved.
+------------------------
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+
+---------------------------------
+removed unnecesary class - Done.
+---------------------------------
+tmplconnector/monetize/templatic-registration/registration_functions.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+---------------------------------------------------
+validation not working while editing product - Solved.
+---------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+
+-------------------------------------------------------------------------
+Issue of text editor not display at register page on submit vehicle - Solved.
+-------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+-----------------------------------------------------------
+twitter widget not working with link and time of post - Solved.
+-----------------------------------------------------------
+tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php
+
+----------------------------------------------------------------------------------------------
+Issue of social media option its work only custom post type not for event page and post - Solved.
+set facebook share images - Solved.
+----------------------------------------------------------------------------------------------
+tmplconnector/templatic-connector.php
+
+-------------------------------------------------------------------
+Issue of total price display as array when go back edit issue - Solved.
+-------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/category.php
+tmplconnector/monetize/templatic-monetization/price_package_functions.php
+tmplconnector/monetize/templatic-monetization/price_package_js.php
+
+---------------------------------------------------------------
+set popular post widget number of post and popular post - Solved.
+---------------------------------------------------------------
+tmplconnector/monetize/templatic-widgets/loadpopularpost.php
+tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php
+
+-----------------------------------------
+Issue of error showing in console - Solved.
+-----------------------------------------
+tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php
+
+--------------------------------------------------------
+Issue of play through issue on send to frnd email - Solved.
+--------------------------------------------------------
+tmplconnector/monetize/templatic-generalizaion/general_functions.php
+
+---------------------------------------------------------------------------------
+Issue of get the send inqury and mail to friend subject display on front side - Solved.
+set post email is blank then send email to admin email - Solved.
+get the author email id for send inqury issue - Solved.
+---------------------------------------------------------------------------------
+tmplconnector/monetize/templatic-generalizaion/general_functions.php
+tmplconnector/monetize/templatic-generalizaion/popup_frms.php
+tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php
+
+-------------------------------------------------------------------------------------------------------
+remove the post name in required field message on post category, post title and post content field - Solved.
+-------------------------------------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/install.php
+
+-------------------------------------------
+submit form validation for texteditor - Solved.
+-------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/submition_validation.php
+
+---------------------------------------
+after registration redirect issue - Solved.
+---------------------------------------
+tmplconnector/monetize/templatic-registration/registration.php
+
+-------------------------------------------------------------------------
+user fields not display when category wise custom fields yes issue - Solved.
+-------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+
+----------------------------------------------------
+Issue of add social login icon on submit page - Solved.
+----------------------------------------------------
+tmplconnector/monetize/templatic-registration/registration_functions.php
+
+------------------------------------------------------------------------
+remove social media widget in tevolution plugin and add in supreme - Done.
+------------------------------------------------------------------------
+Deleted - tmplconnector/monetize/templatic-widgets/templatic_social_media_widget.php
+
+------------------------------------
+Issue of social media widget - Solved.
+------------------------------------
+tmplconnector/monetize/templatic-widgets/install.php
+
+--------------------------------------------------------------
+remove slider search option on tevolution slider widget - Solved.
+create do-action for slider search option - Solved.
+remove display text from slider - Solved.
+--------------------------------------------------------------
+tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php
+
+-------------------------------------------------
+price not work as per category wise issue - Solved.
+-------------------------------------------------
+tmplconnector/monetize/templatic-monetization/price_package_js.php
+
+-----------------------------------
+Widget title related changes - Done.
+-----------------------------------
+style.css
+tmplconnector/monetize/templatic-claim_ownership/claim_widget.php
+tmplconnector/monetize/templatic-widgets/templatic_advertisements_widget.php
+tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php
+tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php
+tmplconnector/monetize/templatic-widgets/templatic_recent_review_widget.php
+
+---------------------------------------------------
+add e tag in coupan code and its description - Doone.
+---------------------------------------------------
+tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php
+
+-------------------------------------------------------------------
+Issue of set advance search filter by category and tag wise - Solved.
+-------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+------------------------------------------------------------
+Issue of double click issue on registration submit form - Solved.
+------------------------------------------------------------
+tmplconnector/monetize/templatic-registration/registration_form.php
+tmplconnector/monetize/templatic-registration/registration_js.php
+
+------------------------------------
+remove <br/> in register page - Done.
+------------------------------------
+tmplconnector/monetize/templatic-registration/install.php
+tmplconnector/monetize/templatic-registration/login_form.php
+
+--------------------------------------
+remove resource_id_sucess id - Solved.
+--------------------------------------
+tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php
+
+-------------------------------
+Issue of taxonomy edit - Solved.
+-------------------------------
+tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php
+
+-------------------------------------------
+changes as per w3c validator issue - Solved.
+-------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/image_uploader.php
+tmplconnector/monetize/templatic-generalizaion/popup_frms.php
+tmplconnector/monetize/templatic-manage_ip/manage_ip_functions.php
+tmplconnector/monetize/templatic-monetization/price_package_functions.php
+tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php
+tmplconnector/monetize/templatic-registration/registration.php
+
+---------------------------------------------------------------------------------------------------------
+added stripe payment gateway validation and changed the way of removing error message on keyup - Solved.
+---------------------------------------------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/js/payment_gateway_validation.js
+
+---------------------------------------------------------
+added class in span tag for displaying stripe errors - Solved.
+---------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php
+
+--------------------------------------------------
+Issue of z-index increase of date picker div - Solved.
+--------------------------------------------------
+css/datepicker/jquery.ui.datepicker.css
+
+------------------------
+remove <br> tag - Done.
+------------------------
+tmplconnector/monetize/templatic-widgets/templatic_recent_review_widget.php
+
+-------------------------------------
+backend button line height set - Done.
+-------------------------------------
+style.css
+
+-------------------------------------------
+Issue of payment success message - Solved.
+-------------------------------------------
+tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/return.php
+
+-----------------------------------------------
+Issue of select category validation issue - Solved.
+-----------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/submition_validation.php
+
+--------------------------------------------
+while edit custom fields do not fetch - Solved.
+--------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+
+--------------------------------------------------
+select price package string trasnlate issue - Solved.
+--------------------------------------------------
+tmplconnector/monetize/templatic-monetization/price_package_functions.php
+
+------------------------------------------------
+change the success title to post type title - Done.
+------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/success.php
+
+
+
+
+3rd December 2012 (version:1.0.2)
+-------------------------------------------
+slashes problem in post title - solved
+----------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_preview.php
+tmplconnector/monetize/templatic-custom_fields/success.php
+tmplconnector/monetize/templatic-generalizaion/general_functions.php
+tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php
+tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/ipn_process.php
+tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/return.php
+tmplconnector/monetize/templatic-monetization/templatic_transaction_detail_report.php
+tmplconnector/monetize/templatic-registration/registration_functions.php
+tmplconnector/monetize/templatic-widgets/loadpopularpost.php
+tmplconnector/monetize/templatic-widgets/templatic_recent_review_widget.php
+----------------------------------------------------------------------------------
+
+changes for display category page wise
+------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_taxonomy/taxonomy-tags.php
+-------------------------------------------------------------------
+
+solved category validation issue
+-------------------------------------------------------------------
+tmplconnector/monetize/templatic-custom_fields/category.php
+tmplconnector/monetize/templatic-custom_fields/page-template_form.php
+tmplconnector/monetize/templatic-custom_fields/submition_validation.php
+----------------------------------------------------------------------
+
+Added pagination in user custom fields in backend
+-------------------------------------------------------
+tmplconnector/monetize/templatic-registration/admin_user_custom_fields_class.php
+
+
+
+
+
+27th November 2012 (version: 1.0.1)
+-----------------------------------
+Security fixes 
+-------------------------------------
+tmplconnector/templatic-connector.php
+tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php
+tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php
+tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php
+
+
+7 November 2012 ( Version : 1.0 )
+
+9th November 2012 ( Version : 1.0)
+----------------------------------------------------------------------------
+Issue with Wordpress Subdirectory installation 
+Issue with login box widget in forgot password feature
+---------------------------------------------------------------------------
+
+Tevolution/tmplconnector/monetize/templatic-registration/
+
+-------------------------------------------------------------------------------
+Issue wirh NotifyUrl in Paypal
+-------------------------------------------------------------------------------
+Tevolution/tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal

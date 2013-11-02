@@ -1,0 +1,9 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">event</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">ecategory</taxonomy>
+		<taxonomy translate="1">etags</taxonomy>
+    </taxonomies>
+</wpml-config>

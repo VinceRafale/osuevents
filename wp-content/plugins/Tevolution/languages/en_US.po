@@ -1,0 +1,6046 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tevolution v1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-02-04 17:49+0530\n"
+"Last-Translator: admin <shakil@templatic.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ templatic
+#: classes/main.connector.class.php:9
+msgid "Bundled Features"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:10
+msgid "Features bundled with Tevolution."
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:13
+msgid "Templatic Plugins"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:14
+msgid "Plugins developed by Templatic."
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:64
+#: tmplconnector/monetize/templatic-bulk_upload/bundle_box.php:11
+msgid "Bulk Import / Export"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:65
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:11
+msgid "Claim Post Manager"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:66
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:11
+msgid "Custom Fields Manager"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:67
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:17
+msgid "Custom Post Types Manager"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:68
+#: tmplconnector/monetize/templatic-manage_ip/bundle_box.php:11
+msgid "Security Manager"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:69
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:15
+#: tmplconnector/monetize/templatic-monetization/install.php:49
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:2
+#: tmplconnector/templatic-connector.php:824
+msgid "Monetization"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:70
+#: tmplconnector/monetize/templatic-registration/bundle_box.php:11
+msgid "User registration/Login Management"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:87
+#: tmplconnector/monetize/templatic-monetization/add_price_packages.php:118
+msgid "All"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:150
+msgid "Templatic Standalone Plugin"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:178
+msgid "Download & Activate &rarr;"
+msgstr ""
+
+# @ templatic
+#: classes/main.connector.class.php:193
+#: tmplconnector/monetize/templatic-bulk_upload/bundle_box.php:22
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:21
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:21
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:27
+#: tmplconnector/monetize/templatic-manage_ip/bundle_box.php:21
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:44
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:20
+#: tmplconnector/monetize/templatic-registration/bundle_box.php:20
+msgid "Activate &rarr;"
+msgstr ""
+
+# @ templatic
+#: templatic.php:234
+msgid "There is a new version of Tevolution available."
+msgstr ""
+
+# @ templatic
+#: templatic.php:234
+#, php-format
+msgid "View version %s Details"
+msgstr ""
+
+# @ templatic
+#: templatic.php:239
+msgid ""
+"or <a href=\"\" class=\"thickbox\" title=\"Tevolution Update\">update now</"
+"a>."
+msgstr ""
+
+# @ default
+#: templatic_login.php:4
+msgid "Tevolution Update"
+msgstr ""
+
+# @ templatic
+#: templatic_login.php:86
+msgid ""
+"Templatic Login , enter your templatic credentials to take the updates of "
+"Tevolution."
+msgstr ""
+
+# @ templatic
+#: templatic_login.php:90
+msgid "User Name"
+msgstr ""
+
+# @ templatic
+#: templatic_login.php:94
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:317
+#: tmplconnector/monetize/templatic-registration/registration_language.php:13
+msgid "Password"
+msgstr ""
+
+# @ templatic
+#: templatic_login.php:99
+#: tmplconnector/monetize/templatic-custom_fields/language.php:27
+#: tmplconnector/monetize/templatic-monetization/language.php:124
+#: tmplconnector/monetize/templatic-registration/registration_language.php:15
+msgid "Cancel"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:1
+#: tmplconnector/templatic-connector.php:51
+msgid "Tevolution"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:12
+msgid "Plugin <strong>activated successfully</strong>."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:17
+msgid "Welcome to the Tevolution dashboard !"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:20
+msgid ""
+"Tevolution is home of add-ons collection.Activate the add-on of your choice,"
+"do necessary settings by following some simple steps and you will be ready "
+"to use features in your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:22
+msgid "More help ? So Many resources are here to help you"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:22
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:40
+msgid "Restart tour"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:22
+msgid "Guide"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templ_header_section.php:22
+msgid "Forum"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/bundle_box.php:15
+msgid ""
+"Use this feature to import .csv content from other sites. If the theme "
+"you&lsquo;re using doesn&lsquo;t support .csv exports connect to your "
+"database and export wp_posts table content into a .csv file.<br/"
+"><strong>NOTE :</strong>This feature works for the default wordpress blog "
+"posts as well as for all the other custom taxonomies you add in your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/bundle_box.php:27
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:25
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:31
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:25
+#: tmplconnector/monetize/templatic-registration/bundle_box.php:24
+msgid "Deactivate "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/bundle_box.php:28
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:26
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:26
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:32
+#: tmplconnector/monetize/templatic-manage_ip/bundle_box.php:27
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:26
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:58
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:26
+#: tmplconnector/monetize/templatic-registration/bundle_box.php:25
+msgid "Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/install.php:15
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:70
+#: tmplconnector/templatic-connector.php:844
+msgid "Bulk Import/Export"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:72
+msgid ""
+"This section will allow you to import/export your content in the post type "
+"of your choice, you can import/export thousands of records in no time."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:72
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:498
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:499
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:21
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:40
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:60
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:80
+#: tmplconnector/monetize/templatic-manage_ip/install.php:54
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:244
+#: tmplconnector/monetize/templatic-widgets/install.php:83
+msgid "Note"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:72
+msgid ""
+"For a successful import/export you will have to follow the sample CSV "
+"format, there is a link below to download the sample file."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:113
+msgid "Bulk Import(.csv)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:120
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:150
+msgid "Select post type"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:140
+msgid ""
+"Download the sample file to see the correct structure of the .csv file. To "
+"use bulk upload with custom fields simply add them as new columns inside "
+"the .csv file. Add them last (on the end)."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:140
+msgid "sample CSV file"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:146
+msgid "Bulk export(.csv)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:163
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:205
+msgid "Export To CSV"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-bulk_upload/templatic_bulk_upload.php:164
+msgid ""
+"If your current theme doesn&lsquo;t support .csv exports connect to your "
+"database and open the wp_posts table. Select the posts you want to export "
+"(use Search or a custom SQL query) and click on the Export tab in the "
+"header. Use the CSV format for the export."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:15
+msgid ""
+"A tempting feature Claim Ownership from templatic. This feature enables the "
+"users to claim on your site and also generates a new user automatically if "
+"you verify the claim.<br/><strong>NOTE : </strong>You can set up the claim "
+"feature for Posts, Pages and for all the other custom taxonomies. By default "
+"it works for all the post types."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:25
+#: tmplconnector/monetize/templatic-manage_ip/bundle_box.php:25
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:25
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:31
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:85
+msgid "Deactivate"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/bundle_box.php:40
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:39
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:45
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:39
+#: tmplconnector/monetize/templatic-registration/bundle_box.php:38
+msgid "Start tour"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/claim_functions.php:280
+msgid ""
+"<p>Dear ,</p><br/>\n"
+"\t\t\t<p>The Claim for the post  has been verified.</p>\n"
+"\t\t\t<p>You can login with the following credentials : </p>\n"
+"\t\t\t<p>Username: [#user_login#]</p>\n"
+"\t\t\t<p>Password: [#user_password#]</p>\n"
+"\t\t\t<p>You can login from [#site_login_url#] or</p><p> the URL is : "
+"[#site_login_url_link#].</p>\n"
+"\t\t\t<p>From : [#$fromEmailName#]</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/claim_functions.php:417
+msgid ""
+"<p>Dear admin,</p><br/>\n"
+"\t\t\t<p> has claimed for this post</p>\n"
+"\t\t\t<p>[#$message#]</p>\n"
+"\t\t\t<p>Link :[#$post_title#]</p>\n"
+"\t\t\t<p>From : [#$your_name#]</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/claim_widget.php:86
+msgid ""
+"Please select the claim  post type on claim setting option from backend."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/install.php:88
+msgid ""
+"These settings enable you to select the post type for which you want to "
+"enable the claim feature. By default it will be enabled for all the post "
+"types. By default it will be display as a link. <br/> After selecting the "
+"post types, move on to <a href=\"widgets.php\">Widgets</a> page to set up "
+"the widget. It will display a link to fill up the form and user will be able "
+"to claim for the particular post."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/install.php:89
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:31
+msgid "Select Post Types"
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:2
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:402
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:826
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:95
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:193
+msgid "ID"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:3
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:269
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:280
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:289
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:827
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:87
+#: tmplconnector/monetize/templatic-registration/admin_user_custom_fields_class.php:65
+#: tmplconnector/monetize/templatic-widgets/templatic_advertisements_widget.php:45
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:191
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:109
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:203
+msgid "Title"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:4
+#: tmplconnector/monetize/templatic-custom_fields/language.php:37
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:78
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:273
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:283
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:292
+msgid "Author"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:5
+msgid "Claimer"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:6
+msgid "Contact"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:7
+#: tmplconnector/monetize/templatic-monetization/language.php:52
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:99
+msgid "Action"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:8
+msgid "Detail"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:9
+msgid "Verify"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:10
+msgid "Decline"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:11
+msgid "Declined"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:12
+msgid "View Post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:13
+msgid "Delete this request"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:14
+msgid "No Claim request for this post."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:15
+msgid "Remove Claim Request"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:16
+msgid "Verified"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:17
+msgid "This post is verified."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:18
+msgid "Claim for this post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:19
+msgid "Owner Verified Listing"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:20
+msgid "Do you own this post?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:21
+msgid "Verify your ownership for"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:22
+#: tmplconnector/monetize/templatic-registration/registration_language.php:8
+msgid "Full Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:23
+msgid "Your Email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:24
+msgid "Contact No"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:25
+msgid "Your Claim"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:26
+msgid "Are you sure want to delete this claim?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:27
+msgid "Claim Deleted"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:28
+msgid "No post has been claimed on your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:29
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3440
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:285
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:830
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:82
+msgid "Status"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:30
+#: tmplconnector/monetize/templatic-monetization/language.php:105
+msgid "Pending"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:32
+msgid "Select Display Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:33
+msgid "Link"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:34
+msgid "Button"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:35
+msgid "You have already claimed for this post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/language.php:36
+msgid "Verify Captcha"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/popup_claim_form.php:30
+msgid ""
+"Hello, I would like to notify you that I am the owner of this listing. I "
+"would like to verify it&lsquo;s authenticity."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/popup_claim_form.php:32
+#: tmplconnector/monetize/templatic-custom_fields/language.php:20
+msgid "Submit"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/popup_claim_form.php:72
+msgid "This field is mendatory. Please enter your name."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/popup_claim_form.php:111
+msgid "Please enter your valid email address."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-claim_ownership/popup_claim_form.php:128
+msgid "Please enter your claim message."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:334
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:21
+msgid "Add a new field"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:335
+msgid "Back to manage custom fields"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:335
+msgid "Back to manage custom field list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:361
+msgid "Select the Post Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:366
+#: tmplconnector/monetize/templatic-custom_fields/ajax_custom_taxonomy.php:9
+msgid "Select All"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:396
+msgid "Select the post type for which you want to display this field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:401
+msgid "Select the categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:430
+msgid "Select the categories for which you want to display this field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:438
+msgid "Heading Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:446
+msgid "You can choose the heading type here."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:453
+msgid "Select the Field Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:457
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:95
+msgid "Text"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:458
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:98
+msgid "Date Picker"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:459
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:99
+msgid "Multi Checkbox"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:460
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:100
+msgid "Radio"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:461
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:101
+msgid "Select"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:462
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:96
+msgid "Text Editor"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:463
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:102
+msgid "Textarea"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:464
+msgid "Heading"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:465
+msgid "Multi image uploader"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:466
+msgid "File uploader"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:467
+msgid "Geo Map"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:468
+msgid "Post Categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:470
+msgid "You can choose the field type here."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:475
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:112
+msgid "Option values"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:479
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:114
+msgid "Seperate multiple option values with a comma. eg. Yes, No"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:484
+msgid "Field Title"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:488
+msgid "Here you go to give the field a proper title."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:494
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3435
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3447
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:120
+msgid "Field name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:498
+msgid "The name must be unique! Use small letters, no spaces allowed."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:499
+msgid ""
+"If you want to transtale the custom field then dont change the field name in "
+"translation."
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:505
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3441
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3452
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:85
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:480
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:651
+msgid "Description"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:509
+msgid ""
+"You can describe the field here. The description will be shown besides or "
+"below the field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:515
+msgid "Default Value"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:519
+msgid ""
+"Here you can specify the default value for the field. The value you mention "
+"here will be taken automatically for this field even if you do not insert "
+"anything in it while submitting the post."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:525
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:91
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:144
+msgid "Position (Display order)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:529
+msgid ""
+"This is a numeric value that determines the position of the custom field in "
+"the front-end and the back-end."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:535
+msgid "Active?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:539
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:552
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:602
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:615
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:630
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:645
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:659
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:674
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:688
+#: tmplconnector/monetize/templatic-custom_fields/install.php:590
+#: tmplconnector/monetize/templatic-custom_fields/install.php:706
+#: tmplconnector/monetize/templatic-manage_ip/install.php:79
+#: tmplconnector/monetize/templatic-monetization/language.php:9
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:28
+#: tmplconnector/monetize/templatic-ratings/install.php:23
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:154
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:165
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:176
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:188
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:201
+#: tmplconnector/monetize/templatic-registration/install.php:322
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:67
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:75
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:83
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:269
+msgid "Yes"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:540
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:553
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:603
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:616
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:631
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:646
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:660
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:675
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:689
+#: tmplconnector/monetize/templatic-custom_fields/install.php:592
+#: tmplconnector/monetize/templatic-custom_fields/install.php:708
+#: tmplconnector/monetize/templatic-manage_ip/install.php:80
+#: tmplconnector/monetize/templatic-monetization/language.php:10
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:28
+#: tmplconnector/monetize/templatic-ratings/install.php:24
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:155
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:166
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:177
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:189
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:202
+#: tmplconnector/monetize/templatic-registration/install.php:324
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:68
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:76
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:84
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:270
+msgid "No"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:542
+msgid ""
+"This setting activate or de-activate the field in the front-end and the back-"
+"end."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:548
+msgid "Compulsory?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:555
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:168
+msgid ""
+"Specify whether or not this field is required to be filled in compulsarily "
+"by users."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:561
+msgid "Validation type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:565
+msgid ""
+"Validation helps avoid invalid information entered by the user. <small><br/"
+"><br/><b>Require</b> means this field cannot be left blank.<br/><b>Phone No."
+"</b> means this field requires numeric values in phone number format.<br/"
+"><b>Digit</b> means this field requires numeric values.<br/><b>Email</b> "
+"means this field is required in a valid email format.</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:573
+msgid "Required field warning message"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:577
+msgid ""
+"Here you can define the warning messege if the user leaves the field un-"
+"filled. The warning messege will be display only when you specify the field "
+"as mandatory."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:584
+msgid "Display Location"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:588
+msgid "Admin side (Backend side) "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:589
+msgid "User side (Frontend side)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:590
+msgid "Both"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:592
+msgid ""
+"You can specify the location where exactly you want to display this field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:598
+msgid "Is editable?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:605
+msgid "Specifying this as Yes will make you able to edit this field in future."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:611
+msgid "Show in search form?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:618
+msgid ""
+"Here you can mention whether you want to show this field on Advanced search "
+"form or not."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:626
+msgid "Show on detail page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:633
+msgid ""
+"You can mention here whether you want to display this field on post detail "
+"page or not."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:641
+msgid "Show on success page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:648
+msgid ""
+"You can specify here whether you want to display this field on success page. "
+"(The page which is displaying after successful submission of a post in fornt-"
+"end.)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:655
+msgid "Show on Listing page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:662
+msgid ""
+"Specify here whether you want to display the field on post listing page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:670
+msgid "Show this field in column?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:677
+msgid ""
+"Here you can mention whether you want to add this field as a column on "
+"specific post type page in back-end."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:684
+msgid "Show this field in email?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:691
+msgid "Here you can mention whether you want to add this field in email."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:699
+msgid "CSS class"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:703
+msgid ""
+"You might want to style this field differently. Mention a class name here "
+"and add its properties in your CSS files."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:711
+msgid "Extra parameter"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:715
+msgid ""
+"Here you can specify an extra parameter for this field (like maxlength, "
+"onchange etc.)."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:722
+msgid "Update changes"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_edit.php:724
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:136
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:138
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:211
+msgid "Save all changes"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:17
+msgid "Manage custom fields"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:18
+msgid "Add custom field"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:18
+msgid "Add a  custom field"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:21
+msgid ""
+"This section will allow you to create new fields for your submission forms. "
+"On top of creating fields for the submission form you also control where "
+"they show in the front-end (in which pages). Each field you create is both "
+"category and post-type specific."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:21
+msgid ""
+"Post category, Post Title, Post Content, Post Excerpt and Post Image fields "
+"are required for the submission form to work correctly. Do not delete them."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:27
+msgid "Custom field deleted successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:30
+msgid "Custom field created successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/admin_manage_custom_fields_list.php:32
+msgid "Custom field updated successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/bundle_box.php:15
+msgid ""
+"With this module you can easily populate a submission form with fields. The "
+"feature also allows you to control on which pages will the submitted value "
+"show. Category-specific and post type-specific fields are also possible!"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/category.php:135
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:2699
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:53
+#: tmplconnector/monetize/templatic-registration/registration_functions.php:707
+msgid "Select Category"
+msgstr ""
+
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:798
+msgid "Address"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:965
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3226
+msgid " Information"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1757
+msgid "Map popup Image Size"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1774
+msgid "Map Center Latitude"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1777
+msgid ""
+"Enter the Latitude to centralize the map. by defaul(\"21.167086220869788\")"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1781
+msgid "Map Center Longitude"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1784
+msgid "Enter longitude for centralize the map.by defaul(\"72.82231945000001\")"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1788
+msgid "Map Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1796
+msgid "You can select the Map type from here. by default(\"Road Map\")"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1800
+msgid "Map display"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1802
+msgid "As per zoom level"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1803
+msgid "Fit all available listing"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1804
+msgid ""
+"You can set the map display from here. by default(\"Fit all available listing"
+"\")"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1808
+msgid "Map Zoom Level"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:1811
+msgid ""
+"Enter zoom level if you want to display map as per zoom level. by default"
+"(\"13\" zoom level)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:2178
+msgid "NEXT"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:2179
+msgid "PREV"
+msgstr ""
+
+# @ sitepress
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3329
+#, php-format
+msgid "Edit the %s translation"
+msgstr ""
+
+# @ sitepress
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3335
+#, php-format
+msgid "Add translation to %s"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3437
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3448
+msgid "Shown in post-type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3439
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3450
+#: tmplconnector/monetize/templatic-registration/admin_user_custom_fields_class.php:66
+msgid "Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3449
+msgid "variable name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3451
+#: tmplconnector/monetize/templatic-monetization/language.php:11
+#: tmplconnector/monetize/templatic-registration/admin_user_custom_fields_class.php:67
+msgid "Active"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3786
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4413
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:377
+msgid "Map"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3788
+msgid "Location: "
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3969
+msgid "Click here to download File"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:3969
+msgid "Download"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4133
+msgid "Listing expiration Notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4225
+msgid "Accept terms and conditions."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4245
+msgid "Please accept Term and Conditions"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4319
+#, php-format
+msgid "<li><p>Post Title :</p> <p> %s </p></li>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4385
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_preview.php:147
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:359
+msgid "Post Description"
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4398
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:220
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:330
+msgid "Post Excerpt"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_function.php:4415
+msgid "Location"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:342
+msgid "New Post listing of ID:#"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:345
+msgid "Post updated of ID:#"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:349
+msgid "Post renew of ID:#"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:353
+msgid ""
+"<p>Dear [#to_name#],</p>\n"
+"\t\t\t\t<p>A New listing has been submitted on your site. Here is the "
+"information about the listing:</p>\n"
+"\t\t\t\t[#information_details#]\n"
+"\t\t\t\t<br>\n"
+"\t\t\t\t<p>[#site_name#]</p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:361
+msgid ""
+"<p>Dear [#to_name#],</p>\n"
+"\t\t\t\t<p>Post has been updated on your site. Here is the information about "
+"the property:</p>\n"
+"\t\t\t\t[#information_details#]\n"
+"\t\t\t\t<br>\n"
+"\t\t\t\t<p>[#site_name#]</p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:369
+msgid ""
+"<p>Dear [#to_name#],</p>\n"
+"\t\t\t\t<p>Post has been renew on your site. Here is the information about "
+"the property:</p>\n"
+"\t\t\t\t[#information_details#]\n"
+"\t\t\t\t<br>\n"
+"\t\t\t\t<p>[#site_name#]</p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:391
+msgid ""
+"<p>Dear [#to_name#],</p><p>A New Post has been submitted by you . Here is "
+"the information about the Post:</p>[#information_details#]<br><p>"
+"[#site_name#]</p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:395
+msgid ""
+"<p>Dear [#to_name#],</p><p>Your Post has been updated by you . Here is the "
+"information about the Post:</p>[#information_details#]<br><p>[#site_name#]</"
+"p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:399
+msgid ""
+"<p>Dear [#to_name#],</p><p>Your Post has been renew by you . Here is the "
+"information about the Post:</p>[#information_details#]<br><p>[#site_name#]</"
+"p>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:403
+#: tmplconnector/monetize/templatic-custom_fields/success.php:65
+msgid "View more detail from"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:406
+msgid "Payment Status: <b>Pending</b>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_paynow.php:408
+msgid "Payment Status: <b>Success</b>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/custom_fields_preview.php:183
+msgid "Back to Top"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/image_uploader.php:189
+msgid "Upload Image"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:19
+msgid "Custom Fields"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:39
+msgid "Custom Fields per page"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:540
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:33
+msgid "Select Payment Method"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:566
+msgid ""
+"These settings will be applied to category listing page, detail/single post "
+"and submit post page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:568
+msgid "Listing page Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:571
+msgid "Select Post type for home page listing"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:584
+msgid "Submit page Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:587
+msgid "Show custom fields categorywise"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:594
+msgid "Select if you want to show category custom fields wise."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:598
+msgid "Category display setting"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:604
+msgid "Please select category type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:605
+msgid "Check Box"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:606
+msgid "Select Box"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:607
+msgid "Multi-select Box"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:611
+msgid ""
+"Specify the format in which you want to display the categories on Submit "
+"page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:615
+msgid "Maximum Image Upload Size"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:619
+msgid " In Bytes"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:622
+msgid "You can specify the maximum size of image upload here"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:626
+msgid "Set default status for free submissions"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:629
+#: tmplconnector/monetize/templatic-custom_fields/install.php:639
+msgid "Published"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:630
+#: tmplconnector/monetize/templatic-custom_fields/install.php:640
+#: tmplconnector/monetize/templatic-custom_fields/install.php:650
+msgid "Draft"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:632
+#: tmplconnector/monetize/templatic-custom_fields/install.php:722
+msgid ""
+"Set the default status for posts from here. By default the post will be in "
+"published status."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:636
+msgid "Set default status for paid submissions"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:642
+msgid ""
+"Set the default status for paid submission posts from here. By default the "
+"post will be in published status."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:647
+msgid "Default status for expired listings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:651
+msgid "Trash"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:653
+msgid ""
+"Set the default status for expired listings posts from here. By default the "
+"post will be in Draft status."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:658
+msgid "Listing Email Notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:673
+msgid "Enter number of days before pre expiry notification Email will be sent."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:678
+msgid "Enable terms and conditions for submit form"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:685
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:77
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:135
+msgid "Enable"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:690
+msgid "Terms and condition text"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:695
+msgid ""
+"Enter the lable for terms and conditions checkbox going to be display in "
+"submit form,\"<b>Enable terms and conditions for submit form</b>\" must be "
+"selected."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:699
+msgid "Detail/Single post page Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:702
+msgid "View Counter Enable"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:713
+msgid "Display the single post view counter enable or disable."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:718
+msgid "Select Related Post By"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:726
+msgid "Show facebook share Detail Page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:730
+msgid "Select if you want to show facebook share on detail page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:734
+msgid "Show Google Plus one in Detail Page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:738
+msgid "Select if you want to show google plus one on detail page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:742
+msgid "Show twitter share in Detail Page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/install.php:746
+msgid "Select if you want to show twitter share on detail page."
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/language.php:3
+#: tmplconnector/monetize/templatic-widgets/install.php:93
+msgid "Select all"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:4
+msgid "Select listing category from here. Select atleast one category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:5
+msgid ""
+"Click on \"Set Address on Map\" and then you can also drag pinpoint to "
+"locate the correct address"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:6
+msgid "Go Back and Edit"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:7
+msgid "Pay &amp; Publish"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:8
+msgid "Publish"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:9
+msgid "update Now"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:10
+msgid "More Photos of The Post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:11
+msgid "Your submitted Information"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:12
+msgid ""
+"<p class=\"sucess_msg_prop\">Thank you, your post request has been received "
+"successfully.</p>[#submited_information_link#]<p>Thanks for listing your "
+"post at our site.</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:13
+msgid ""
+"Apologies, your IP has been blocked for this domain. You are not able to use "
+"the submit form."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:15
+#: tmplconnector/monetize/templatic-registration/registration_language.php:23
+msgid "Invalid Username/Password."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:16
+msgid "I'm a"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:17
+msgid "Existing User"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:18
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:326
+msgid "New User? Register Now"
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/language.php:19
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:91
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:213
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:160
+#: tmplconnector/monetize/templatic-registration/install.php:171
+#: tmplconnector/monetize/templatic-registration/install.php:186
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:160
+msgid "Login"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:21
+msgid "Submit a post"
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/language.php:22
+#: tmplconnector/monetize/templatic-custom_fields/language.php:24
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1074
+msgid "Coupon Code"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:23
+msgid "Enter coupon code here (optional)"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:25
+#: tmplconnector/monetize/templatic-custom_fields/page-template_form.php:469
+msgid "Preview This Post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:26
+msgid "Next step"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:28
+msgid "Posted Successfully Information"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:29
+msgid "Renew Successfully Information"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:30
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:26
+#: tmplconnector/monetize/templatic-monetization/language.php:13
+msgid "required"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:31
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:10
+msgid "Search this website"
+msgstr ""
+
+# @ templatic
+# @ supreme
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/language.php:32
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:13
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:14
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:93
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:201
+msgid "Search"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:33
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:51
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:4
+msgid "Category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:34
+msgid "select category"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:35
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:72
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:190
+msgid "Date"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:36
+msgid "<span>to</span>"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:38
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:80
+msgid "Exact author"
+msgstr ""
+
+# @ templatic
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/language.php:39
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:101
+msgid "Please enter word you want to search"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:40
+msgid "Tags "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:41
+msgid ""
+"<p>Thanks. The Post has been submitted successfully.</p><p>In order to "
+"publish the post, kindly transfer amount of <b>[#payable_amt#] </b> in our "
+"bank. Our bank account details are mentioned below.</p>\n"
+"<p>Bank Name : [#bank_name#]</p><p>Account Number : [#account_number#]</"
+"p><br><p>Please include the following reference : [#submition_Id#]</p>"
+"[#submited_information_link#]<br><p>Thanks for listing your Post at "
+"[#store_name#].</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:44
+msgid ""
+"Are you really sure want to DELETE this post? Deleted post can not be "
+"recovered later"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:45
+msgid "Yes, Delete Please!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:46
+msgid "Select feature listing for this post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/language.php:47
+msgid "Set Alive Days for this post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:238
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:282
+msgid "Set Address on Map"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:244
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:288
+msgid "Address Latitude"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:246
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:290
+msgid ""
+"Please enter latitude for google map perfection. eg. : 39.955823048131286"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:250
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:294
+msgid "Address Longitude"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:252
+#: tmplconnector/monetize/templatic-custom_fields/location_add_map.php:296
+msgid ""
+"Please enter logngitude for google map perfection. eg. : -75.14408111572266"
+msgstr ""
+
+# @ supreme
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:19
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:20
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:14
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:15
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:16
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:17
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:272
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:282
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:291
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:653
+msgid "Tags"
+msgstr ""
+
+# @ supreme
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:73
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:88
+msgid "Start Date"
+msgstr ""
+
+# @ supreme
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/page-template_advanced_search.php:74
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:89
+msgid "End Date"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/page-template_form.php:276
+msgid "Edit "
+msgstr ""
+
+# @ supreme
+#: tmplconnector/monetize/templatic-custom_fields/page-template_form.php:467
+msgid "Next Step"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:39
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:60
+#: tmplconnector/monetize/templatic-registration/registration.php:14
+msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:44
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:65
+#: tmplconnector/monetize/templatic-registration/registration.php:19
+msgid ""
+"<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:56
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:76
+#: tmplconnector/monetize/templatic-registration/registration.php:31
+msgid "<strong>ERROR</strong>: Invalid username or e-mail."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:73
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:92
+#: tmplconnector/monetize/templatic-registration/registration.php:47
+msgid "Invalid key"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:82
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:83
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:92
+#, php-format
+msgid "[%s] Your new password"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:136
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:26
+#: tmplconnector/monetize/templatic-registration/registration.php:125
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:26
+msgid "ERROR: Please enter a username."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:138
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:28
+#: tmplconnector/monetize/templatic-registration/registration.php:127
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:28
+msgid ""
+"<strong>ERROR</strong>: This username is invalid.  Please enter a valid "
+"username."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:141
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:18
+#: tmplconnector/monetize/templatic-registration/registration.php:130
+msgid ""
+"<strong>ERROR</strong>: This username is already registered, please choose "
+"another one."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:145
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:35
+#: tmplconnector/monetize/templatic-registration/registration.php:134
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:35
+msgid "<strong>ERROR</strong>: Please type your e-mail address."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:147
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:37
+#: tmplconnector/monetize/templatic-registration/registration.php:136
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:37
+msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:150
+#: tmplconnector/monetize/templatic-registration/registration.php:139
+msgid ""
+"<strong>ERROR</strong>: This email is already registered, please choose "
+"another one."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:190
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:74
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:74
+#, php-format
+msgid ""
+"<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a "
+"href=\"mailto:%s\">webmaster</a> !"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:312
+#: tmplconnector/monetize/templatic-registration/login_form.php:71
+#: tmplconnector/monetize/templatic-registration/registration.php:325
+msgid "Sorry, that key does not appear to be valid."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/registration.php:450
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:168
+#: tmplconnector/monetize/templatic-registration/registration.php:468
+msgid ""
+"<strong>ERROR</strong>: Cookies are blocked or not supported by your "
+"browser. You must <a href='http://www.google.com/cookies.html'>enable "
+"cookies</a> to use WordPress."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:7
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:7
+msgid ""
+"Email for Contact Details is Empty. Please enter Email, your all information "
+"will sent to your Email."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:31
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:31
+msgid ""
+"<strong>ERROR</strong>:  This username is already registered, please choose "
+"another one."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/single_page_checkout_insertuser.php:40
+#: tmplconnector/monetize/templatic-registration/single_page_checkout_insertuser.php:40
+msgid ""
+"<strong>ERROR</strong>:  This email is already registered, please choose "
+"another one."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php:62
+#, php-format
+msgid "You are going to submit  post and pay %s for %s days."
+msgstr ""
+
+# @ nightlife
+#: tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php:69
+#, php-format
+msgid "You are going to submit %s post for %s days."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php:71
+msgid ""
+"Here is the preview of your submitted information, if you want to improve/"
+"edit some information then click on <strong>Go Back And Edit</strong> Link."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/submit_preview_buttons.php:78
+msgid "You are going to update post."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/submition_validation.php:124
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:150
+msgid "Please provide your email address"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_fields/submition_validation.php:131
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:157
+msgid "Please provide valid email address"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_fields/success.php:64
+msgid "Your submitted id is:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:6
+msgid "Add New Post type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:6
+msgid "Back to Post type list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:22
+msgid ""
+"Fill out the necessary information to create a new post type and matching "
+"taxonomies. Be careful when entering slugs."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:22
+msgid "Please insert the slugs carefully."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:28
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:650
+msgid "Post Type Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:31
+msgid "ex. Places, Events etc"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:36
+msgid "Post Type Slug"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:40
+msgid "ex. places, events etc"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:40
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:60
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:80
+msgid "In small letters only. No white space is allowed."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:45
+msgid "Custom Taxonomy name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:50
+msgid "ex. Categories, Event Categories etc"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:55
+msgid "Taxonomy Slug "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:60
+msgid "ex. eventcategories, placecategories etc"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:65
+msgid "Custom Tag name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:70
+msgid "ex. Tags, Events Tags etc"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:75
+msgid "Tags Slug"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:80
+msgid "ex. etags, placetags etc"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:90
+msgid "In a few words, explain what this taxonomy is about."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:95
+msgid "Upload Icon"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:100
+msgid ""
+"Enter the URL or upload an image of 16 x 16 for the taxonomy icon and you "
+"need to click on \"Insert into post\" button"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:109
+msgid "Labels For Taxonomy Section"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:115
+msgid "Add New text"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:119
+msgid ""
+"Will be display on Add new item links. By default it will display Add New "
+"for all the post types."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:124
+msgid "Add New Item"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:128
+msgid ""
+"Will be display on the post detail page while adding a post. By default it "
+"will display New Item."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:133
+msgid "Edit Item text"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:137
+msgid ""
+"Will be display on the post detail page while editing a post. By default it "
+"will display Edit Item."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:142
+msgid "View Item button text"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:146
+msgid ""
+"Will be display on the post detail page after you submit the post. By "
+"default it will display View Item."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:151
+msgid "Search button text"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:155
+msgid ""
+"Will be display on the Search button. By default it will display Search "
+"Items."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:160
+msgid "No item found text"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:164
+msgid ""
+"Will be displayed when there is no item in Posts or Pages. By default it "
+"will display No posts found/No pages found."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:169
+msgid "Not item found in Trash text"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/add_custom_taxonomy.php:173
+msgid ""
+"Will be displayed when there is no item in Trash. By default it will display "
+"No posts found in Trash/No pages found in Trash."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/bundle_box.php:21
+msgid ""
+"Creating a new custom post type is tricky unless if you&lsquo;re not very "
+"familiar with WordPress - this module solves that problem. With this manager "
+"you can easily create new post types and taxonomies. Every created post "
+"type / taxonomy will work flawlessly with custom fields and price packages."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:2
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:3
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:271
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:281
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:290
+msgid "Categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:5
+msgid "Search category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:6
+msgid "Popular categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:7
+msgid "All categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:8
+msgid "Parent category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:9
+msgid "Parent category:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:10
+msgid "Edit category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:11
+msgid "Update category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:12
+msgid "Add new category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:13
+msgid "New category name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:18
+msgid "Popular tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:19
+msgid "All tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:20
+msgid "Parent tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:21
+msgid "Parent tags:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:22
+msgid "Edit tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:23
+msgid "Update tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:24
+msgid "Add new tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/custom_post_type_lang.php:25
+msgid "New tag name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:23
+msgid "Custom Post Types"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:39
+msgid "Taxonomy per page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:274
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:284
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:293
+msgid "Posted On"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:350
+msgid "Uncategorized"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:364
+msgid "No Tags"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:427
+msgid "Category Price"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:429
+msgid "Here you can set the category price for a particular category"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:478
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:96
+msgid "Name"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:479
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:498
+msgid "Price"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:481
+msgid "Slug"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:482
+msgid "Posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:574
+msgid "Email Content Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:575
+msgid ""
+"Notification e-mails are sent to administrators and users while relevant "
+"messages are displayed on the site at different times such as when a new "
+"user registers or a payment process completes successfully. You may "
+"customize these emails and messages here."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:580
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:155
+#: tmplconnector/monetize/templatic-registration/install.php:286
+msgid "Email Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:583
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:158
+#: tmplconnector/monetize/templatic-registration/install.php:289
+msgid "Email Subject"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:586
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:161
+#: tmplconnector/monetize/templatic-registration/install.php:292
+msgid "Email Description"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:593
+msgid "Successful Post submission to Admin"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:596
+msgid "Post submitted successfully Acknowledgment"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:604
+msgid "Payment success email to client"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:607
+msgid "Acknowledgment for your Payment"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:615
+msgid "Payment success to Admin "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:618
+msgid "Payment received successfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:632
+msgid "Notification Content Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:637
+msgid "Notification Title"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:640
+msgid "Messege Description"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:647
+msgid "Successful post submission notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:655
+msgid "Payment successful notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:663
+msgid "Payment canceled notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/install.php:671
+msgid "Payment via bank transfer success notification"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/manage_custom_taxonomy.php:9
+msgid "Custom post type deleted successfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/manage_custom_taxonomy.php:13
+msgid "Custom Post types"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/manage_custom_taxonomy.php:14
+msgid "Add Custom Post type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/manage_custom_taxonomy.php:16
+msgid ""
+"This is another classic feature from Templatic. This will enable you to "
+"create your own post types for your site. You can create multiple post types."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy-category.php:73
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy-tags.php:78
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:379
+msgid "Location : "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:561
+#, php-format
+msgid "Related %ss"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:652
+msgid "Taxonomy Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:870
+msgid "Previous"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:871
+#: tmplconnector/templatic-connector.php:778
+#: tmplconnector/templatic-connector.php:789
+#: tmplconnector/templatic-connector.php:806
+#: tmplconnector/templatic-connector.php:816
+#: tmplconnector/templatic-connector.php:826
+#: tmplconnector/templatic-connector.php:836
+#: tmplconnector/templatic-connector.php:846
+#: tmplconnector/templatic-connector.php:856
+#: tmplconnector/templatic-connector.php:924
+#: tmplconnector/templatic-connector.php:935
+#: tmplconnector/templatic-connector.php:1001
+#: tmplconnector/templatic-connector.php:1012
+#: tmplconnector/templatic-connector.php:1023
+#: tmplconnector/templatic-connector.php:1034
+#: tmplconnector/templatic-connector.php:1045
+#: tmplconnector/templatic-connector.php:1113
+#: tmplconnector/templatic-connector.php:1123
+#: tmplconnector/templatic-connector.php:1132
+#: tmplconnector/templatic-connector.php:1212
+#: tmplconnector/templatic-connector.php:1274
+#: tmplconnector/templatic-connector.php:1284
+#: tmplconnector/templatic-connector.php:1294
+#: tmplconnector/templatic-connector.php:1304
+#: tmplconnector/templatic-connector.php:1314
+#: tmplconnector/templatic-connector.php:1384
+msgid "Next"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:896
+msgid "No Comments"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:898
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:32
+msgid "Comments"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:900
+msgid "1 Comment"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:908
+msgid " F jS, Y, g:i a"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-custom_taxonomy/taxonomy_functions.php:909
+#, php-format
+msgid "Published by %s on %s %s"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_functions.php:112
+msgid ""
+"[SUBJECT-STR]You might be interested in [SUBJECT-END]\n"
+"\t\t\t<p>Dear [#$to_name#],</p>\n"
+"\t\t\t<p>[#$frnd_comments#]</p>\n"
+"\t\t\t<p>Link : <b>[#$post_title#]</b> </p>\n"
+"\t\t\t<p>From, [#$your_name#]</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:75
+msgid ""
+"The settings listed here are common for the whole plugin. You just need to "
+"select the forms where you want to enable captcha."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:80
+msgid "WP-reCaptcha"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:82
+msgid "Playthru"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:84
+msgid ""
+"You can use any of these captcha options in your site. You can select one "
+"for you from here. You can get the plugins here : <br/> <a href=\"http://"
+"wordpress.org/extend/plugins/are-you-a-human/\">Are You a Human</a> <br/> <a "
+"href=\"http://wordpress.org/extend/plugins/wp-recaptcha/\">WP-reCaptcha</a>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:88
+msgid "Enable User verification on"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:91
+msgid "Registration page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:92
+msgid "Submit listing page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:93
+#: tmplconnector/templatic-connector.php:854
+msgid "Claim Ownership"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:94
+msgid "Email to Friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:96
+msgid "Just check mark the forms where you want to use the captcha."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:114
+msgid ""
+"Email settings are common for the whole plugin. Whatever you set here will "
+"be common for all the mails sent from your domain."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:119
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:98
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:381
+msgid "Email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:121
+msgid "PHP Mail"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:123
+msgid "WP SMTP Mail"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:125
+msgid ""
+"This setting allows you to select the mail function you want to use to send "
+"emails from your site. You can either select PHP mail or SMTP mail. By "
+"default it will send mails by using PHP Mail."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:137
+msgid "Send to Friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:139
+msgid "Send Inquiry"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:142
+msgid ""
+"This setting allows you to enable Send to Friend and Send Inquiry emails on "
+"your site. The link to show this emails will be seen on post detail page "
+"after you enable it from here."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:150
+msgid "Send email to friend/Send Inquiry Email Content Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:168
+msgid "Send email to friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/general_settings.php:183
+msgid "Send inquiry email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:17
+msgid "Send To Friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:22
+msgid "Friend&rsquo;s name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:24
+msgid "Friend&rsquo;s email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:26
+msgid "Your name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:28
+msgid "Your email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:30
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:28
+msgid "Subject"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:30
+msgid "mail_friend_sub"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:30
+msgid "Send to friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:32
+msgid ""
+"Hello, \n"
+"                \n"
+"    I just stumbled upon this listing and thought you might like it. Just "
+"check it out."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:37
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:61
+msgid "Send"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:142
+msgid "Please enter your friend's name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:173
+msgid "Please enter your friend's valid email address"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:190
+msgid "Please Enter Your Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:223
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:248
+msgid "Please enter your valid email address"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_frms.php:239
+msgid "Please Enter Comments"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:18
+msgid "Inquiry for "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:22
+msgid "Full name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:24
+msgid "Your email "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:26
+msgid "Contact number "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:29
+msgid "send_inquirey_email_sub"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:29
+msgid "Inquiry email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:32
+msgid " Message"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:32
+msgid ""
+"Hello,\n"
+"I would like to inquire more about this listing. Please let me know how can "
+"I get in touch with you. Waiting for your prompt reply?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:119
+msgid ""
+"[SUBJECT-STR]You might be interested in [SUBJECT-END]\n"
+"\t\t<p>Dear [#to_name#],</p>\n"
+"\t\t<p>[#frnd_comments#]</p>\n"
+"\t\t<p>Link : <b>[#post_title#]</b> </p>\n"
+"\t\t<p>Contact number : [#contact#]</p>\n"
+"\t\t<p>From, [#your_name#]</p>\n"
+"\t\t<p>Sent from -[#$post_url_link#]</p></p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:149
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:151
+msgid "Email sent successfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:196
+msgid "Please enter your full name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:276
+msgid "Please enter subject line"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-generalizaion/popup_inquiry_frm.php:305
+msgid "Please enter message"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/bundle_box.php:15
+msgid ""
+"Another classic feature from templatic. This feature will lead to you help "
+"with security related issues.You can block some users by just mentioning "
+"their IP addresses in the settings.<br/><strong>NOTE : </strong>The user "
+"whose IP is blocked, will not be able to post anything on your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:54
+msgid ""
+"Security related settings are very essential for your domain. From here you "
+"can block an IP address by mentioning it the textarea and also you can "
+"enable SSL on your domain"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:54
+msgid "You must purchase the SSL certificate in order to use it on your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:56
+msgid "Blocked IP addresses"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:72
+msgid ""
+"The IP addresses you have blocked previously appear here. Once you remove "
+"them from the list below, they will be unblocked. Suspicious IP addresses "
+"should be added to the list below in order to prevent listings done from "
+"that IP"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:76
+msgid "Enable SSL on submit and registration Page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/install.php:82
+msgid ""
+"This option will enable SSL on submit and registration page, this option "
+"requires an SSL certificate enabled on your server"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:2
+msgid "Is"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:3
+msgid "IP not detected"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:4
+msgid "IP for this post is"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:5
+msgid "Post is submitted from IP"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:6
+msgid "Block IP"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-manage_ip/language.php:7
+msgid "Unblock IP"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:97
+msgid "Post title"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:99
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:96
+msgid "Payment method"
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:100
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:122
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:24
+msgid "Amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:101
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:145
+msgid "Post Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/admin_transaction_class.php:102
+msgid "status"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/bundle_box.php:19
+msgid ""
+"Making money with WordPress is no easy task, that&lsquo;s why we created "
+"several features that will make that process easier. The Monetization module "
+"allows you to setup price packages and control the currency, coupons and "
+"payment gateways used on the site. Every price package is category and post "
+"type-specific for unparalleled flexibility. "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/export_transaction.php:10
+msgid "Title,Pay Date,Billing name,Pay Method,Amount\\r\n"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/export_transaction.php:26
+msgid "No record available"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/install.php:50
+msgid "Transactions"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/install.php:214
+msgid ""
+"The settings listed below will be applied to the dashboard widgets. You can "
+"set the color for the post type in order to differentiate the post types on "
+"the Transaction dashboard widget."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/install.php:216
+msgid "Transaction Settings(Select Post Types)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/install.php:247
+msgid ""
+"These settings enable you to select the post type for which you want to see "
+"the transaction of particular post type on transaction dashboard widget."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:2
+msgid "Manage Price Packages"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:3
+#: tmplconnector/monetize/templatic-monetization/language.php:5
+msgid "Add New Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:4
+msgid "Monetization Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:6
+msgid ""
+"Here are the currency settings where you can set the currency code, currency "
+"symbol and currency position for your domain"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:7
+msgid ""
+"A new package will be generated after you fill up the below information. "
+"These packages will allow you to charge the users to submit posts on your "
+"site"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:8
+msgid ""
+"A classic feature from Templatic which enables you to set different packages "
+"on your site. You need to set the <strong>currency</strong> in order to use "
+"this feature"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:12
+msgid "Inactive"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:14
+msgid "Package Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:15
+msgid ""
+"This will be display as a package title in front end. ex. Summer Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:16
+msgid ""
+"Enabling this will allow you to charge the users per each post submission"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:17
+msgid ""
+"Pay per subscription enables you to allow the users to submit unlimited "
+"posts during their subscription period"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:18
+msgid "Select Categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:19
+msgid "This package will be display for the selected categories"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:20
+msgid "Package Description"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:21
+msgid "In a few words, describe what this packages is about"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:22
+msgid "Show Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:23
+msgid "Show Package even when no category is selected"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:24
+msgid ""
+"This package will be display even when user does not select any category"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:25
+msgid "Select Post Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:26
+msgid "This package will be enabled for the selected post type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:27
+msgid "Package Amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:28
+msgid "Mention the package amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:29
+msgid "Billing Period"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:30
+msgid "Set the time period for this package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:31
+msgid "Days"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:32
+msgid "Months"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:33
+msgid "Years"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:34
+msgid "Package Status"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:35
+msgid "Checking mark this will activate this package on your site"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:36
+msgid "Is Recurring"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:37
+msgid ""
+"Selecting this option will enable you to charge the users automatically "
+"after the billing period gets over"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:38
+msgid "Charge users every"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:39
+msgid "Billing Period for Recurring package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:40
+msgid "Set the time period for recurrence"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:41
+msgid "Billing Cycle"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:42
+msgid ""
+"This specifies the billing cycle for recurring package. Mention the number "
+"of times you want to repeat the recurring process"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:43
+msgid "Settings for Featured posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:44
+msgid ""
+"These settings are must if you want to charge the users for featured posts "
+"otherwise leave them blank"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:45
+msgid "Is Featured"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:46
+msgid ""
+"Checking mark on this will enable you to charge the users extra for featured "
+"posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:47
+msgid "Amount to be charged for Home page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:48
+msgid "Mention the amount to charge extra for home page featured posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:49
+msgid "Amount to be charged for Category page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:50
+msgid ""
+"Mention the amount to charge extra for category listing page featured posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:51
+msgid "Back to packages list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:53
+msgid "Package Detail"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:54
+msgid "Edit Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:55
+msgid "Delete Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:56
+msgid "You have not inserted any package yet"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:57
+msgid "Pakcage Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:58
+msgid "Pay per Post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:59
+msgid "Pay per Subscription"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:60
+msgid "Number of Posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:61
+msgid "This will be submit the number of limited post on pay per Subscription."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:62
+msgid "Validity"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:63
+msgid "Charges"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:64
+msgid "Recurring Charges"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:65
+msgid "Select a Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:66
+msgid "Currency Symbol"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:67
+msgid "You can specify the currency symbol here"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:68
+msgid "Currency Code"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:69
+msgid "You can specify the currency code here"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:70
+msgid "Currency Position"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:71
+msgid "You can set the currency position from here"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:72
+msgid "Symbol Before amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:73
+msgid "Space between Before amount and Symbol"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:74
+msgid "Symbol After amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:75
+msgid "Space between After amount and Symbol"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:76
+msgid "Would you like to make this post Featured?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:77
+msgid "Make this post featured on Home page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:78
+msgid "Make this post featured on Category listing page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:79
+msgid ""
+"An additional charges will be applied to make this post featured on any of "
+"the pages"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:80
+msgid "Total Charges"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:81
+msgid "Price settings for Featured listings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:82
+msgid ""
+"<p class=\"notes_spec\">You might want to charge users extra amount for "
+"featured listings within this price package.</p> "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:83
+msgid ""
+"Activate/deactivate additional price settings for &raquofeatured&raquo "
+"listings."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:84
+msgid "Amount to be charged<br><small>(for featuring on homepage)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:85
+msgid ""
+"This is the price you wish to charge extra for featuring a place or an event "
+"listing on the homepage. eg. 20"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:86
+msgid ""
+"Amount to be charged<br><small>(for featuring on categories page)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:87
+msgid ""
+"This is the price you wish to charge extra for a place or an event listing "
+"on category pages. eg. 12"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:88
+msgid "This setting will activate / deactivate this price package."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:89
+msgid "Latest transactions"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:92
+#, php-format
+msgid "You are going to submit for %s days"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:93
+msgid "1. Enter Event Listing Details"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:94
+msgid "2. Preview Event &amp; Payment"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:95
+msgid "3. Event Successful"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:96
+msgid "Yes &sbquo; feature this listing on homepage."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:97
+msgid "Yes &sbquo; feature this listing on category pages."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:98
+msgid "Yes &sbquo; feature this event on homepage."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:99
+msgid "Yes &sbquo; feature this event on category pages."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:100
+msgid "Total price as per your selection."
+msgstr ""
+
+# @ templatic
+# @ default
+#: tmplconnector/monetize/templatic-monetization/language.php:101
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1031
+msgid "Order Status"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:104
+msgid "Approved"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:106
+msgid "Payment Success"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:107
+msgid "Back to Orders Listing"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:108
+msgid "Order status changed successfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:109
+msgid ""
+"Thank you for joining us. Your payment is received and event is published."
+"<br>Thank you for becoming our valued member.<br><br>You can edit this "
+"message from language.php file at root of theme folder."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:110
+msgid "Inavalid transation"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:111
+msgid ""
+"There is some error occured while transaction is being process, please try "
+"again."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:112
+msgid "Authentication fail, invalid transaction id generated."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:113
+msgid ""
+"Event Posting cancelled.<br><br>You can edit this message from language.php "
+"file at root of theme folder."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:114
+msgid "Install New Payment Gateway"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:115
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:6
+msgid "Update"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:116
+msgid "Mail to a friend"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:117
+msgid "Send inquiry"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:120
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:135
+msgid "Transaction Report"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:121
+msgid "Back to transaction list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:122
+msgid "Here you can view the transaction detail."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:123
+msgid "Color"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:127
+msgid "Coupon Start Date"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:128
+msgid "Mention coupon start date"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:129
+msgid "Coupon End Date"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:130
+msgid ""
+"Mention coupon end date. After this date, the coupon will be expired and not "
+"be applicable anymore"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:131
+msgid "Mention coupon code"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:132
+msgid "Specify coupon type, the way you wish to calculate the discount amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/language.php:133
+msgid ""
+"Specify coupon amount. This amount will be discounted as per coupon type you "
+"have selected"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_class.php:124
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:251
+msgid "Package type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_class.php:163
+msgid "Packages permanently deleted."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_class.php:167
+#: tmplconnector/monetize/templatic-monetization/price_packages_list.php:18
+msgid "Package permanently deleted."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:251
+msgid "Pay per subscription"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:251
+msgid "Pay per post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:376
+#, php-format
+msgid "Would you like to make this %s featured?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:387
+#, php-format
+msgid ""
+"An additional amount will be charged to make this %s featured.You have the "
+"option to feature your $post_type on home page or category page or both."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:828
+msgid "Paid amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:829
+msgid "Alive days"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:831
+msgid "Post type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:856
+msgid "No recent transaction available."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:860
+msgid "No transaction type selected from transaction settings."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1029
+msgid "Order Number"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1030
+msgid "Order Date"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1039
+msgid "User Information"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1049
+msgid "Payment Information"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1061
+#: tmplconnector/templatic-connector.php:1281
+msgid "Price Package"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1085
+msgid "Products Information"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1089
+msgid "Image"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1090
+msgid "Product Name"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/price_package_functions.php:1091
+msgid "Price Total"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_packages_list.php:23
+msgid "Package created successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/price_packages_list.php:26
+msgid "Package updated successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:68
+msgid "Edit Coupon"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:71
+msgid "Add a Coupon"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:74
+msgid "Back to Manage coupon list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:74
+msgid "Back to coupons list"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_add.php:122
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:19
+msgid "Percentage"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:90
+msgid "Discount type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_code_class.php:91
+msgid "Value"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:24
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:24
+msgid "Manage Coupons"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:25
+msgid "Add a field for Coupon"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:25
+msgid "Add a new coupon"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:27
+msgid ""
+"Displaying a list of coupons added on your site where you can manage all the "
+"coupons. You will be able to set the time period as well for each coupon. "
+"Hence a coupon will not be applicable after it gets expired."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:32
+msgid "Coupon deleted successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:35
+msgid "Coupon created successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/admin_coupon_list.php:37
+msgid "coupon updated successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/ajax_check_coupon_code.php:21
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/ajax_check_coupon_code.php:26
+msgid "Congratulations!!!You save "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php:22
+msgid "Discount Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php:23
+msgid "Coupon&nbsp;Code"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php:24
+msgid "Discount Amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php:96
+msgid "Sorry! coupon code does not exist.Please try an aother coupon code."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-manage_coupon/install.php:118
+msgid "Validate"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:33
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:84
+msgid "Activate"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_payment_options_class.php:98
+#: tmplconnector/monetize/templatic-registration/admin_user_custom_fields_class.php:68
+msgid "Display order"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:60
+msgid "Back to Payment Options List"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:60
+msgid "&laquo; Back to Payment Options List"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:64
+msgid "Updated Succesfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:72
+msgid ""
+"Here you can edit the payment option settings. Double check the values you "
+"enter here to avoid payment related problems."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:77
+msgid "Payment method name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:93
+msgid ""
+"This is a numeric value that determines the position of this payment option "
+"in the list. e.g. 5"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/admin_paymethods_add.php:150
+msgid "Please enter Payment Method"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:11
+msgid "Templatic - Payment Options"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:14
+msgid ""
+"Another classic feature from templatic. This feature adds the payment "
+"gateways like Paypal, Paypal Pro, Google Checkout etc. on your site. You are "
+"free to edit these options and also you can enable or disable each of them. "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/bundle_box.php:27
+msgid ""
+"This link will redirect you to Payment Options page where you can Activate "
+"or Deactivate Payment gateways on your site."
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/cancel.php:10
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/return.php:13
+#: tmplconnector/monetize/templatic-registration/profile.php:159
+#: tmplconnector/monetize/templatic-registration/registration.php:540
+msgid "Home"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/install.php:11
+msgid "Example"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/install.php:22
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/prebanktransfer/install.php:29
+msgid "Payment Method integrated successfully"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/install.php:28
+msgid ""
+"this payment method cannot deleted because it is fix, you can deactive it"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/ipn_process.php:93
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/ipn_process.php:123
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_detail_report.php:48
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:53
+msgid "Place Listing Submitted and Payment Success Confirmation Email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/paypal_response.php:3
+msgid "Processing for Paypal, Please wait ...."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/paypal/return.php:27
+msgid "Payment procudure has been completed"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/prebanktransfer/install.php:11
+msgid "Enter the bank name to which you want to transfer payment"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/prebanktransfer/install.php:17
+msgid "Enter your bank Account ID"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment/prebanktransfer/install.php:35
+msgid "Payment Method deleted successfully"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:31
+msgid "Pay With"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:243
+msgid "Manage Payment Options"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:244
+msgid ""
+"Here is a list of payment gateways. You can Activate or Deactivate them from "
+"here"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic-payment_options/payment_functions.php:244
+msgid ""
+"You need to purchase a plugin to integrate a payment gateway in order to use "
+"it on your site"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:4
+msgid ""
+" Here is the monetization module, a bunch of classic features from Templatic "
+"which helps you monetize your website easily. Here you will be able to set "
+"the currency settings, create packages to be charged the users and also the "
+"payment gateways."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:21
+msgid "Currency Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:22
+msgid "Price Packages"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_monetization.php:23
+#: tmplconnector/templatic-connector.php:1301
+#: tmplconnector/templatic-connector.php:1311
+#: tmplconnector/templatic-connector.php:1321
+msgid "Payment Gateways"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_detail_report.php:80
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:85
+msgid "Payment Success Confirmation Email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:136
+msgid ""
+"You can view whole transaction report in this section. You can search for a "
+"transaction or sort them according to the payment gateway too. It also "
+"allows you to export all the transactions in a CSV file."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:141
+msgid "Search by transaction ID"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:168
+msgid "Payment Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:184
+msgid "Select Payment Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:197
+msgid "Name/Email"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:201
+msgid "Reset"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-monetization/templatic_transaction_report.php:205
+msgid "You can export the transation data from here "
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-ratings/get_rating.php:14
+msgid " rating"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-ratings/get_rating.php:21
+msgid "rating"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-ratings/install.php:18
+msgid "<h3>Rating Option</h3>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-ratings/install.php:21
+msgid "Rating Option"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-ratings/language.php:3
+msgid "Rate this by clicking a star below:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-ratings/templatic_post_rating.php:165
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:68
+msgid "Edit Custom User Meta"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:69
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:21
+msgid "Add a field for users&rsquo; profile"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:70
+msgid "Back to Manage fields list"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:91
+msgid "Field type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:97
+msgid "Text Heading"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:103
+msgid "Upload"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:105
+msgid "Select the type of the custom field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:122
+msgid ""
+"The name you provide here will be display as the field&rsquo;s name (label) "
+"in the front-end."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:128
+msgid "Field description"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:130
+msgid ""
+"Custom field description which will appear in the front-end as well as the "
+"backend."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:136
+msgid "HTML variable name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:138
+msgid ""
+"The name you specify should be unique. You will not be able to modify it "
+"once you submit the field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:146
+msgid ""
+"This is a numeric value that determines the position of the custom field in "
+"the front-end and the back-end. e.g. 5"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:152
+msgid "Is Active?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:157
+msgid ""
+"This setting activates/de-activates the custom field in the front-end and "
+"the back-end."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:163
+msgid "Compulsory"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:174
+msgid "Show on Registration page?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:179
+msgid ""
+"Specify whether or not this field be shown on the &lsquo;Registration "
+"page&rsquo;."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:185
+msgid "Show On Edit Profile Page ?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:191
+msgid ""
+"Specify whether or not this field be shown on the &lsquo;user&rsquo;s edit "
+"profile page&rsquo;."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:198
+msgid "Show On user dashboard Page ?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_edit.php:204
+msgid ""
+"Specify whether or not this field be shown on the &lsquo;user&rsquo;s "
+"dashboard page&rsquo;."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:20
+msgid "Manage user profile fields"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:24
+msgid ""
+"The fields you add/edit here will be display in user&rsquo;s dashboard and "
+"profile area. Using these fields, you can make users fill in custom "
+"information about themselves."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:29
+msgid "Information Deleted successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:32
+msgid "Custom user info field created successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/admin_custom_usermeta_list.php:34
+msgid "Custom user info field updated successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:120
+msgid "User Custom Fields"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-registration/install.php:168
+msgid "Log out"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:179
+#: tmplconnector/monetize/templatic-registration/install.php:195
+#: tmplconnector/monetize/templatic-registration/registration_language.php:19
+msgid "Register"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-registration/install.php:188
+msgid "LogOut"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:281
+msgid "Registration Email Content Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:299
+msgid "Registration success email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:317
+msgid "<h3>Registration Option</h3>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:320
+msgid "Allow user to autologin after registration"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/install.php:326
+msgid ""
+"These settings enable you to sign in or not automatically after registration."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/js/login.js.php:43
+msgid "Please Enter Name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/js/login.js.php:62
+msgid "Please Enter password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/js/login.js.php:89
+msgid "Please Enter User name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/js/login.js.php:106
+msgid "Please Enter Email ID"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:2
+msgid "Password changed successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:3
+msgid "Your information is updated successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:4
+msgid "New Password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:5
+msgid "Confirm New Password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:7
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:385
+msgid "Get New Password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:8
+msgid "About you"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:9
+msgid "Your Website"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/lang_reg.php:10
+msgid "Provide brief information about yourself"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:13
+msgid "<strong>ERROR</strong>: Please enter a username."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:15
+msgid ""
+"<strong>ERROR</strong>: This username is invalid because it uses illegal "
+"characters. Please enter a valid username."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:100
+msgid "Your login Information :"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:101
+#: tmplconnector/monetize/templatic-registration/registration.php:56
+msgid "Username: "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:102
+#: tmplconnector/monetize/templatic-registration/registration.php:57
+msgid "Password: "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:109
+#: tmplconnector/monetize/templatic-registration/registration.php:64
+msgid " Your new password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:182
+msgid "User registration is currently not allowed."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:208
+msgid "Registration complete. Please check your e-mail."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:222
+msgid ""
+"Widget contain the login form before login , after login contain the links "
+"of Dashboard,Edit profile,Logout etc. "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:223
+msgid "T &rarr; Login Dashboard wizard"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:234
+msgid "Check your e-mail for the new password."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:316
+msgid "Username"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:322
+#: tmplconnector/monetize/templatic-registration/registration_language.php:17
+#: tmplconnector/monetize/templatic-registration/registration_language.php:22
+msgid "Sign In"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_box_widget.php:409
+msgid "Login Box Title"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/login_form.php:74
+msgid ""
+"Please enter your username or e-mail address. You will receive a new "
+"password via e-mail."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration.php:55
+msgid "<p><b>Your login Information :</b></p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration.php:209
+msgid ""
+"[SUBJECT-STR]Registration Email[SUBJECT-END]<p>Dear [#user_name#],</p>\n"
+"\t\t\t<p>Your login information:</p>\n"
+"\t\t\t<p>Username: [#user_login#]</p>\n"
+"\t\t\t<p>Password: [#user_password#]</p>\n"
+"\t\t\t<p>You can login from [#site_login_url#] or</p><p> the URL is : "
+"[#site_login_url_link#].</p>\n"
+"\t\t\t<p>We hope you enjoy. Thanks!</p>\n"
+"\t\t\t<p>[#site_name#]</p>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration.php:221
+msgid "Registration Email"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration.php:236
+msgid ""
+"<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the "
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-registration/registration.php:579
+msgid "OR"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_functions.php:421
+msgid "Select the listing type to show your submited listing."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:3
+msgid "E-mail"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:4
+msgid "User name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:5
+msgid "Remember me on this computer"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:6
+msgid "Sign Up Now"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:7
+msgid "Personal Information"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:9
+msgid "(Note: A password will be e-mailed to you for future reference.)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:10
+msgid "Register Now"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:11
+msgid "Edit profile"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:12
+msgid "Facebook link"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:14
+msgid "Forgot password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:16
+msgid "Twitter link"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:18
+msgid "Change password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:20
+msgid "Dashboard"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:21
+msgid "Logout"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:24
+msgid "Registration complete. Please check your e-mail for login details."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:25
+msgid "We just sent you a new password. Kindly check your e-mail now."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:26
+msgid ""
+"A confirmation link has been sent to you via email. Kindly check your e-mail "
+"now."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:27
+msgid "User registration has been disabled by the admin."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:28
+msgid "You are now logged out."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:29
+msgid ""
+"Please enter your e-mail address as username. You will receive a new "
+"password via e-mail."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:30
+msgid "Invalid Email, please check"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:31
+msgid "Check your e-mail for your new password."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:32
+msgid ""
+"Your registration is successfully completed, Now please go to your email id "
+"to activate account."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:33
+msgid ""
+"Your account has been activated successfully, your login details has been "
+"sent to your email id."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:34
+msgid "Invalid Captcha."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:35
+msgid "Please play the game to register."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:38
+#: tmplconnector/monetize/templatic-registration/registration_language.php:46
+msgid "Edit Profile"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:39
+msgid "Confirm Password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:40
+#: tmplconnector/templatic-connector.php:712
+#: tmplconnector/templatic-connector.php:1661
+msgid "Edit"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:41
+msgid "Profile edited successfully."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:42
+msgid "Please enter Email."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:43
+msgid "Email already exists, please choose another."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:44
+msgid "Password and Confirm Password should same."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:45
+msgid "Sign in using social profile"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_language.php:47
+msgid "Please select"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:18
+msgid "text"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:29
+#, php-format
+msgid "Please select %s"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:31
+#, php-format
+msgid "Please Enter %s"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-registration/registration_validation.php:213
+msgid "Password could not be match"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/install.php:82
+msgid "A wide variety of Templatic widgets."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/install.php:83
+msgid ""
+"Here is the list of templatic widgets. You just need to check mark each in "
+"order to use it on your site"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/install.php:83
+msgid ""
+"Widgets which are check marked here will only be display on widgets page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/install.php:87
+msgid "Enable Templatic Widgets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:72
+msgid " View "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:74
+msgid " Views "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:80
+msgid " Daily View "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:82
+msgid " Daily Views "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:85
+msgid " Comment "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:87
+msgid " Comments "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:113
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:184
+msgid "ago"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:125
+msgid "No Popular post fond."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/loadpopularpost.php:231
+msgid ""
+"GD Library Error: imagecreatetruecolor does not exist - please contact your "
+"webhost and ask them to install the GD library"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_aboust_us_widget.php:9
+msgid ""
+"Through this widget you can show the information about site/your/company. "
+"You can use <html> tags too"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_aboust_us_widget.php:10
+msgid "T &rarr; About Us"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_aboust_us_widget.php:49
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:66
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:62
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:132
+msgid "Title:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_aboust_us_widget.php:54
+msgid "Description:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_advertisements_widget.php:9
+msgid ""
+"Show the advertisements. here You can paste HTML, JavaScript, an IFrame into "
+"this widget. "
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_advertisements_widget.php:10
+msgid "T &rarr; Advertisements"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_advertisements_widget.php:50
+msgid ""
+"Advertisement code <small>(ex.&lt;a href=\"#\"&gt;&lt;img src=\"http://"
+"templatic.com/banner.png\" /&gt;&lt;/a&gt; and google ads code here )</small>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:9
+msgid "Display the list of categories listing for selected post type"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:10
+msgid "T &rarr; Browse By Categories"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:71
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:137
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:113
+#: tmplconnector/monetize/templatic-widgets/templatic_recent_review_widget.php:41
+msgid "Select Post:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:85
+msgid "Display all categories list in front side for selected post type"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_categories_widget.php:89
+msgid "Show Categories Count:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:9
+msgid "Display the list of tags for selected post type"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:10
+msgid "T &rarr; Browse By Tag"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:38
+msgid "No Tag Available"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:67
+msgid "Select Post for tag:"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:81
+msgid "Display all tags list in front side for selected post tags"
+msgstr ""
+
+# @ default
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_browse_by_tag_widget.php:84
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:183
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:380
+msgid "Number of posts:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:9
+msgid "Show your facebook fans on your site."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:10
+msgid "T &rarr; Facebook fans"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:55
+msgid "Facebook Page Full URL"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:60
+msgid "Width"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:65
+msgid "Show Faces"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:73
+msgid "Show Stream"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_facebook_widget.php:81
+msgid "Show Header"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:9
+msgid ""
+"Show Listing post with post thumbnail, post title, post content, post "
+"categorywise, gravatar with order by option."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:10
+msgid "T &rarr; Listing Post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:31
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:123
+msgid "By"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:34
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:126
+msgid "[Read More...]"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:153
+msgid "Select Category:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:155
+msgid "---Select Category wise recent post ---"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:188
+msgid "Order By"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:192
+msgid "Parent"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:194
+msgid "Comment Count"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:195
+msgid "Random"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:199
+msgid "Sort Order"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:201
+msgid "Descending (3, 2, 1)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:202
+msgid "Ascending (1, 2, 3)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:206
+msgid "Show Author Gravatar"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:208
+msgid "Gravatar Size"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:210
+msgid "Small (45px)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:211
+msgid "Medium (65px)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:212
+msgid "Large (85px)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:213
+msgid "Extra Large (125px)"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:217
+msgid "Show Featured Image"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:219
+msgid "Image Size"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:232
+msgid "Show Post Title"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:235
+msgid "Content Type"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:237
+msgid "Show Content"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:238
+msgid "Show Excerpt"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:239
+msgid "Show Content Limit"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:240
+msgid "No Content"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:244
+msgid "Limit content to"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:244
+msgid "characters"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_listing_post_widget.php:247
+msgid "More Text (if applicable)"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:9
+msgid ""
+"Widget list the popular post as per total views , daily views or comments."
+"( you can also select another post-type)"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:10
+msgid "T &rarr; Popular Posts Widget "
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:129
+msgid "Total Number of Posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:134
+msgid "Number of Posts Per Slide"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:139
+msgid "Shows post as per view counting/comments"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:141
+msgid "Total views"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:142
+msgid "Daily views"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:143
+msgid "Total comments"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:149
+msgid "Pagination Position"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:151
+msgid "After Posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_popular_post_widget.php:152
+msgid "Before Posts"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_recent_review_widget.php:2
+msgid "Number of Reviews"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:10
+msgid ""
+"Home page post slider with display selected post type or display custom "
+"images on home page slider"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:11
+msgid "T &rarr; Home page Main Slider"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:259
+msgid "Animation"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:261
+msgid "Fade"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:262
+msgid "Slide"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:267
+msgid "Slide show"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:275
+msgid "Sliding Direction"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:277
+msgid "Horizontal"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:278
+msgid "Vertical"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:283
+msgid "Reverse Animation Direction"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:285
+msgid "False"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:286
+msgid "True"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:291
+msgid "Slide Show Speed"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:296
+msgid "Animation Speed"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:304
+msgid "<b>Settings for Carousel slider option?</b>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:310
+msgid ""
+"Item Width: <br/><small>(Box-model width of individual items, including "
+"horizontal borders and padding.)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:315
+msgid ""
+"Min Item <br/><small>(Minimum number of items that should be visible. Items "
+"will resize fluidly when below this.)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:320
+msgid ""
+"Max Item <br/><small>(Maxmimum number of items that should be visible. Items "
+"will resize fluidly when above this limit.)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:325
+msgid ""
+"Items Move <br/><small>(Number of items that should move on animation. If 0, "
+"slider will move all visible items.)</small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:334
+msgid "<b>Use custom images?</b>"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:340
+msgid "Select Taxonomy:"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:393
+msgid "Banner Slider Title 1"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_slider_widget.php:401
+msgid ""
+"Banner Slider Image 1 full URL <small>(ex.http://templatic.com/images/"
+"banner1.png, Image size 980x425 )</small>  :"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:12
+msgid "Twitter username not configured"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:16
+msgid "Number of tweets not valid"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:60
+msgid "Error retrieving tweets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:81
+msgid "No public tweets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:89
+msgid "Unable to get tweets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:169
+msgid "0 seconds"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:172
+msgid "year"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:173
+msgid "month"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:174
+msgid "day"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:175
+msgid "hour"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:176
+msgid "minute"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:177
+msgid "second"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:184
+msgid "s"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:208
+msgid "Twitter Username"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:213
+msgid "Show # of Tweets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:218
+msgid "Show this linked text for each Tweet"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:223
+msgid ""
+"Twitter button text <small>(for eg. Follow us, Join me on Twitter, etc.)</"
+"small>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:228
+msgid "Link below tweets with Twitter user"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:234
+msgid "Find and show hyperlinks"
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:241
+msgid "Show your latest twitter tweets on your site. ."
+msgstr ""
+
+# @ default
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:242
+msgid "T &rarr; Latest Twitter Feed"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/monetize/templatic-widgets/templatic_twiter_widget.php:286
+msgid "Last Tweets"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:185
+msgid "General Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:309
+#, php-format
+msgid "Visited %s times"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:310
+msgid " Visits today"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:347
+msgid "Facebook Share."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:356
+msgid "Tweet"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:445
+msgid "Name of the recipient."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:446
+msgid "Site name as you provided in General Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:447
+msgid "Site's login page URL"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:448
+msgid "Recipient's login ID"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:449
+msgid "Recepient's password"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:450
+msgid "Site login page link"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:451
+msgid "Date of post"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:452
+msgid "Information details of place/event."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:453
+msgid "Transaction details of place/event."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:454
+msgid "Subject for the email to the recipient."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:455
+msgid "Comment for the email to the recipient."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:456
+msgid "Sender's name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:457
+msgid "URL of the detail page"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:458
+msgid "Payable amount"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:459
+msgid "Bank name"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:460
+msgid "Account number"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:461
+msgid "Submission ID"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:716
+#: tmplconnector/templatic-connector.php:1665
+msgid "Renew"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:718
+#: tmplconnector/templatic-connector.php:1667
+msgid "Delete"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:758
+msgid "Welcome To Tevolution!."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:759
+msgid ""
+"Congratulations !<br/><br/> Tevolution is successfully installed on your "
+"site. Click on \"Start Tour\" for quick overview.<br/><br/>Thank you for "
+"installing Tevolution"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:760
+#: tmplconnector/templatic-connector.php:1201
+msgid "Start Tour"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:769
+msgid "Tevolution Overview"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:771
+msgid ""
+"You can add/edit/delete custom post-types/taxonomies by activating Custom "
+"Post Type manager."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:772
+msgid ""
+"Manage different types of custom fields for different post types, it "
+"contains bundle of options."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:773
+msgid ""
+"It enables you to manage registration/login+profile with custom fields, you "
+"can also display these fields on your author page."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:774
+msgid ""
+"This feature rich module contains price packages, currency settings and "
+"bundle of payment gateways."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:775
+msgid ""
+"To stay safe from attackers/spam posting you can block IPs, this module also "
+"allows you to enable SSL while doing payment"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:776
+msgid "This will allow your site visitors to claim listings on your site"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:777
+msgid ""
+"This module allows you to import or export the listings of the site(<b>NOTE</"
+"b> : with sample csv format)."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:787
+msgid "Custom Post Type manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:788
+msgid ""
+"By using this module, you will be able to create the post types of your "
+"choice."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:797
+msgid "Custom Fields manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:798
+msgid ""
+"Custom fields manager enables you to create fields of your choice. You will "
+"also be able to add fields as per categories in your site. The fields you "
+"create here will be displayed on submission form."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:799
+msgid ""
+"Now onwards you can activate any of the modules you want and take the "
+"benefit of exclusive features offered by Tevolution."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:814
+msgid "User Login and Registration manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:815
+msgid ""
+"This will enable you to create custom fields for user registration page. You "
+"can access the profile page using the T> Login Dashboard Wizard widget in "
+"the sidebar widget areas, You can also use facebook and twitter login on "
+"your site."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:825
+msgid ""
+"This module is a bunch of all the features which helps you make money. You "
+"can create price packages and also you will be able to select payment "
+"gateways and manage coupons by using this module."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:834
+msgid "Security manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:835
+msgid ""
+"A very essential feature which helps you to deal with the fake users by "
+"blocking their ip address. You can also use the SSL on your site by enabling "
+"it."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:845
+msgid ""
+"Bulk import/export is another useful feature which enables you to import or "
+"export the data by using CSV file. This will enable you to import/export "
+"data for your chosen post type."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:855
+msgid ""
+"This module helps you deal with the claims posted by users. You will be able "
+"to enable users so that they can claim for an event posted on your site and "
+"you will be able to approve or reject them."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:921
+#: tmplconnector/templatic-connector.php:931
+msgid "Custom post type manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:922
+msgid ""
+"This page shows the Listing of custom post types you have created, To add a "
+"new post type click Next."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:932
+msgid ""
+"Use this form to add a new post type. Fill in the necessary information here "
+"(Please insert the slugs carefully). Your post type will be created."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:998
+#: tmplconnector/templatic-connector.php:1009
+msgid "Custom fileds manager"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:999
+msgid "Please activate custom post type manager.!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1010
+msgid ""
+"Select yes if you want to show your custom fields in selected categories on "
+"the submission form."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1020
+#: tmplconnector/templatic-connector.php:1031
+#: tmplconnector/templatic-connector.php:1042
+msgid "Custom fileds manager."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1021
+msgid "You can add a new custom field from here!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1032
+msgid ""
+"Fill in the necessary information to create a new custom field, you can also "
+"select on which post type&prime;s submission form you want to display this "
+"field."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1043
+msgid ""
+"You can add submit form from here by selecting <b>Page - Submit Form</b> and "
+"after selecting the template dont forget to select post type for the "
+"submission form from below metabox: <b>Post type options</b>"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1110
+#: tmplconnector/templatic-connector.php:1120
+#: tmplconnector/templatic-connector.php:1129
+msgid "User Login and Registration manager."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1111
+msgid "Select Yes if you want to allow user to auto login after registration."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1121
+msgid ""
+"You can add custom fields from here!!! , To display the details or custom "
+"fields you created on author dashboard just to  add <b>do_action(\"author_box"
+"\")</b> in author.php file located in your current theme directory."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1130
+msgid ""
+"You can add user custom fields from here and there is also related login box "
+"widget and you can find it here!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1199
+#: tmplconnector/templatic-connector.php:1209
+msgid "Widget manager."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1200
+msgid ""
+"Templatic widgets now included on your site to know how to use please click "
+"on &prime; Start Tour &prime;  !"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1210
+msgid ""
+"You can activate your widget and all the activate widget you will finr "
+"here!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1271
+msgid "Currency Setting"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1272
+msgid ""
+"Mention currency in which you will take payment and also select how you want "
+"the currency symbol to appear. e.g., Before amount or after amount ?"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1282
+msgid "You can add your price package from here, !!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1291
+msgid "Add Price Package"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1292
+msgid ""
+"Fill out the details in this form to create a new price package or click "
+"Next to go back to the previous page!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1302
+msgid "You can activate or deactivate your payment gateways from here!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1312
+msgid ""
+"You can add discount coupons from here, you can advertise these coupons to "
+"allow your visitors to get a discount while adding listings!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1322
+msgid "Fill out the mentioned details to add a coupon!!!"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1382
+msgid "Claim Settings"
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1383
+msgid "Select the post types for which you want to enable this feature."
+msgstr ""
+
+# @ templatic
+#: tmplconnector/templatic-connector.php:1392
+msgid "Set Claim Widget"
+msgstr ""
+
+# @ default
+#: wp-updates-plugin.php:78
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+
+# @ default
+#: wp-updates-plugin.php:82
+msgid "An unknown error occurred"
+msgstr ""

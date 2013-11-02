@@ -1,0 +1,36 @@
+<?php
+define('ID_TEXT',__('ID',DOMAIN));
+define('TITLE_TEXT',__('Title',DOMAIN));
+define('AUTHOR_NAME_TEXT',__('Author',DOMAIN));
+define('CLAIMER_TEXT',__('Claimer',DOMAIN));
+define('CONTACT_NUM_TEXT',__('Contact',DOMAIN));
+define('ACTION_TEXT',__('Action',DOMAIN));
+define('DETAILS_CLAIM',__('Detail',DOMAIN));
+define('VERIFY_CLAIM',__('Verify',DOMAIN));
+define('DECLINE_CLAIM',__('Decline',DOMAIN));
+define('DECLINED',__('Declined',DOMAIN));
+define('VIEW_CLAIM',__('View Post',DOMAIN));
+define('DELETE_CLAIM',__('Delete this request',DOMAIN));
+define('NO_CLAIM',__('No Claim request for this post.',DOMAIN));
+define('REMOVE_CLAIM_REQUEST',__('Remove Claim Request',DOMAIN));
+define('YES_VERIFIED',__('Verified',DOMAIN));
+define('POST_VERIFIED_TEXT',__('This post is verified.',DOMAIN));
+define('CLAIM_BUTTON',__('Claim for this post',DOMAIN));
+define('OWNER_VERIFIED',__('Owner Verified Listing',DOMAIN));
+define('OWNER_TEXT',__('Do you own this post?',DOMAIN));
+define('VERIFY_OWNERSHIP_FOR',__('Verify your ownership for',DOMAIN));
+define('FULL_NAME',__('Full Name',DOMAIN));
+define('EMAIL',__('Your Email',DOMAIN));
+define('CONTACT',__('Contact No',DOMAIN));
+define('CLAIM',__('Your Claim',DOMAIN));
+define('DELETE_CONFIRM_ALERT',__('Are you sure want to delete this claim?',DOMAIN));
+define('ENTRY_DELETED',__('Claim Deleted',DOMAIN));
+define('NO_CLAIM_REQUEST',__('No post has been claimed on your site.',DOMAIN));
+define('STATUS',__('Status',DOMAIN));
+define('PENDING',__('Pending',DOMAIN));
+define('SELECT_POST_TYPE',__('Select Post Types',DOMAIN));
+define('SELECT_DISPLAY_TYPE',__('Select Display Type',DOMAIN));
+define('LINK',__('Link',DOMAIN));
+define('BUTTON',__('Button',DOMAIN));
+define('ALREADY_CLAIMED',__('You have already claimed for this post',DOMAIN));
+?>
