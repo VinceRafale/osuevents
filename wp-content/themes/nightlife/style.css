@@ -5974,8 +5974,8 @@ ul.ui-tabs-nav li a, .tabber ul li a {
 	div#menu-header-horizontal .menu ul,
 		div#menu-header-horizontal .menu li,
 		div#menu-header-horizontal .menu ul ul {
-			float: none;
-			width: 100% !important;
+		background: white;			
+		width: 100% !important;
 			}
 
 				div#menu-primary .menu ul ul,
