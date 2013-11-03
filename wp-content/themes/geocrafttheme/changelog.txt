@@ -1,0 +1,163 @@
+Theme Name: Geocraft Theme  Changelog
+======================================
++ = Added
+- = Removed
+* Version 1.7.3
+***************************************
+1. Listing being premium before payment issue fixed.
+2. Free listing not upgrading issue fixed.
+3. expiry listing renew,delete , edit option redirecting to the front page issue fixed.
+4. Social icon on footer redirect to same page issue fixed to new page.
+5. Map set to previous state while update listing issue fixed.
+6. Image uploader not working issue in ie9 now fixed.
+7. Crausel slider loading stack issue now fixed.
+8. Image description on listing editing issue now fixed.
+
+* Version 1.7.2
+***************************************
+1. Search feature improved, now listing searches with tags, categories possible.
+2. + Homepage and category page limit listings on Slider from theme options.
+3. + Lead capture ON/OFF feature for free listing added in theme options.
+4. + More social links like Digg, Dribbble, Flickr, LinkedIn, Stumbleupon, Skype on listing page.
+     Note: For existing theme, you have to add social links manually.
+     HTML variable name are:
+     1. geocraft_digg = Digg,
+     2. geocraft_dribbble = Dribbble
+     3. geocraft_flickr = Flickr
+     4. geocraft_linkedin = Linkedin
+     5. geocraft_stumbleupon = Stumbleupon
+     6. geocraft_skype = Skype
+
+* Version 1.7.1
+***************************************
+1. Listing Expiry Module updated.
+2. Multiple expiry emails were sent on listing expiry now fixed.
+3. Design Improvements in theme to make site look more elegant.
+4. Expired Listing Renewal module added.
+
+* Version 1.7.0
+***************************************
+1. Pro/Paid/Featured type of listing renamed as "Premium" Listings.
+2. Featured listing means featuring them on Homepage Slider/Category Slider.
+3. Change of Featured Tag to Premium.
+4. Menu title change from Featured Listing to Premium Listing.
+5. Import/Export function improved with lesser fields in CSV to make it more simple.
+6. Remove Latitude/Longitude.
+7. Required Custom fields were not validating earlier now fixed.
+8. If Address hidden in Free Listing. Maps will hide automatically.
+9. Tap to Call and Tap to email in business listings details added.
+10.Image upload description now appears issue fixed.
+11.Multiple email sent at page refresh is now fixed.
+12.Lead Capture form email now includes detailed Listing Title, Contact Name, Number and Message.
+
+* Version 1.6.9
+***************************************
+1. Logo was not responsive for mobile devices now fixed.
+2. Listing turns into Paid even without paying in a specific condition now fixed.
+3. Import issue in wordpress 3.5 version is now fixed.
+4. Listing submit preview shows constant value while selecting recurring payment issue is now fixed.
+5. Homepage feature image was not been displayed in some conditions now fixed.
+6. Lead capture untranslated text issue now fixed.
+
+* Version 1.6.8
+***************************************
+1. In Custom Permalink, the Category Page was showing all the listings in Slider.
+2. Broken button Style in Themes Options Panel now fixed.
+3. CSV Import Export function improved.
+4. Few missed Translation Strings in theme now added.
+5. Now you can hide multiple Slide Images for Free Listings.
+6. RTL Languages now supported.
+
+* Version 1.6.7
+***************************************
+1. Blog template category didn't showed now fixed.
+2. During listing edit, address field was not saved issue now fixed.
+
+* Version 1.6.6
+***************************************
+1. Creating category need refresh to load is now fixed.
+2. Rss feed issue is now fixed.
+3. Edit listing in custom permalink not working is now fixed.
+4. Edit listing category all select not working is now fixed.
+5. Edit listing saved category deselecting are now fixed.
+6. Blog category page not working is now fixed.
+7. Added in edit listing pending approval message.
+8. First text appearing in package issue is now fixed.
+
+* Version 1.6.5
+***************************************
+1. New Feature: Now you can hide custom fields for Free Listings.
+2. Top Slider not working fine on some Android based Mobiles which is now fixed.
+3. Unlimited number of Featured Listings possible on Homepage & Category page Slider.
+4. During Editing the listings sub categories were not displayed is now fixed.
+5. Lead capture not accepting feedbacks now fixed.
+
+* Version 1.6.4
+***************************************
+1. Implemented Sticky Listing functionality through sticky custom post type plugin.
+2. Listing duplicating in homepage and all listing page issue fixed.
+3. Featured listing on slider in homepage and category page issue fixed.
+4. Show listing on slider even if no image is uploaded in the listing.
+
+* Version 1.6.3
+***************************************
+1. Contact form content duplicate issue fixed.
+2. Listing submission preview valid up to date issue fixed
+
+* Version 1.6.2
+***************************************
+1. An error while listing upgrading fixed. 
+2. Issue with the Category listing widget, it makes the entire footer to disappear. fixed
+3. Enable sticky post in listing type.
+4. Footer recent listing style issue fixed.
+5. Footer recent review style issue fixed.
+
+* Version 1.6.1
+***************************************
+1. Email validation issue at listing submission fixed.
+
+* Version 1.6
+***************************************
+1. IE8 placeholder issue fixed.
+2. Map required issue fixed.
+3. Map description displayed twice now fixed.
+4. Search Improved.
+5. Multiple emails of Listing Expiry Notice fixed.
+6. Contact Number with spaces truncates fixed.
+
+* Version 1.5
+***************************************
+1. Expiring listing issue fixed.
+2. Captcha in lead capture.
+3. Slider auto scrolling.
+4. Upgrade free listing to premium type.
+
+* Version 1.4
+***************************************
+1. Homepage slider and category slider changed.
+2. Listing submition subcategory issue fixed.
+3. Sidebar subcategory issue fixed.
+4. Single page modified for custom field.
+5. Featured listing issue fixed.
+6. Listing validity days issue fixed in preview listing.
+
+* Version 1.3
+***************************************
+1. Minor issue fixed.
+
+* Version 1.2
+***************************************
+1. Customizable custom fields.
+2. Creating multiple pages when re-activating theme fixed.
+3. Recent review admin url fixed.
+4. Import and export featured added.
+5. Translation issue fixed.
+6. Custom field listing page dynamic
+
+* Version 1.1
+***************************************
+1. Post Button add dynamically.
+
+* Version 1.0
+***************************************
+1. Theme is created

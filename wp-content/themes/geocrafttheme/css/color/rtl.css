@@ -1,0 +1,540 @@
+/* 
+    Document   : Geocrafttheme Language RTL
+    Created on : 17 Jan 2013, 3:33:12 PM
+    Author     : Inkthemes
+    Description: Geocrafttheme Language RTL
+       
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: right;
+}
+p {
+	text-align: right;
+}
+blockquote {
+	background-position:right;
+}
+ol {
+	direction:rtl;
+}
+ol li {
+	list-style:decimal;
+}
+ul {
+	direction:rtl;
+}
+ul li {
+	margin-left:0;
+}
+.header_wrapper .header {
+	height:110px;
+}
+.header_wrapper .header .logo {
+	position:absolute;
+	right:150px;
+	top:20px;
+}
+.header_wrapper .header .post_btn {
+	position:absolute;
+	left:180px;
+	top:-15px;
+}
+#menu .ddsmoothmenu li:first-child a {
+	padding-left: 0;
+	padding-left: 10px;
+}
+.content_wrapper .featured_content .featured_thumb {
+	float: right;
+	margin-right: 20px;
+	margin-left:20px;
+}
+.content_wrapper .featured_content .f_post_content .f_post_meta {
+	padding-left: 0;
+}
+/* footer */
+.footer_wrapper .footer_widget ul li {
+	margin-left: 15px;
+}
+.footer_wrapper .footer_widget li {
+	margin-right: 15px;
+	/*float: right;*/
+}
+.footer_wrapper .footer_widget .tagcloud {
+	float:right;
+}
+.footer_wrapper .footer_widget #searchform {
+	float: right;
+}
+.footer_wrapper .footer_widget li.current_page_item {
+	float:right;
+	clear:both;
+}
+.footer_wrapper .footer_widget li.page_item {
+	float:right;
+	clear:both;
+}
+.footer_wrapper .footer_widget li.cat_item {
+	float:right;
+	clear:both;
+}
+.footer_wrapper .footer_widget .review_thumb img.avatar, .footer_wrapper .footer_widget .review_thumb .r_thumb {
+	float: right;
+	margin-left:15px;
+}
+.footer_wrapper .footer_widget .review_thumb ul.r_rating {
+	list-style-type: none;
+	padding-bottom:0;
+}
+/* Reveiw Table */
+.tbl_des table td {
+	float:right;
+	margin-left:20px;
+}
+.depth_article .article_detail .ar_desc .label.category {
+	background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.date {
+	background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.social {
+	background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.default {
+	background-position:right;
+}
+.article_slider .flex-direction-nav li .prev {
+	left: 0;
+	width: 31px;
+	height: 24px;
+	left: 18px;
+}
+.article_slider .flex-direction-nav li .next {
+	left: 10%;
+	width: 31px;
+	height: 24px;
+}
+/*sidebar */
+.sidebar {
+	margin-left: 31px;
+}
+.sidebar .review_thumb img.avatar, .sidebar .review_thumb .r_thumb {
+	float: right;
+	margin-right: 0;
+	margin-left:10px;
+}
+.recent_title {
+	padding-bottom: 6px;
+	background-position: right;
+	padding-right: 31px;
+}
+.sidebar .review_thumb .r_thumb_title {
+	padding-bottom: 6px;
+	background-position: right;
+	padding-right: 31px;
+}
+/* Contact Form */
+.content_wrapper #contactForm label {
+	float: right;
+}
+.content_wrapper #contactForm input[type="text"] {
+	clear: both;
+	margin-left:200px;
+}
+.content_wrapper #contactForm textarea#commentsText {
+	margin-left:200px;
+}
+.content_wrapper #contactForm input[type="submit"] {
+	margin-left:410px;
+}
+/* Add New Listing */
+#add_place .form_row .label, #user_profile .form_row .label {
+	float: right;
+}
+#add_place .form_row .field input[type="button"] {
+}
+#add_place .form_row .field input[type="submit"] {
+	margin-left:410px;
+}
+#user_profile .form_row .field input[type="text"] {
+/*margin-left:150px;*/
+}
+#user_profile .form_row .field input[type="submit"] {
+	margin-left:180px;
+}
+/*Registration page */
+#loginform .row label {
+	float:right;
+}
+#registration_form .row label, #fotget_pw .row label {
+	float:right;
+}
+#loginform .row input[type="text"], #registration_form .row input[type="text"], #fotget_pw .row input[type="text"] {
+	display: block;
+	float:right;
+}
+#loginform .row input[type="password"], #registration_form .row input[type="password"] {
+	display: block;
+	float:right;
+}
+#registration_form .error {
+	color: red;
+	float:left;
+	margin-left:15px;
+}
+#registration_form .submit {
+	float:right;
+}
+#loginform {
+	width:40%;
+	padding-right:50px;
+}
+#registration_form {
+	width: 50%;
+	padding-right: 0px;
+}
+#loginform input[type="submit"] {
+	float:right;
+}
+#loginform h4 {
+	margin-right:0;
+}
+.register h4 {
+	margin-right:0;
+}
+#loginform .required, #registration_form .required, #loginform .forgot_password {
+	color: #ad170a;
+	float:right;
+}
+#place_header ul.step li {
+	float: right;
+}
+#place_header ul.step li.one {
+	float: right;
+}
+#place_header ul.step li.current.one {
+	float: right;
+}
+#add_place {
+	margin-right: 0;
+}
+/* comment form */
+#commentform input[type="text"] {
+	float: right;
+}
+textarea#comment {
+	float: right;
+}
+#respond input#submit {
+	margin-left: 468px;
+}
+.content_wrapper .post .f_post_content p {
+}
+.content_wrapper .featured_content .featured_thumb.blog {
+	float: right;
+}
+.content_wrapper .post .featured_thumb.blog img.postimg {
+	float:right;
+	margin-right:0;
+}
+.content_wrapper .post .f_post_content {
+	overflow: hidden;
+}
+
+.content_wrapper .post .post_meta .meta-nav li {
+display: inline;
+padding-left: 20px;
+margin-right: 25px;
+padding-bottom: 3px;
+}
+
+.content_wrapper .post .post_meta .meta-nav li.comment{
+display: inline;
+padding-left:23px;
+margin-right: 25px;
+padding-bottom: 3px;
+}
+
+
+
+/* Media Screen */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+.header_wrapper .header {
+ 	height:80px;
+}
+.header_wrapper .header .logo {
+	 position:absolute;
+	 right:150px;
+	 top:10px;
+}
+.header_wrapper .header .post_btn {
+	 text-align: center;
+	 position:absolute;
+	 left:65px;
+	 top:-18px;
+}
+.content_wrapper #contactForm input[type="text"] {
+	 clear: both;
+	 margin-left:70px;
+}
+.content_wrapper #contactForm textarea#commentsText {
+ 	margin-left:70px;
+}
+.content_wrapper #contactForm input[type="submit"] {
+	 margin-left:270px;
+}
+.sidebar {
+ 	margin-left: 0px;
+}
+
+/* Sign In and Registration page */
+/*Registration page */
+#loginform .row label {
+	 float:right;
+	 clear:both;
+}
+#registration_form .row label, #fotget_pw .row label {
+	 float:right;
+	 clear:both;
+}
+#loginform .row input[type="text"], #registration_form .row input[type="text"], #fotget_pw .row input[type="text"] {
+	 display: block;
+	 float:right;
+	 clear:both;
+}
+#loginform .row input[type="password"], #registration_form .row input[type="password"] {
+	 display: block;
+	 float:right;
+	 clear:both;
+}
+#registration_form .error {
+	 color: red;
+	 float:left;
+	 margin-left:15px;
+}
+#registration_form .submit {
+	 float:right;
+	 display: block;
+	 clear:both;
+}
+ #loginform {
+	 padding-right:0;
+}
+ #registration_form {
+	 width: 50%;
+	 padding-right: 0px;
+}
+#loginform input[type="submit"] {
+	 float:right;
+	 clear:both;
+}
+ .register {
+	 margin-right:0;
+	 padding-top:50px;
+	 float:right;
+	 clear:both;
+}
+ #loginform .required, #registration_form .required, #loginform .forgot_password {
+	 color: #ad170a;
+	 float:right;
+}
+ .footer_wrapper .footer_widget li.current_page_item {
+	 float:right;
+	 clear:both;
+}
+.footer_wrapper .footer_widget li.page_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.cat_item {
+	 float:right;
+	 clear:both;
+}
+
+#inquiry_form {
+	margin-left:-10px;
+}
+
+.content_wrapper .post .post_meta .meta-nav li.comment {
+display: inline;
+padding-left: 23px;
+margin-right: 25px;
+padding-bottom: 3px;
+}
+
+
+#add_place .form_row .field input[type="submit"] {
+margin-left: 350px;
+}
+
+
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+.header_wrapper .header .logo {
+	position: absolute;
+	right: 100px;
+	top: 20px;
+}
+ .header_wrapper .header .post_btn {
+	 position:absolute;
+	 left:0;
+	 top:90px;
+}
+}
+@media only screen and ( max-width: 768px ) {
+.header_wrapper .header {
+ 	height:110px;
+}
+.header_wrapper .header .logo {
+	position: absolute;
+	right: 105px;
+	top: 20px;
+}
+.header_wrapper .header .post_btn {
+	 position:absolute;
+	 left:50px;
+	 top:-10px;
+}
+.content_wrapper #contactForm input[type="text"] {
+	 clear: both;
+	 margin-left:50px;
+}
+.content_wrapper #contactForm textarea#commentsText {
+	 margin-left:50px;
+}
+.content_wrapper #contactForm input[type="submit"] {
+	 margin-left:250px;
+}
+.sidebar {
+ 	margin-left:0px;
+}
+#loginform, #registration_form {
+	width: 50%;
+	float: right !important;
+	background:none;
+	margin-right:0;
+	padding-right: 1px;
+}
+ #inquiry_form {
+	margin-left:-15px;
+}
+ .footer_wrapper .footer_widget li.current_page_item {
+	 float:right;
+	 clear:both;
+}
+.footer_wrapper .footer_widget li.page_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.cat_item {
+	 float:right;
+	 clear:both;
+}
+}
+@media only screen and (max-width: 480px) {
+.header_wrapper .header {
+ 	height:170px;
+}
+.header_wrapper .header .logo {
+	 position:absolute;
+	 left:30px;
+	 top:20px;
+}
+.header_wrapper .header .post_btn {
+	 text-align: center;
+	 position:absolute;
+	 left:10px;
+	 top:90px;
+}
+ .content_wrapper #contactForm input[type="text"] {
+	 clear: both;
+	 margin-left:0px;
+}
+.content_wrapper #contactForm textarea#commentsText {
+	 margin-left:0px;
+}
+.content_wrapper #contactForm input[type="submit"] {
+ 	margin-left:50px;
+}
+.sidebar {
+ 	margin-left: 0;
+}
+
+
+/* Review Table */
+.tbl_des table td {
+	 float:right;
+	 margin-left:20px;
+}
+.depth_article .article_detail .ar_desc .label.category {
+	 background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.date {
+ 	background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.social {
+ 	background-position:right;
+}
+.depth_article .article_detail .ar_desc .label.default {
+	 background-position:right;
+}
+.article_slider .flex-direction-nav li .prev {
+	 left: 0;
+	 width: 31px;
+	 height: 24px;
+	 left: 18px;
+}
+.article_slider .flex-direction-nav li .next {
+	 left: 10%;
+	 width: 31px;
+	 height: 24px;
+}
+ .sidebar {
+	 margin-left:10px;
+	 margin-top:25px;
+}
+ .footer_wrapper .footer_widget li.current_page_item {
+	 float:right;
+	 clear:both;
+}
+.footer_wrapper .footer_widget li.page_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.current_cat_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.cat_item {
+	 float:right;
+	 clear:both;
+}
+
+.content_wrapper .post .post_meta .meta-nav li.comment a{
+display: inline;
+padding-left: 23px;
+margin-right: 25px;
+padding-bottom: 3px;
+}
+
+
+
+}
+@media only screen and (max-width: 350px) {
+.footer_wrapper .footer_widget li.current_page_item {
+	 float:right;
+	 clear:both;
+}
+.footer_wrapper .footer_widget li.page_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.current_cat_item {
+	 float:right;
+	 clear:both;
+}
+ .footer_wrapper .footer_widget li.cat_item {
+	 float:right;
+	 clear:both;
+}
+}

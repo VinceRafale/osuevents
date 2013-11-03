@@ -1,0 +1,27 @@
+Fid,field_cate,f_type,opt_value,f_des,f_title,f_var_nm,dft_value,p_order,is_active,is_require,show_on_detail
+1,,text,,Enter listing title.,Listing Title,list_title,,1,1,1,1
+2,,geo_map,,Please enter listing address. eg. : 1870 Beloit Ave Apartment' West Los Angeles' CA 90025,Address,geo_address,,2,1,0,1
+3,,geo_map_input,,Address latitude,Address Latitude,geo_latitude,,3,1,0,1
+4,,geo_map_input,,Address longitude,Address Longitude,geo_longitude,,4,1,0,1
+5,,text,,Enter contact person name.,Contact Name,geocraft_contact,,5,1,0,1
+6,,image_uploader,,,Select Image,geocraft_meta_image1,,6,1,0,1
+7,,image_uploader,,,Select Image,geocraft_meta_image2,,7,1,0,1
+8,,image_uploader,,,Select Image,geocraft_meta_image3,,8,1,0,1
+9,,image_uploader,,,Select Image,geocraft_meta_image4,,9,1,0,1
+10,,image_uploader,,,Select Image,geocraft_meta_image5,,10,1,0,1
+11,,texteditor,,Note : Basic HTML tags are allowed,Listing Description,geocraft_description,,11,1,1,1
+12,,text,,Enter Business or Listing Timing Information. eg. : 10.00 am to 6 pm every day,Time,geocraft_timing,,12,1,0,1
+13,,text,,You can enter phone number. cell phone number etc.,Phone No,geocraft_phone,,13,1,0,1
+14,,text,,Enter your email address.,Email,geocraft_meta_email,,14,1,1,1
+15,,text,,Enter website URL. eg. : http://domain.com,Website,geocraft_website,,15,1,0,1
+16,,text,,Enter twitter URL. eg. : http://twitter.com/mydomain,Twitter,geocraft_twitter,,16,1,0,1
+17,,text,,Enter facebook URL. eg. : http://facebook.com/mydomain,Facebook,geocraft_facebook,,17,1,0,1
+18,,text,,Enter Google plus URL. eg. : https://plus.google.com/u/,Google Plus,geocraft_googleplus,,18,1,0,1
+19,,text,,,Delicious,geocraft_delicious,,19,1,0,1
+20,,text,,,Digg,geocraft_digg,,20,1,0,1
+21,,text,,,Dribble,geocraft_dribbble,,21,1,0,1
+22,,text,,,Flickr,geocraft_flickr,,22,1,0,1
+23,,text,,,Linkedin,geocraft_linkedin,,23,1,0,1
+24,,text,,,Stumbleupon,geocraft_stumbleupon,,24,1,0,1
+25,,text,,,Skype,geocraft_skype,,25,1,0,1
+26,,text,,Tags are short keywords.  with comas no space within. Up to 40 characters only.,Tags,geocraft_tag,,26,1,0,1

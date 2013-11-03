@@ -1,0 +1,31 @@
+.top_strip {
+    background:#077fa2;
+}
+.header_wrapper .header{
+    background: #13b4e3 url('images/blueln.png') top center no-repeat;
+}
+.main_search #searchsubmit {
+    background:url(images/blueshbtn.png) repeat-x;
+}
+.sidebar #searchform input[type="submit"] {
+    background:url(images/bluesh.png) no-repeat;
+}
+.footer_wrapper {
+    background:#077fa2;
+}
+.footer_wrapper .footer_widget h5 {
+    background:url(images/bbfborder.png) repeat-x bottom;
+}
+.footer_wrapper .footer_widget ul {
+    list-style-image:url(images/fbbullet.png);
+}
+.footer_wrapper .footer_widget #searchform {
+    background:url(images/fbbsearch.png) no-repeat;
+}
+.footer_bottom {
+    background:#034c61;
+    color:#81dbf5;
+}
+.footer_bottom .copy_right {
+    color: #81dbf5;
+}

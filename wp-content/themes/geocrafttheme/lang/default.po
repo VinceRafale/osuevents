@@ -1,0 +1,1794 @@
+# Copyright (C) 2012 Geocraft Theme
+# This file is distributed under the same license as the WordPress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Geocraft Theme 1.1\n"
+"Report-Msgid-Bugs-To: admin@inkthemes.comPOT-Creation-Date: 2012-10-12 12:47:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-01-19 14:51+0530\n"
+"Last-Translator: satyendra <satyendra61@yahoo.com>\n"
+"Language-Team: \n"
+"POT-Creation-Date: \n"
+
+#: admin_path.php:8
+msgid "Pages Navigation Menu"
+msgstr ""
+
+#: admin_path.php:9
+msgid "Home"
+msgstr ""
+
+#: admin_path.php:10
+msgid "This entry was posted in  and tagged . Bookmark the  permalink"
+msgstr ""
+
+#: admin_path.php:11
+msgid "This entry was posted in. Bookmark the  permalink"
+msgstr ""
+
+#: admin_path.php:12
+msgid "Bookmark the permalink"
+msgstr ""
+
+#: admin_path.php:13
+msgid "Home Page Widget Area"
+msgstr ""
+
+#: admin_path.php:14
+msgid "Listing Widget Area"
+msgstr ""
+
+#: admin_path.php:15
+msgid "Blog Widget Area"
+msgstr ""
+
+#: admin_path.php:16
+msgid "Pages Widget Area"
+msgstr ""
+
+#: admin_path.php:17
+msgid "The default pages for pages widget area"
+msgstr ""
+
+#: admin_path.php:18
+msgid "Contact Page Widget Area"
+msgstr ""
+
+#: admin_path.php:19
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: admin_path.php:20
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: admin_path.php:21
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: admin_path.php:22
+msgid "Fourth Footer Widget Area"
+msgstr ""
+
+#: admin_path.php:23
+msgid "You are not allowed to access this part of the site"
+msgstr ""
+
+#: admin_path.php:25
+msgid "Options Updated"
+msgstr ""
+
+#: admin_path.php:26
+msgid "Options Reset"
+msgstr ""
+
+#: admin_path.php:27
+msgid "Options"
+msgstr ""
+
+#: admin_path.php:29
+msgid "General Settings"
+msgstr ""
+
+#: admin_path.php:30
+msgid "Custom Logo"
+msgstr ""
+
+#: admin_path.php:31
+msgid "Upload your own Logo, Optimal Size 217pixels wide by 66pixels Height"
+msgstr ""
+
+#: admin_path.php:32
+msgid "Custom Favicon"
+msgstr ""
+
+#: admin_path.php:33
+msgid "Specify a 16px x 16px image that will represent your website's favicon."
+msgstr ""
+
+#: admin_path.php:34
+msgid "Tracking Code"
+msgstr ""
+
+#: admin_path.php:35
+msgid "Paste your Google Analytics (or other) tracking code here."
+msgstr ""
+
+#: admin_path.php:36
+msgid "Background Image"
+msgstr ""
+
+#: admin_path.php:37
+msgid "Choose image for website's background image."
+msgstr ""
+
+#: admin_path.php:38
+msgid "Homepage Settings"
+msgstr ""
+
+#: admin_path.php:39
+msgid "HomePage Featured Slider Main Heading"
+msgstr ""
+
+#: admin_path.php:40
+msgid "Set the text for the Featured Slider Heading, default text is 'FEATURED BUSINESS LISTINGS'"
+msgstr ""
+
+#: admin_path.php:41
+msgid "HomePage Recently Added Heading"
+msgstr ""
+
+#: admin_path.php:42
+msgid "Set the text for the Recently Added Heading. Default text is 'Recently Added'"
+msgstr ""
+
+#: admin_path.php:43
+msgid "Listing Setting"
+msgstr ""
+
+#: admin_path.php:44
+#: metabox_path.php:33
+msgid "Free Listing"
+msgstr ""
+
+#: admin_path.php:45
+msgid "Set whether you want to put the Free Listing to Instantly publish or pending mode. By default Free listing submission would be in Pending Mode"
+msgstr ""
+
+#: admin_path.php:46
+msgid "Paid Listing"
+msgstr ""
+
+#: admin_path.php:47
+msgid "Set whether you want to put the Paid Listing to Instantly publish or pending mode. By default Paid listing submission would be in Publish Mode"
+msgstr ""
+
+#: admin_path.php:48
+msgid "Styling Options"
+msgstr ""
+
+#: admin_path.php:49
+msgid "Theme Stylesheet"
+msgstr ""
+
+#: admin_path.php:50
+msgid "Select your themes alternative color scheme."
+msgstr ""
+
+#: admin_path.php:51
+msgid "Custom CSS"
+msgstr ""
+
+#: admin_path.php:52
+msgid "Quickly add some CSS to your theme by adding it to this block."
+msgstr ""
+
+#: admin_path.php:53
+msgid "Social Icons"
+msgstr ""
+
+#: admin_path.php:54
+msgid "Yahoo"
+msgstr ""
+
+#: admin_path.php:55
+msgid "Enter your link url for Yahoo."
+msgstr ""
+
+#: admin_path.php:56
+msgid "Blogger"
+msgstr ""
+
+#: admin_path.php:57
+msgid "Enter your link url for Blogger."
+msgstr ""
+
+#: admin_path.php:58
+msgid "Facebook"
+msgstr ""
+
+#: admin_path.php:59
+msgid "Enter your link url for Facebook."
+msgstr ""
+
+#: admin_path.php:60
+msgid "Twitter"
+msgstr ""
+
+#: admin_path.php:61
+msgid "Enter your link url for Twitter."
+msgstr ""
+
+#: admin_path.php:62
+msgid "Rss"
+msgstr ""
+
+#: admin_path.php:63
+msgid "Enter your link url for Rss."
+msgstr ""
+
+#: admin_path.php:64
+msgid "Youtube"
+msgstr ""
+
+#: admin_path.php:65
+msgid "Enter your link url for Youtube."
+msgstr ""
+
+#: admin_path.php:66
+msgid "Google Plus"
+msgstr ""
+
+#: admin_path.php:67
+msgid "Enter your link url for Google Plus."
+msgstr ""
+
+#: admin_path.php:68
+msgid "Pinterest"
+msgstr ""
+
+#: admin_path.php:69
+msgid "Enter your link url for Pinterest."
+msgstr ""
+
+#: admin_path.php:70
+msgid "Footer Settings"
+msgstr ""
+
+#: admin_path.php:71
+msgid "Enter text you want to be displayed on Footer"
+msgstr ""
+
+#: admin_path.php:72
+msgid "SEO Options"
+msgstr ""
+
+#: admin_path.php:73
+msgid "Meta Keywords (comma separated)"
+msgstr ""
+
+#: admin_path.php:74
+msgid "Meta keywords provide search engines with additional information about topics that appear on your site. This only applies to your home page. Keyword Limit Maximum 8"
+msgstr ""
+
+#: admin_path.php:75
+msgid "Meta Description"
+msgstr ""
+
+#: admin_path.php:76
+msgid "You should use meta descriptions to provide search engines with additional information about topics that appear on your site. This only applies to your home page.Optimal Length for Search Engines, Roughly 155 Characters"
+msgstr ""
+
+#: admin_path.php:77
+msgid "Meta Author Name"
+msgstr ""
+
+#: admin_path.php:78
+msgid "You should write the full name of the author here. This only applies to your home page."
+msgstr ""
+
+#: admin_setting_path.php:8
+msgid "Price Package Title"
+msgstr ""
+
+#: admin_setting_path.php:9
+msgid "The name of the Package would appear on the Frontend on the Business Listing Submission Page."
+msgstr ""
+
+#: admin_setting_path.php:10
+msgid "Description of the price package"
+msgstr ""
+
+#: admin_setting_path.php:11
+msgid "Describe this price package in your words. [Optional]"
+msgstr ""
+
+#: admin_setting_path.php:12
+msgid "Package Cost"
+msgstr ""
+
+#: admin_setting_path.php:13
+msgid "Set the one time payment cost here for placing the listing."
+msgstr ""
+
+#: admin_setting_path.php:14
+msgid "Listing Active Period"
+msgstr ""
+
+#: admin_setting_path.php:15
+msgid "Days"
+msgstr ""
+
+#: admin_setting_path.php:16
+msgid "Months"
+msgstr ""
+
+#: admin_setting_path.php:17
+msgid "Years"
+msgstr ""
+
+#: admin_setting_path.php:18
+msgid "Set the Active Time period of the Listing. After which the Listing would expire, the user gets the email after his listing expires through which he can reactivate the listing again."
+msgstr ""
+
+#: admin_setting_path.php:19
+msgid "Status"
+msgstr ""
+
+#: admin_setting_path.php:20
+#: custom_field_path.php:37
+msgid "Active"
+msgstr ""
+
+#: admin_setting_path.php:21
+msgid "Deactive"
+msgstr ""
+
+#: admin_setting_path.php:22
+msgid "Incase you want this Price Package to Activate/Deactivate from the Frontend, you can set the Status here."
+msgstr ""
+
+#: admin_setting_path.php:23
+msgid "Price settings for Featured listings"
+msgstr ""
+
+#: admin_setting_path.php:24
+msgid "You might want to charge users extra amount for featured listings within this price package."
+msgstr ""
+
+#: admin_setting_path.php:25
+msgid "Feature Listing Status"
+msgstr ""
+
+#: admin_setting_path.php:26
+msgid "Select Active/Deactive for featured listing."
+msgstr ""
+
+#: admin_setting_path.php:27
+msgid "Amount to be charged (for featuring on homepage)"
+msgstr ""
+
+#: admin_setting_path.php:28
+msgid "This is the price you wish to charge extra for featuring a business listing on the homepage. eg. 25"
+msgstr ""
+
+#: admin_setting_path.php:29
+msgid "Amount to be charged (for featuring on categories page)"
+msgstr ""
+
+#: admin_setting_path.php:30
+msgid "This is the price you wish to charge extra for a business listing on category pages. eg. 10"
+msgstr ""
+
+#: admin_setting_path.php:32
+msgid "First Price"
+msgstr ""
+
+#: admin_setting_path.php:33
+msgid "Price of first period of subscription"
+msgstr ""
+
+#: admin_setting_path.php:34
+msgid "First Period"
+msgstr ""
+
+#: admin_setting_path.php:35
+msgid "First period of subscription"
+msgstr ""
+
+#: admin_setting_path.php:36
+msgid "Rebill Times"
+msgstr ""
+
+#: admin_setting_path.php:37
+msgid "Charge Second Price x Times"
+msgstr ""
+
+#: admin_setting_path.php:38
+msgid "Rebill Second Price until cancelled"
+msgstr ""
+
+#: admin_setting_path.php:39
+msgid "This is the number of payments which will occur at the Second Price"
+msgstr ""
+
+#: admin_setting_path.php:40
+msgid "Second Price"
+msgstr ""
+
+#: admin_setting_path.php:41
+msgid "Price that must be billed for second and the following periods of subscriptions."
+msgstr ""
+
+#: admin_setting_path.php:42
+msgid "Second period of subscription"
+msgstr ""
+
+#: admin_setting_path.php:43
+msgid "Set the active period of this package."
+msgstr ""
+
+#: admin_setting_path.php:44
+msgid "Select the status for package active/deactive"
+msgstr ""
+
+#: admin_setting_path.php:46
+msgid "The Free Package is priced at 0 by default. But you can make it a Paid Package as well but putting some dollar value. Eg. 50"
+msgstr ""
+
+#: admin_setting_path.php:47
+msgid "The Listing would remain active for this time period. After which the Listing would expire, the user gets the email after his listing expires through which he can reactivate the listing again."
+msgstr ""
+
+#: admin_setting_path.php:49
+msgid "Paypal Settings"
+msgstr ""
+
+#: admin_setting_path.php:50
+msgid "Here you can edit the payment option settings. Double check the values you enter here to avoid payment related problems."
+msgstr ""
+
+#: admin_setting_path.php:51
+msgid "Paypal Sandbox Mode"
+msgstr ""
+
+#: admin_setting_path.php:52
+msgid "Yes"
+msgstr ""
+
+#: admin_setting_path.php:53
+msgid "No"
+msgstr ""
+
+#: admin_setting_path.php:54
+msgid "For testing purpose choose 'Yes' in Paypal Sandbox Mode. Else choose No for Live Websites and enter your Paypal Email Address below. You must have a PayPal Sandbox account setup before using the testing feature."
+msgstr ""
+
+#: admin_setting_path.php:56
+msgid "Geocraft Transactions"
+msgstr ""
+
+#: admin_setting_path.php:57
+msgid "ID"
+msgstr ""
+
+#: admin_setting_path.php:58
+msgid "Listing ID"
+msgstr ""
+
+#: admin_setting_path.php:59
+msgid "User Name"
+msgstr ""
+
+#: admin_setting_path.php:60
+msgid "Payer Email"
+msgstr ""
+
+#: admin_setting_path.php:61
+msgid "Listing Title"
+msgstr ""
+
+#: admin_setting_path.php:62
+msgid "Transaction ID"
+msgstr ""
+
+#: admin_setting_path.php:63
+msgid "Payment Status"
+msgstr ""
+
+#: admin_setting_path.php:64
+msgid "Total Amount"
+msgstr ""
+
+#: admin_setting_path.php:65
+msgid "Paid Date"
+msgstr ""
+
+#: admin_setting_path.php:66
+msgid "No transactions found."
+msgstr ""
+
+#: admin_setting_path.php:68
+msgid "Geocraft Advance"
+msgstr ""
+
+#: admin_setting_path.php:69
+msgid "Free Payment Package"
+msgstr ""
+
+#: admin_setting_path.php:70
+msgid "One Time Payment Package"
+msgstr ""
+
+#: admin_setting_path.php:71
+msgid "Recurring Payment Package"
+msgstr ""
+
+#: admin_setting_path.php:72
+msgid "Payment Setting"
+msgstr ""
+
+#: admin_setting_path.php:73
+msgid "Save All Changes"
+msgstr ""
+
+#: admin_setting_path.php:77
+msgid "Set Default Currency"
+msgstr ""
+
+#: admin_setting_path.php:78
+msgid "Select Currency code."
+msgstr ""
+
+#: admin_setting_path.php:79
+msgid "Supported Currency List"
+msgstr ""
+
+#: admin_setting_path.php:80
+msgid "Currency"
+msgstr ""
+
+#: admin_setting_path.php:81
+msgid "Code"
+msgstr ""
+
+#: admin_setting_path.php:82
+msgid "Symbol"
+msgstr ""
+
+#: controls_path.php:8
+#: front_end_path.php:19
+msgid "A message will be sent to your email address."
+msgstr ""
+
+#: controls_path.php:9
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: controls_path.php:10
+msgid "Edit profile"
+msgstr ""
+
+#: controls_path.php:11
+msgid "Log out"
+msgstr ""
+
+#: controls_path.php:12
+#: template_path.php:117
+msgid "Add Listing"
+msgstr ""
+
+#: controls_path.php:13
+msgid "Register"
+msgstr ""
+
+#: controls_path.php:14
+msgid "Sign In"
+msgstr ""
+
+#: controls_path.php:15
+msgid "Select All"
+msgstr ""
+
+#: controls_path.php:16
+#: custom_field_path.php:38
+msgid "Action"
+msgstr ""
+
+#: controls_path.php:17
+msgid "All Dummy data has been removed from your database successfully!"
+msgstr ""
+
+#: controls_path.php:18
+msgid "Theme activated successfully."
+msgstr ""
+
+#: controls_path.php:19
+msgid "Sample data has been populated on your site. Wish to delete sample data?"
+msgstr ""
+
+#: controls_path.php:20
+msgid "Yes Delete Please!"
+msgstr ""
+
+#: controls_path.php:21
+msgid "Would you like to populate sample data on your site?"
+msgstr ""
+
+#: controls_path.php:22
+msgid "Dashboard"
+msgstr ""
+
+#: controls_path.php:23
+msgid "Welcome,"
+msgstr ""
+
+#: controls_path.php:24
+msgid "Name"
+msgstr ""
+
+#: controls_path.php:25
+msgid "Email"
+msgstr ""
+
+#: controls_path.php:26
+msgid "Phone No"
+msgstr ""
+
+#: controls_path.php:27
+msgid "Write your message"
+msgstr ""
+
+#: controls_path.php:28
+msgid "Enter Captcha"
+msgstr ""
+
+#: dashboard_path.php:8
+msgid "Edit"
+msgstr ""
+
+#: dashboard_path.php:9
+msgid "Delete"
+msgstr ""
+
+#: dashboard_path.php:10
+msgid "View"
+msgstr ""
+
+#: dashboard_path.php:11
+msgid "Items"
+msgstr ""
+
+#: dashboard_path.php:12
+msgid "Listings"
+msgstr ""
+
+#: dashboard_path.php:13
+msgid "Categories"
+msgstr ""
+
+#: dashboard_path.php:14
+#: widget_path.php:11
+msgid "Date"
+msgstr ""
+
+#: dashboard_path.php:15
+msgid "Expired"
+msgstr ""
+
+#: dashboard_path.php:16
+msgid "Note: You would not be able to see subscriptions of free listings. Your listings must be paid to view all subscriptions."
+msgstr ""
+
+#: dashboard_path.php:17
+msgid "Contact Number"
+msgstr ""
+
+#: dashboard_path.php:18
+msgid "Message"
+msgstr ""
+
+#: dashboard_path.php:19
+msgid "No subscriptions found."
+msgstr ""
+
+#: dashboard_path.php:20
+msgid "Usernames cannot be changed."
+msgstr ""
+
+#: dashboard_path.php:21
+msgid "First Name:"
+msgstr ""
+
+#: dashboard_path.php:22
+msgid "Your first name."
+msgstr ""
+
+#: dashboard_path.php:23
+msgid "Last Name:"
+msgstr ""
+
+#: dashboard_path.php:24
+msgid "Your last name."
+msgstr ""
+
+#: dashboard_path.php:25
+msgid "Nick Name:"
+msgstr ""
+
+#: dashboard_path.php:26
+msgid "Your nick name (Required)."
+msgstr ""
+
+#: dashboard_path.php:27
+msgid "Your email (Required)."
+msgstr ""
+
+#: dashboard_path.php:28
+msgid "Your website."
+msgstr ""
+
+#: dashboard_path.php:29
+msgid "Aim:"
+msgstr ""
+
+#: dashboard_path.php:30
+msgid "Yahoo Im:"
+msgstr ""
+
+#: dashboard_path.php:31
+msgid "Jabber / Google Talk:"
+msgstr ""
+
+#: dashboard_path.php:32
+msgid "About Yourself:"
+msgstr ""
+
+#: dashboard_path.php:33
+msgid "Share a little biographical information to fill out your profile. This may be shown publicly."
+msgstr ""
+
+#: dashboard_path.php:34
+msgid "New Password:"
+msgstr ""
+
+#: dashboard_path.php:35
+msgid "If you would like to change the password type a new one. Otherwise leave this blank."
+msgstr ""
+
+#: dashboard_path.php:36
+msgid "Password Again:"
+msgstr ""
+
+#: dashboard_path.php:37
+msgid "Type your new password again."
+msgstr ""
+
+#: dashboard_path.php:38
+msgid "Update Profile"
+msgstr ""
+
+#: dashboard_path.php:39
+msgid "Author"
+msgstr ""
+
+#: dashboard_path.php:40
+msgid "In Response To"
+msgstr ""
+
+#: dashboard_path.php:41
+msgid "Enter listing title."
+msgstr ""
+
+#: dashboard_path.php:42
+msgid "Category"
+msgstr ""
+
+#: dashboard_path.php:43
+msgid "Publish"
+msgstr ""
+
+#: dashboard_path.php:44
+msgid "Pending"
+msgstr ""
+
+#: dashboard_path.php:45
+msgid "Address"
+msgstr ""
+
+#: dashboard_path.php:46
+msgid "Please enter listing address. eg. : 230 Vine Street And locations throughout Old City, Philadelphia, PA 19106"
+msgstr ""
+
+#: dashboard_path.php:47
+msgid "Click on Set Address on Map and then you can also drag pinpoint to locate the correct address"
+msgstr ""
+
+#: dashboard_path.php:48
+msgid "Address Latitude"
+msgstr ""
+
+#: dashboard_path.php:49
+msgid "Address Longitude"
+msgstr ""
+
+#: dashboard_path.php:50
+msgid "Contact Name"
+msgstr ""
+
+#: dashboard_path.php:51
+msgid "Enter contact person name."
+msgstr ""
+
+#: dashboard_path.php:52
+msgid "Add images : (You can upload more than one images to create image gallery on listing page)"
+msgstr ""
+
+#: dashboard_path.php:53
+msgid "Select Images"
+msgstr ""
+
+#: dashboard_path.php:54
+msgid "Upload Image"
+msgstr ""
+
+#: dashboard_path.php:55
+msgid "Listing Description"
+msgstr ""
+
+#: dashboard_path.php:56
+msgid "Note : Basic HTML tags are allowed"
+msgstr ""
+
+#: dashboard_path.php:57
+msgid "Time"
+msgstr ""
+
+#: dashboard_path.php:58
+msgid "Enter Business or Listing Timing Information. eg. : 10.00 am to 6 pm every day"
+msgstr ""
+
+#: dashboard_path.php:59
+msgid "You can enter phone number,cell phone number etc."
+msgstr ""
+
+#: dashboard_path.php:60
+msgid "Enter your email address."
+msgstr ""
+
+#: dashboard_path.php:61
+msgid "Enter website URL. eg. : http://domain.com"
+msgstr ""
+
+#: dashboard_path.php:62
+msgid "Enter twitter URL. eg. : http://twitter.com/mydomain"
+msgstr ""
+
+#: dashboard_path.php:63
+msgid "Enter facebook URL. eg. : http://facebook.com/mydomain"
+msgstr ""
+
+#: dashboard_path.php:64
+msgid "Enter Google plus URL. eg. : https://plus.google.com/u/"
+msgstr ""
+
+#: dashboard_path.php:65
+msgid "Tag Keyword"
+msgstr ""
+
+#: dashboard_path.php:66
+msgid "Tags are short keywords, with no space within. Up to 40 characters only."
+msgstr ""
+
+#: dashboard_path.php:67
+msgid "Update Your Listing"
+msgstr ""
+
+#: front_end_path.php:8
+msgid "Cookies are blocked or not supported by your browser. You must enable cookies to continue."
+msgstr ""
+
+#: front_end_path.php:9
+msgid "You are now logged out."
+msgstr ""
+
+#: front_end_path.php:10
+msgid "User registration is currently not allowed."
+msgstr ""
+
+#: front_end_path.php:11
+msgid "Check your email for the confirmation link."
+msgstr ""
+
+#: front_end_path.php:12
+msgid "Registration complete. Please check your e-mail."
+msgstr ""
+
+#: front_end_path.php:13
+msgid "Login Register"
+msgstr ""
+
+#: front_end_path.php:14
+msgid "Password Recovery"
+msgstr ""
+
+#: front_end_path.php:15
+msgid "Sorry, that key does not appear to be valid."
+msgstr ""
+
+#: front_end_path.php:16
+msgid "Forgot your password?"
+msgstr ""
+
+#: front_end_path.php:17
+msgid "Enter your email of username."
+msgstr ""
+
+#: front_end_path.php:18
+msgid "Reset my password"
+msgstr ""
+
+#: front_end_path.php:20
+msgid "Enter Business Listing Details"
+msgstr ""
+
+#: front_end_path.php:21
+msgid "Preview listing & Payments"
+msgstr ""
+
+#: front_end_path.php:22
+msgid "Listing Successfully Submitted"
+msgstr ""
+
+#: front_end_path.php:24
+msgid "Below is the preview of your listing, however it's not published yet. To Publish Click the 'Checkout and Publish' Button below. If you want to edit the listing choose the Go Back Button. Amount to be paid: with validing  daysSelected Package:"
+msgstr ""
+
+#: front_end_path.php:26
+msgid "Enter Listing Details"
+msgstr ""
+
+#: front_end_path.php:27
+msgid "Select Package"
+msgstr ""
+
+#: front_end_path.php:28
+msgid "Billing terms: USD for first , then  USD for every  for  installments"
+msgstr ""
+
+#: front_end_path.php:29
+msgid "Billing terms: USD for first, then USD for eac"
+msgstr ""
+
+#: front_end_path.php:30
+msgid "Would you like to make this listing featured"
+msgstr ""
+
+#: front_end_path.php:31
+msgid "Yes feature this listing on homepage."
+msgstr ""
+
+#: front_end_path.php:32
+msgid "Yes feature this listing on category pages."
+msgstr ""
+
+#: front_end_path.php:33
+msgid "An additional amount will be charged to make this place featured.You have the option to feature your place on home page or category page or both."
+msgstr ""
+
+#: front_end_path.php:34
+msgid "Total price as per your selection."
+msgstr ""
+
+#: front_end_path.php:35
+msgid "Note: You will be able to see a preview in the next page"
+msgstr ""
+
+#: front_end_path.php:37
+msgid "Please enter a username."
+msgstr ""
+
+#: front_end_path.php:38
+msgid "This username is invalid.  Please enter a valid username."
+msgstr ""
+
+#: front_end_path.php:39
+msgid "This username is already registered, please choose another one."
+msgstr ""
+
+#: front_end_path.php:40
+msgid "Please type your e-mail address."
+msgstr ""
+
+#: front_end_path.php:41
+msgid "The email address isnt correct."
+msgstr ""
+
+#: front_end_path.php:42
+msgid "This email is already registered, please choose another one."
+msgstr ""
+
+#: front_end_path.php:43
+msgid "Please enter a password."
+msgstr ""
+
+#: front_end_path.php:44
+msgid "Please enter password twice."
+msgstr ""
+
+#: front_end_path.php:45
+msgid "Passwords do not match."
+msgstr ""
+
+#: front_end_path.php:46
+msgid "Create a free account"
+msgstr ""
+
+#: front_end_path.php:47
+msgid "Enter a Password:"
+msgstr ""
+
+#: front_end_path.php:48
+msgid "Enter Password again:"
+msgstr ""
+
+#: front_end_path.php:50
+msgid "User Name:"
+msgstr ""
+
+#: front_end_path.php:51
+msgid "Password:"
+msgstr ""
+
+#: front_end_path.php:52
+msgid "Remember me on this computer"
+msgstr ""
+
+#: front_end_path.php:53
+msgid "Lost your password?"
+msgstr ""
+
+#: metabox_path.php:8
+msgid "Contact Person name (Optional)"
+msgstr ""
+
+#: metabox_path.php:9
+msgid "Enter Name of the contact person"
+msgstr ""
+
+#: metabox_path.php:10
+msgid "Business Address"
+msgstr ""
+
+#: metabox_path.php:11
+msgid "Enter the Complete Address of the Business"
+msgstr ""
+
+#: metabox_path.php:12
+msgid "Phone Number (Optional)"
+msgstr ""
+
+#: metabox_path.php:13
+msgid "Enter the Contact Phone Number of business here"
+msgstr ""
+
+#: metabox_path.php:14
+msgid "Business Timing"
+msgstr ""
+
+#: metabox_path.php:15
+msgid "Opening Time of the Business. For Eg. From 11AM to 5PM"
+msgstr ""
+
+#: metabox_path.php:16
+msgid "Business Email"
+msgstr ""
+
+#: metabox_path.php:17
+msgid "Enter the contact email"
+msgstr ""
+
+#: metabox_path.php:18
+msgid "Website of the Business (Optional)"
+msgstr ""
+
+#: metabox_path.php:19
+msgid "Enter the Website URL of the business. For Eg. http://www.yourbusiness.com"
+msgstr ""
+
+#: metabox_path.php:20
+msgid "Enter your Twitter Link here (Optional)"
+msgstr ""
+
+#: metabox_path.php:21
+msgid "For Example: twitter.com/yourbusiness"
+msgstr ""
+
+#: metabox_path.php:22
+msgid "Enter your Facebook Link here (Optional)"
+msgstr ""
+
+#: metabox_path.php:23
+msgid "For Example: facebook.com/yourbusiness"
+msgstr ""
+
+#: metabox_path.php:24
+msgid "Enter your Google Plus Link here (Optional)"
+msgstr ""
+
+#: metabox_path.php:25
+msgid "For Example: plus.google.com/yourbusiness"
+msgstr ""
+
+#: metabox_path.php:26
+msgid "Upload Image 1"
+msgstr ""
+
+#: metabox_path.php:27
+msgid "Upload Image 2"
+msgstr ""
+
+#: metabox_path.php:28
+msgid "Upload Image 3"
+msgstr ""
+
+#: metabox_path.php:29
+msgid "Upload Image 4"
+msgstr ""
+
+#: metabox_path.php:30
+msgid "Upload Image 5"
+msgstr ""
+
+#: metabox_path.php:31
+msgid "Feature on Home Page"
+msgstr ""
+
+#: metabox_path.php:32
+msgid "Feature on Category Page"
+msgstr ""
+
+#: metabox_path.php:34
+msgid "Pro Listing"
+msgstr ""
+
+#: metabox_path.php:35
+#: model_path.php:8
+msgid "Merchant Id"
+msgstr ""
+
+#: model_path.php:9
+msgid "Login ID"
+msgstr ""
+
+#: model_path.php:10
+msgid "Example : yourname@domain.com"
+msgstr ""
+
+#: model_path.php:11
+msgid "Transaction Key"
+msgstr ""
+
+#: model_path.php:12
+msgid "Example : 1234567890"
+msgstr ""
+
+#: model_path.php:13
+msgid "Instant Id"
+msgstr ""
+
+#: model_path.php:14
+msgid "Example : 123456"
+msgstr ""
+
+#: model_path.php:15
+msgid "Account Id"
+msgstr ""
+
+#: model_path.php:16
+msgid "Example : 12345"
+msgstr ""
+
+#: model_path.php:17
+msgid "Worldpay"
+msgstr ""
+
+#: model_path.php:18
+msgid "Vendor Id"
+msgstr ""
+
+#: model_path.php:19
+msgid "Enter Vendor ID Example : 1303908"
+msgstr ""
+
+#: model_path.php:20
+msgid "Notify Url"
+msgstr ""
+
+#: model_path.php:21
+msgid "Bank Information"
+msgstr ""
+
+#: model_path.php:22
+msgid "Enter the bank name to which you want to transfer payment"
+msgstr ""
+
+#: model_path.php:23
+msgid "Enter your bank Account ID"
+msgstr ""
+
+#: model_path.php:24
+msgid "Pre Bank Transfer"
+msgstr ""
+
+#: model_path.php:25
+msgid "Pay Cash On Arrival"
+msgstr ""
+
+#: model_path.php:26
+msgid "If in Sandbox Testing Mode, enter the Sandbox Email else enter your real Paypal Account Email where you want to collect payments. Eg: myaccount@xyz.com"
+msgstr ""
+
+#: model_path.php:27
+msgid "Example :"
+msgstr ""
+
+#: template_path.php:8
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: template_path.php:9
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr ""
+
+#: template_path.php:10
+msgid "Most Used Categories"
+msgstr ""
+
+#: template_path.php:11
+msgid "Try looking in the monthly archives."
+msgstr ""
+
+#: template_path.php:13
+msgid "Daily Archives:"
+msgstr ""
+
+#: template_path.php:14
+msgid "Monthly Archives:"
+msgstr ""
+
+#: template_path.php:15
+msgid "Yearly Archives:"
+msgstr ""
+
+#: template_path.php:16
+msgid "Blog Archives"
+msgstr ""
+
+#: template_path.php:18
+msgid "View all posts by"
+msgstr ""
+
+#: template_path.php:19
+msgid "Published"
+msgstr ""
+
+#: template_path.php:20
+msgid "Full size is pixels"
+msgstr ""
+
+#: template_path.php:21
+msgid "Link to full-size image"
+msgstr ""
+
+#: template_path.php:22
+msgid "Pages:"
+msgstr ""
+
+#: template_path.php:24
+msgid "Author Archives:"
+msgstr ""
+
+#: template_path.php:25
+msgid "About"
+msgstr ""
+
+#: template_path.php:27
+msgid "Category Archives:"
+msgstr ""
+
+#: template_path.php:29
+msgid "Review has already been inserted from this computer. So no other reviews are allowed from this computer on this post."
+msgstr ""
+
+#: template_path.php:31
+msgid "No listing found."
+msgstr ""
+
+#: template_path.php:33
+msgid "Search..."
+msgstr ""
+
+#: template_path.php:34
+msgid "Location..."
+msgstr ""
+
+#: template_path.php:35
+msgid "Search Listing"
+msgstr ""
+
+#: template_path.php:37
+msgid "No post found."
+msgstr ""
+
+#: template_path.php:39
+msgid "Nothing Found"
+msgstr ""
+
+#: template_path.php:40
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr ""
+
+#: template_path.php:42
+msgid "Read More"
+msgstr ""
+
+#: template_path.php:43
+msgid "No Review"
+msgstr ""
+
+#: template_path.php:44
+msgid "1 Review"
+msgstr ""
+
+#: template_path.php:46
+msgid "You searched for:"
+msgstr ""
+
+#: template_path.php:47
+msgid "Near:"
+msgstr ""
+
+#: template_path.php:49
+msgid "Search"
+msgstr ""
+
+#: template_path.php:51
+msgid "Tag Archives:"
+msgstr ""
+
+#: template_path.php:52
+msgid "&larr; Older posts"
+msgstr ""
+
+#: template_path.php:54
+msgid "All Listings In"
+msgstr ""
+
+#: template_path.php:56
+msgid "Thanks, your email was sent successfully."
+msgstr ""
+
+#: template_path.php:57
+msgid "Sorry, an error occured."
+msgstr ""
+
+#: template_path.php:58
+msgid "Your Name"
+msgstr ""
+
+#: template_path.php:59
+#: template_path.php:93
+msgid "(required)"
+msgstr ""
+
+#: template_path.php:60
+msgid "Your Email"
+msgstr ""
+
+#: template_path.php:61
+msgid "(Optional)"
+msgstr ""
+
+#: template_path.php:62
+msgid "Your Message"
+msgstr ""
+
+#: template_path.php:63
+msgid "Submit Your Message"
+msgstr ""
+
+#: template_path.php:65
+msgid "Member Since:"
+msgstr ""
+
+#: template_path.php:66
+msgid "Add New Listing"
+msgstr ""
+
+#: template_path.php:67
+msgid "View Listings"
+msgstr ""
+
+#: template_path.php:68
+msgid "Expired Listings"
+msgstr ""
+
+#: template_path.php:69
+msgid "View Reviews"
+msgstr ""
+
+#: template_path.php:70
+msgid "Edit Profile"
+msgstr ""
+
+#: template_path.php:71
+msgid "Leads Capture"
+msgstr ""
+
+#: template_path.php:73
+msgid "<p>Thank you</p><p>Your listing has been successfully submitted. Pending approval from administration.</p>"
+msgstr ""
+
+#: template_path.php:75
+msgid "Post your comment"
+msgstr ""
+
+#: template_path.php:76
+msgid "No Responses"
+msgstr ""
+
+#: template_path.php:77
+msgid "One Responses"
+msgstr ""
+
+#: template_path.php:78
+msgid "% Responses"
+msgstr ""
+
+#: template_path.php:79
+#: template_path.php:91
+msgid "Comment"
+msgstr ""
+
+#: template_path.php:81
+msgid "Rate this by clicking a star below:"
+msgstr ""
+
+#: template_path.php:82
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: template_path.php:83
+msgid "You must be"
+msgstr ""
+
+#: template_path.php:84
+msgid "logged in"
+msgstr ""
+
+#: template_path.php:85
+msgid "to post a comment."
+msgstr ""
+
+#: template_path.php:86
+msgid "Logged in as"
+msgstr ""
+
+#: template_path.php:87
+msgid "Log out &raquo;"
+msgstr ""
+
+#: template_path.php:88
+msgid "Post Your Review"
+msgstr ""
+
+#: template_path.php:89
+msgid "Review"
+msgstr ""
+
+#: template_path.php:90
+#: template_path.php:96
+msgid "Website"
+msgstr ""
+
+#: template_path.php:92
+msgid "Submit"
+msgstr ""
+
+#: template_path.php:94
+msgid "Your name:"
+msgstr ""
+
+#: template_path.php:95
+#: template_path.php:98
+msgid "Email:"
+msgstr ""
+
+#: template_path.php:97
+msgid "Name:"
+msgstr ""
+
+#: template_path.php:100
+msgid "Contact Name:"
+msgstr ""
+
+#: template_path.php:101
+msgid "Address :"
+msgstr ""
+
+#: template_path.php:102
+msgid "Phone No :"
+msgstr ""
+
+#: template_path.php:103
+msgid "Timing :"
+msgstr ""
+
+#: template_path.php:104
+msgid "Category :"
+msgstr ""
+
+#: template_path.php:105
+msgid "Publish date :"
+msgstr ""
+
+#: template_path.php:106
+msgid "Email ID :"
+msgstr ""
+
+#: template_path.php:107
+msgid "Website :"
+msgstr ""
+
+#: template_path.php:108
+msgid "Social Links :"
+msgstr ""
+
+#: template_path.php:109
+#: custom_field_path.php:20
+msgid "Description"
+msgstr ""
+
+#: template_path.php:100
+msgid "Helo"
+msgstr ""
+
+#: template_path.php:110
+msgid "Location Map"
+msgstr ""
+
+#: template_path.php:111
+msgid "Reviews"
+msgstr ""
+
+#: template_path.php:112
+msgid "Related Listings"
+msgstr ""
+
+#: template_path.php:113
+msgid "Rating"
+msgstr ""
+
+#: widget_path.php:9
+msgid "Title:"
+msgstr ""
+
+#: widget_path.php:10
+msgid "Sort by"
+msgstr ""
+
+#: widget_path.php:12
+msgid "Number of comments"
+msgstr ""
+
+#: widget_path.php:13
+msgid "Random"
+msgstr ""
+
+#: widget_path.php:14
+msgid "Include post excerpt"
+msgstr ""
+
+#: widget_path.php:8
+msgid "Recent Posts"
+msgstr ""
+
+#: widget_path.php:15
+msgid "Excerpt length in words:"
+msgstr ""
+
+#: widget_path.php:16
+msgid "Include post date"
+msgstr ""
+
+#: widget_path.php:17
+msgid "Show number of comments"
+msgstr ""
+
+#: widget_path.php:18
+msgid "Number of posts to show:"
+msgstr ""
+
+#: widget_path.php:19
+msgid "Show Post Type:"
+msgstr ""
+
+#: widget_path.php:20
+msgid "Shows recent posts  custom post types."
+msgstr ""
+
+#: widget_path.php:21
+msgid "Geocraft Recent Posts"
+msgstr ""
+
+#: import_export_path.php:3
+msgid "Import And Export"
+msgstr ""
+
+#: import_export_path.php:4
+msgid "Export to CSV from listing"
+msgstr ""
+
+#: import_export_path.php:5
+msgid "Export to CSV"
+msgstr ""
+
+#: import_export_path.php:6
+msgid "Upload your CSV"
+msgstr ""
+
+#: import_export_path.php:7
+msgid "Import"
+msgstr ""
+
+#: import_export_path.php:8
+msgid "Import Successful"
+msgstr ""
+
+#: custom_field_path.php:3
+msgid "Add a New Custom Field"
+msgstr ""
+
+#: custom_field_path.php:4
+msgid "&laquo; Back to manage custom field list"
+msgstr ""
+
+#: custom_field_path.php:5
+msgid "Show for categories"
+msgstr ""
+
+#: custom_field_path.php:6
+msgid "Select the categories for which this field will be displayed."
+msgstr ""
+
+#: custom_field_path.php:7
+msgid "Field type"
+msgstr ""
+
+#: custom_field_path.php:8
+msgid "Text"
+msgstr ""
+
+#: custom_field_path.php:9
+msgid "Radio"
+msgstr ""
+
+#: custom_field_path.php:10
+msgid "Select"
+msgstr ""
+
+#: custom_field_path.php:11
+msgid "Textarea"
+msgstr ""
+
+#: custom_field_path.php:12
+msgid "Image uploader"
+msgstr ""
+
+#: custom_field_path.php:13
+msgid "Select the type of this custom field."
+msgstr ""
+
+#: custom_field_path.php:14
+msgid "Option values"
+msgstr ""
+
+#: custom_field_path.php:15
+msgid "Seperate multiple option values with a comma. eg. Yes, No"
+msgstr ""
+
+#: custom_field_path.php:16
+msgid "Name of this field"
+msgstr ""
+
+#: custom_field_path.php:17
+msgid "Custom field title which will appear in cutom fields label."
+msgstr ""
+
+#: custom_field_path.php:18
+msgid "HTML variable name"
+msgstr ""
+
+#: custom_field_path.php:19
+msgid "The HTML variable name for the custom field. IMPORTANT: It should be a unique name and it will be not editable after once you entered."
+msgstr ""
+
+#: custom_field_path.php:21
+msgid "Describe this field in a few words. It will appear in beside the field."
+msgstr ""
+
+#: custom_field_path.php:22
+msgid "Default value"
+msgstr ""
+
+#: custom_field_path.php:23
+msgid "Enter the default value of the custom field."
+msgstr ""
+
+#: custom_field_path.php:24
+msgid "Position (Display order)"
+msgstr ""
+
+#: custom_field_path.php:25
+msgid "This is a numeric value that determines the position of the custom field in the front-end and the back-end. e.g. 5"
+msgstr ""
+
+#: custom_field_path.php:26
+msgid "Active?"
+msgstr ""
+
+#: custom_field_path.php:27
+msgid "This setting activates/de-activates the custom field in the front-end and the back-end."
+msgstr ""
+
+#: custom_field_path.php:28
+msgid "Required?"
+msgstr ""
+
+#: custom_field_path.php:29
+msgid "Specify whether or not this field is required to be filled in compulsarily by users."
+msgstr ""
+
+#: custom_field_path.php:30
+msgid "Show on detail page?"
+msgstr ""
+
+#: custom_field_path.php:31
+msgid "Specify whether or not this field be shown on the &lsquo;Detail page&rsquo;."
+msgstr ""
+
+#: custom_field_path.php:33
+msgid "Custom Field"
+msgstr ""
+
+#: custom_field_path.php:35
+msgid "Manage Custom Fields"
+msgstr ""
+
+#: custom_field_path.php:36
+msgid "Type"
+msgstr ""
+
+#: custom_field_path.php:39
+msgid "Add Custom Field"
+msgstr ""
+
+#: map_path.php:8
+msgid "Set Address on Map"
+msgstr ""
+
+#: dashboard_path.php:69
+msgid "Upgrade"
+msgstr ""
+
+#: dashboard_path.php:70
+msgid "Want to Upgrade your Listing to Premium ?"
+msgstr ""
+
+#: dashboard_path.php:71
+msgid "Upgrade now to get more visibility to your listing and get leads directly on your Dashboard."
+msgstr ""
+

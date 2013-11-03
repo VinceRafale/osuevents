@@ -1,8 +1,8 @@
 /**
- * Theme Name: OSU Events
- * Theme URI: http://osuevents.com
- * Description: OSU Events
- * Version: 1.0.0
+ * Theme Name: OSU EVENTS
+ * Theme URI: http://osuevents.com/
+ * Description: All things to do at OSU
+ * Version: 1.0.1
  * Author: Shashank Agarwal
  * Author URI: http://shashank.pw
  * Tags: theme-options, threaded-comments, microformats, translation-ready, rtl-language-support, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-width, featured-images, full-width-template, buddypress
@@ -5974,8 +5974,8 @@ ul.ui-tabs-nav li a, .tabber ul li a {
 	div#menu-header-horizontal .menu ul,
 		div#menu-header-horizontal .menu li,
 		div#menu-header-horizontal .menu ul ul {
-		background: white;			
-		width: 100% !important;
+			float: none;
+			width: 100% !important;
 			}
 
 				div#menu-primary .menu ul ul,

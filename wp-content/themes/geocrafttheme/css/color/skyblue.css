@@ -1,0 +1,31 @@
+.top_strip {
+    background:#124a76;
+}
+.header_wrapper .header{
+    background: #206093 url('images/skyln.png') top center no-repeat;
+}
+.main_search #searchsubmit {
+    background:url(images/skyshbtn.png) repeat-x;
+}
+.sidebar #searchform input[type="submit"] {
+    background:url(images/skysh.png) no-repeat;
+}
+.footer_wrapper {
+    background:#124a76;
+}
+.footer_wrapper .footer_widget h5 {
+    background:url(images/fsborder.png) repeat-x bottom;
+}
+.footer_wrapper .footer_widget ul {
+    list-style-image:url(images/pbullet.png);
+}
+.footer_wrapper .footer_widget #searchform {
+    background:url(images/fssearch.png) no-repeat;
+}
+.footer_bottom {
+    background:#093558;
+    color:#5385ad;
+}
+.footer_bottom .copy_right {
+    color: #5385ad;
+}

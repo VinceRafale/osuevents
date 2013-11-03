@@ -1,0 +1,31 @@
+.top_strip {
+    background:#b53f07;
+}
+.header_wrapper .header{
+    background: #e65008 url('images/orangeln.png') top center no-repeat;
+}
+.main_search #searchsubmit {
+    background:url(images/orangeshbtn.png) repeat-x;
+}
+.sidebar #searchform input[type="submit"] {
+    background:url(images/orangesh.png) no-repeat;
+}
+.footer_wrapper {
+    background:#b53f07;
+}
+.footer_wrapper .footer_widget h5 {
+    background:url(images/ofborder.png) repeat-x bottom;
+}
+.footer_wrapper .footer_widget ul {
+    list-style-image:url(images/obullet.png);
+}
+.footer_wrapper .footer_widget #searchform {
+    background:url(images/fosearch.png) no-repeat;
+}
+.footer_bottom {
+    background:#7b2b05;
+    color:#f7a781;
+}
+.footer_bottom .copy_right {
+    color: #f7a781;
+}

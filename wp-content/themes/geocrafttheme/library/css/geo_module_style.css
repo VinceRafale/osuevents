@@ -1,0 +1,76 @@
+.form-field{
+    margin-bottom: 15px !important;
+}
+.form-wrap input.upload,
+.form_row input.upload{
+    width:47%;
+}
+.form-wrap .hide,
+.form_row .hide{
+    display:none;
+}
+.form-wrap .meta-image,
+.form_row .meta-image{
+    max-width:340px;
+    margin:18px 0 18px 0;
+    display: block;
+    padding:5px;
+    border: 1px solid #ccc; 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.form-wrap input.upload {
+    width:80%;
+}
+.form-wrap input.upload_button,
+.form_row input.upload_button{
+    float:right;
+    width:45px;
+    border-color:#BBBBBB;
+    cursor:pointer;
+    height:16px;
+}
+.form-wrap input.upload_button:hover {
+    border-color:#666666;
+    color:#000;
+}
+
+.form-wrap .reset-button {
+    float:left;
+    cursor:pointer;
+}
+/* Add Place from*/
+.form_row{
+    position: relative;
+}
+.form_row .image_reset_button{
+    background: url('images/close.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin-left: -8px;
+    margin-bottom: -30px;
+    left: 420px;
+    top:17px;
+    margin-top: 15px;
+    position: absolute;
+    z-index: 10;
+}
+.form_row .meta-image{
+    position: relative;
+    z-index:0;
+    display: block;
+}
+.hide.meta-image{
+    margin-top: 10px !important;
+}
+.form_row .upload-error{
+    color: red;
+}
+/*
+Payments Style
+*/
+#payments{
+    list-style-type: none;
+}
