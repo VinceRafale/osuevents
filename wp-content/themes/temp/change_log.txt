@@ -1,0 +1,208 @@
+Templatic theme - Nightlife    (Launched on 30th November 2012)
+=================================================================================================================================================================================================================
+16th January 2013 (v:1.0.6)
+----------------------------------------
+Issue of fetch events in rss feed - Solved.
+Issue of guide link change - Solved.
+message not showing - Solved.
+----------------------------------------
+functions/auto_install/auto_install.php
+
+------------------------------------
+mega menu responsive issue - Solved.
+------------------------------------
+style.css
+
+------------------------------------------------
+Issue of css message/comment changes - Solved.
+------------------------------------------------
+custom.css
+
+-----------------------------------------------------------------------------------------------------------
+change 'suppress_filters' if wpml plugin activate then gives false otherwise true for latest news widget - Solved.
+-----------------------------------------------------------------------------------------------------------
+functions/widget_functions.php
+
+-------------------------------------------------------------------
+Issue of added do_action for stripe pay per subscription plan - Solved.
+-------------------------------------------------------------------
+loop-author.php
+
+-------------------------------------------------------------------------
+Issue of replace home page paggination if pagenavi_plugin is exixts - Solved.
+-------------------------------------------------------------------------
+home.php
+
+---------------------------------------------------
+nightlife slider place holder is not work in IE - Solved.
+Issue of script add for placeholder - Solved.
+---------------------------------------------------
+js/modernizr.js
+
+--------------------------------
+ie8 featured image issue - Solved.
+--------------------------------
+loop-event.php
+style.css
+
+
+
+
+11th January 2013 (V:1.0.5)
+--------------------------------------------------------------------------------------
+Remove checkbox for "Is this a daily event" from recurring radio button selection - Solved.
+Added option to have no tickets with the particular event - Solved.
+Issue of display date time issue on category page slider - Solved.
+Recurring event for sunday was not showing in calander - Solved.
+Custom fields display ordering - Solved.
+Wordpress 3.5 related Issue - Solved.
+--------------------------------------------------------------------------------------
+functions/custom_functions.php
+
+-------------------------------------
+Breadcrumbs related changes - Solved.
+-------------------------------------
+functions/auto_install/auto_install.php
+author.php
+home.php
+page-template_facebookevents.php
+recurring_event_user.php
+search.php
+
+--------------------------
+Logo upload issue - Solved.
+--------------------------
+functions/preview_custom_functions.php
+
+-------------------------------------------------------------------------------------
+IE was showing different header and footer background color when set to black - Solved.
+Issue of event date and title set for slider - Solved.
+Issue of Subsidary footer widget style set - Solved.
+Issue of blog listing design width auto - Solved.
+The Issue of search icon issue in IE - Solved.
+-------------------------------------------------------------------------------------
+style.css
+
+--------------------------------------------------------------
+Added code for supreme theme settings default values - Solved.
+--------------------------------------------------------------
+functions/auto_install/auto_install.php
+loop-event-search.php
+loop-event.php
+
+--------------------------------------------------
+updated default option for theme customizer - Done.
+--------------------------------------------------
+functions/auto_install/auto_install.php
+
+-------------------------------------------------------------------------
+Add action for slider for display event start date on slider with title - Solved.
+Added option of favicon image icon - Done.
+-------------------------------------------------------------------------
+functions/auto_install/auto_install.php
+functions.php
+header.php
+
+----------------------------------------------------
+change in recurring event user list page title - Solved.
+----------------------------------------------------
+functions/auto_install/auto_install_data.php
+
+
+
+19th December 2012 (version:1.0.4)
+------------------------------
+set global $post in archive page
+set 404 page side bar 
+------------------------------
+footer.php
+
+--------------------------------------------------------------------
+remove templ_show_edit_renew_delete_link add_action in author page 
+--------------------------------------------------------------------
+functions/custom_functions.php
+
+
+15th December 2012 (version:1.0.3)
+-----------------------------------------
+add action for night life slider search option
+add display text on slider widget
+-----------------------------------------
+functions.php
+
+--------------------------------------------------------
+show featured events on the top on listings page - Solved.
+--------------------------------------------------------
+functions/listing_filters.php
+
+--------------------------------------------------
+fix auto install image dumy folder as per uploder path
+--------------------------------------------------
+functions/auto_install/auto_install_data.php
+
+--------------------------------
+solved custom fields rename issue
+--------------------------------
+functions/auto_install/data-generator.php
+
+-------------------
+Design Search in IE8
+-------------------
+style.css
+
+
+11th December- 2012 (version: 1.0.2)
+----------------------------------------
+fixed an issue on woocom product detail page
+---------------------------------------------
+style.css
+
+------------------------------------------------------------------------------
+-search filter not working when we enter wrong search field value and if 
+event start date and end date are same thane result not showing in slider search
+-if current date is same as start date and end date
+than event not showing on home and on category page.
+------------------------------------------------------------------------------
+functions/listing_filters.php
+
+-----------------------------------------------------------------------------
+Issues of localized past events, current events, upcoming events tabs - Solved.
+-----------------------------------------------------------------------------
+functions/custom_functions.php
+
+------------------------------------------------
+-solved edit renew link issue on author page
+-display start date before post title in category page
+-removed sharing button filter
+-----------------------------------------------
+functions/custom_functions.php
+
+-------------------------------------
+footer search not working address wise
+-------------------------------------
+functions/listing_filters.php
+
+---------------------------------
+recurring event issue in auto install
+---------------------------------
+functions/auto_install/auto_install_data.php
+-------------------------------------------
+
+
+3rd December 2012 (version: 1.0.1)
+---------------------------------------------------
+Recurring Events improvement and 
+WooCommerce compatibility for selling event tickets
+---------------------------------------------------
+recurring_event_user.php
+functions.php
+functions/custom_functions.php
+loop-event-search.php
+functions/auto_install/auto_install_data.php
+loop-event-search.php
+functions/listing_filters.php
+search.php
+
+images/icon_ticket.png
+style.css
+
